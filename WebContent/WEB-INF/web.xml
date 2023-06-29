@@ -2,13 +2,19 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 927d7f69cf8b1276c1790c1009ed0df96f16cb3b
   <display-name>project</display-name>
 =======
   <display-name>text</display-name>
 >>>>>>> origin/master
+<<<<<<< HEAD
 =======
   <display-name>text</display-name>
 >>>>>>> c709333eda53756cb944e432091b34832c06e8d7
+=======
+>>>>>>> 927d7f69cf8b1276c1790c1009ed0df96f16cb3b
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
