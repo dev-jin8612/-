@@ -71,7 +71,7 @@
                     <a href="/" class="nav_tapButton"><span>스토어</span></a>
                   </li>
                   <li class="nav_tap">
-                    <div>
+                    <div class="feed_show">
                       <button class="nav_tapButton nav_listDetails">
                         더보기
                         <svg
@@ -90,7 +90,7 @@
                         </svg>                        
 
                       </button>
-                      <div class="feed" role="navigation">
+                      <div class="feed feed2" role="navigation">
                         <div class="feed-a">
                           <div class="feed-b">
                             <div class="feed-c" style="background-color: rgb(255, 248, 231)">
