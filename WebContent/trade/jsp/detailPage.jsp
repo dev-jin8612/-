@@ -7,13 +7,10 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="../css/cssSet1.css" />
-<link rel="stylesheet" href="../css/cssSet2.css" />
-<link rel="stylesheet" href="../css/cssSet3.css" />
-<link rel="stylesheet" href="../css/custom.css" />
 </head>
 
 <body>
-<div id="page-container">
+    <div id="page-container">
       <div class="black-bg-wrap" style="display: none"></div>
       <div id="wz-header">
         <div class="web-header">
@@ -60,129 +57,118 @@
                     </svg>
                   </a>
                 </h1>
-                <ul class="GNBDesktop_container__1TR2D">
-                  <li class="GNBDesktop_item__1zjYG">
-                    <a href="" class="GNBDesktop_link__3ObNR"><span>오픈예정</span></a>
+                <ul class="nav_list">
+                  <li class="nav_tap">
+                    <a href="" class="nav_tapButton"><span>오픈예정</span></a>
                   </li>
-                  <li class="GNBDesktop_item__1zjYG">
-                    <a href="/" class="GNBDesktop_link__3ObNR"><span>펀딩 +</span></a>
+                  <li class="nav_tap">
+                    <a href="/" class="nav_tapButton"><span>펀딩 +</span></a>
                   </li>
-                  <li class="GNBDesktop_item__1zjYG">
-                    <a href="/" class="GNBDesktop_link__3ObNR"><span>프리오더</span></a>
+                  <li class="nav_tap">
+                    <a href="/" class="nav_tapButton"><span>프리오더</span></a>
                   </li>
-                  <li class="GNBDesktop_item__1zjYG">
-                    <a href="/" class="GNBDesktop_link__3ObNR"><span>스토어</span></a>
+                  <li class="nav_tap">
+                    <a href="/" class="nav_tapButton"><span>스토어</span></a>
                   </li>
-                  <li class="GNBDesktop_item__1zjYG">
+                  <li class="nav_tap">
                     <div>
-                      <button class="GNBDesktop_link__3ObNR GNBDesktop_more__3IpSI">
+                      <button class="nav_tapButton nav_listDetails">
                         더보기
                         <!-- 더보기 오른쪽의 화살표 모양 이미지를 넣기 -->
                         <img src="" alt="" />
                       </button>
-                      <div class="MoreMenuDesktop_container__104wM" role="navigation">
-                        <div class="MoreMenuDesktop_innerContainer__2RwMO">
-                          <div class="MoreMenuDesktop_bannerContainer__vK2Lc">
-                            <div
-                              class="MoreMenuBanner_container__3n_2m"
-                              style="background-color: rgb(255, 248, 231)"
-                            >
-                              <div class="MoreMenuBanner_inner__4fzC7">
-                                <div class="MoreMenuBanner_icon__1HFSa">
+                      <div class="feed" role="navigation">
+                        <div class="feed-a">
+                          <div class="feed-b">
+                            <div class="feed-c" style="background-color: rgb(255, 248, 231)">
+                              <div class="feed-d">
+                                <div class="feed-e">
                                   <!-- 피드 왼쪽의 글 쓰인것 같은 이미지 넣기 -->
                                   <img src="" alt="" />
                                 </div>
-                                <div class="MoreMenuBanner_label__2dyLV">피드</div>
+                                <div class="feedText">피드</div>
                               </div>
                             </div>
                             <a
                               href="/"
                               target="_blank"
                               rel="noreferer noopener"
-                              class="MoreMenuBanner_container__3n_2m"
+                              class="feed-c"
                               style="background-color: rgb(233, 236, 239)"
-                              ><div class="MoreMenuBanner_inner__4fzC7">
-                                <div class="MoreMenuBanner_icon__1HFSa">
+                              ><div class="feed-d">
+                                <div class="feed-e">
                                   <!-- 메이커 센터 옆 이미지 넣기 -->
                                   <img src="" alt="" />
                                 </div>
-                                <div class="MoreMenuBanner_label__2dyLV">메이커센터</div>
+                                <div class="feedText">메이커센터</div>
                               </div></a
                             >
-                            <div
-                              class="MoreMenuBanner_container__3n_2m"
-                              style="background-color: rgb(239, 243, 253)"
-                            >
-                              <div class="MoreMenuBanner_inner__4fzC7">
-                                <div class="MoreMenuBanner_icon__1HFSa">
+                            <div class="feed-c" style="background-color: rgb(239, 243, 253)">
+                              <div class="feed-d">
+                                <div class="feed-e">
                                   <!-- 투자가기 옆 이미지 넣기 -->
                                   <img src="" alt="" />
                                 </div>
-                                <div class="MoreMenuBanner_label__2dyLV">투자하기</div>
+                                <div class="feedText">투자하기</div>
                               </div>
                             </div>
-                            <div
-                              class="MoreMenuBanner_container__3n_2m"
-                              style="background-color: rgb(230, 246, 255)"
-                            >
-                              <div class="MoreMenuBanner_inner__4fzC7">
-                                <div class="MoreMenuBanner_icon__1HFSa">
+                            <div class="feed-c" style="background-color: rgb(230, 246, 255)">
+                              <div class="feed-d">
+                                <div class="feed-e">
                                   <!-- 스타트업 찾기기 옆 이미지 넣기 -->
                                   <img src="" alt="" />
                                 </div>
-                                <div class="MoreMenuBanner_label__2dyLV">스타트업 찾기</div>
+                                <div class="feedText">스타트업 찾기</div>
                               </div>
                             </div>
                           </div>
-                          <div
-                            class="MenuList_container__7uw7A MoreMenuDesktop_moreMenuList__suowN"
-                          >
-                            <h4 class="MenuList_label__2ap5Z">바로 가기</h4>
+                          <div class="Categories Categories2">
+                            <h4 class="Categories3">바로 가기</h4>
                             <ul>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >wadiz NEXT BRAND
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt="" />
                                 </a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >wadiz TRADERS
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >와디즈 파트너 서비스
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >IP 라이선스 사업 신청
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >와디즈 스쿨
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="" class="MenuListItem_button__aQOTa"
+                                <a href="" class="anchors"
                                   >도움말센터
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >서포터클럽 멤버십
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt="" />
@@ -190,55 +176,53 @@
                               </li>
                             </ul>
                           </div>
-                          <div
-                            class="MenuList_container__7uw7A MoreMenuDesktop_moreMenuList__suowN"
-                          >
-                            <h4 class="MenuList_label__2ap5Z">와디즈 소개</h4>
+                          <div class="Categories Categories2">
+                            <h4 class="Categories3">와디즈 소개</h4>
                             <ul>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >굿 웨이브
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >와디즈 블로그
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >와디즈 이야기
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >공간 와디즈
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >협력 프로그램
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >와디즈 어워즈
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >성공 프로젝트
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
@@ -246,13 +230,11 @@
                               </li>
                             </ul>
                           </div>
-                          <div
-                            class="MenuList_container__7uw7A MoreMenuDesktop_moreMenuList__suowN"
-                          >
-                            <h4 class="MenuList_label__2ap5Z">공지</h4>
+                          <div class="Categories Categories2">
+                            <h4 class="Categories3">공지</h4>
                             <ul>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >공지 사항
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
@@ -261,21 +243,21 @@
                               <li>
                                 <!-- 새로운 이벤트가 있으면 이벤트 옆에 new가 생김-->
                                 <!-- <span class="NewBadge_badge__Z74aM">New</span> 이렇게 -->
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >이벤트
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
                                 /></a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >보도 자료
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt="" />
                                 </a>
                               </li>
                               <li>
-                                <a href="/" class="MenuListItem_button__aQOTa"
+                                <a href="/" class="anchors"
                                   >채용
                                   <!-- 무슨 이미지 인지 모르겠음 -->
                                   <img src="" alt=""
@@ -285,6 +267,7 @@
                           </div>
                         </div>
                       </div>
+                      <!-- 이거 왜 있는거지? -->
                       <div
                         class="Backdrop_backDrop__2cxxQ Backdrop_dimmed__L5zbD GNBDesktop_backdrop__3shzy"
                       ></div>
@@ -292,126 +275,104 @@
                   </li>
                 </ul>
                 <div class="web-header-utils">
-                  <div class="DesktopSearchApp_container__VEGeP">
+                  <div class="searchBox">
                     <form>
-                      <div class="SearchController_container__3KkCv" tabindex="-1">
-                        <div class="SearchTag_emptyTag__3OE1B"></div>
-                        <div class="SearchController_keyword__2Q-9Q">
+                      <div class="searchBox-a" tabindex="-1">
+                        <div class="searchBox-aa"></div>
+                        <div class="searchInput">
                           <input type="search" placeholder="" aria-label="검색" value="" />
                         </div>
-                        <button
-                          type="submit"
-                          class="SearchController_searchIcon__3IHRt"
-                          aria-label="검색"
-                        >
+                        <button type="submit" class="searchButton" aria-label="검색">
                           <!-- 검색창에 돋보기 이미지 -->
                           <img src="" alt="" />
                         </button>
                       </div>
                     </form>
                     <!-- 최근 검색, 검색 카테고리1, 검색 카테고리2 -->
-                    <div class="DesktopSearchApp_conditionContainer__179KE" style="display: none">
-                      <div class="DesktopSearchCondition_container__6jXWH">
-                        <div class="CurateList_container__3kc0N">구역1</div>
-                        <div class="DesktopSearchCondition_bottomSection__IzNXl">
-                          <div class="SimpleRecentKeywordList_container__3iL6E">
-                            <div class="SimpleRecentKeywordList_header__aJmxF">
+                    <div class="DesktopSearchApp" style="display: none">
+                      <div class="DesktopSearchApp-a">
+                        <div class="CurateList_container">구역1</div>
+                        <div class="DesktopCategory">
+                          <div class="DesktopCategory-a">
+                            <div class="DesktopCategory-b">
                               <h4>최근 검색어</h4>
                             </div>
-                            <div class="SimpleRecentKeywordList_keywordContainer__3udUj"></div>
-                            <div class="SimpleRecentKeywordList_emptyList__6HqDv">
+                            <div class="Recently"></div>
+                            <div class="Recently2">
                               <p>최근 검색어가 없어요</p>
                             </div>
                           </div>
-                          <div class="SimpleCategoryList_container__3dCnP">
-                            <div class="SimpleCategoryList_header__T_0S4"><h4>카테고리</h4></div>
+                          <div class="tagAnchor">
+                            <div class="tagAnchor2"><h4>카테고리</h4></div>
                             <div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">패션·잡화</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">패션·잡화</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">테크·가전</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">테크·가전</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">홈·리빙</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">홈·리빙</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">여행·스포츠</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">여행·스포츠</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">푸드</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">푸드</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">뷰티</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">뷰티</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">출판</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">출판</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">취미·클래스</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">취미·클래스</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">반려동물</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">반려동물</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">캐릭터·굿즈</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">캐릭터·굿즈</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">컬쳐·아티스트</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">컬쳐·아티스트</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">후원</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">후원</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">기부∙캠페인</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">기부∙캠페인</div>
                               </div>
-                              <div class="SimpleCategoryList_categoryItem__12adh" tabindex="-1">
-                                <div class="SimpleCategoryList_title__211f8">모임</div>
+                              <div class="tagAnchor-a" tabindex="-1">
+                                <div class="tagAnchor-b">모임</div>
                               </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                      <div class="DesktopSearchApp_footer__5pLDo">
+                      <div class="SearchApp_footer">
                         <button type="button">닫기</button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="HeaderDesktop_user__dYJMc">
-                    <div class="User_container__1a7yg">
-                      <button type="button" class="User_btnSign__2wErR">로그인</button
-                      ><button data-event="iam.signup" class="User_btnSign__2wErR">회원가입</button>
+                  <div class="user">
+                    <div class="User_container">
+                      <button type="button" class="User_btnSign">로그인</button
+                      ><button data-event="iam.signup" class="User_btnSign">회원가입</button>
                     </div>
                   </div>
 
                   <div class="web-header-funding-open funding-open">
                     <button
                       aria-label="프로젝트 만들기"
-                      class="Button_button__cfyja Button_primary__1SI8s Button_contained__1zYTU Button_md__2z5ab funding-open-button"
+                      class="Button_button Button_primary Button_contained Button_md funding-open-button"
                       type="button"
                     >
-                      <span><span class="Button_children__1BTvH">프로젝트 만들기</span></span>
+                      <span><span class="Button_children">프로젝트 만들기</span></span>
                     </button>
                   </div>
-                </div>
-                <!-- PreviewOverlay_co... 얘는 왜 있는지 모르겠음 -->
-                <div class="PreviewOverlay_container__3Q3h2">
-                  <svg
-                    viewBox="0 0 40 40"
-                    focusable="false"
-                    role="presentation"
-                    class="withIcon_icon__djI-9"
-                    aria-hidden="true"
-                    style="width: 24px; height: 24px"
-                  >
-                    <path fill="none" d="M0 0h40v40H0z"></path>
-                    <path
-                      d="M38 6.06H2V31h11.8v3.88h12.4V31H38zm-2.12 22.85H4.12V8.14h31.76z"
-                    ></path>
-                  </svg>
-                  <p class="PreviewOverlay_title__21y5H">미리보기 모드</p>
-                  <p class="PreviewOverlay_description__2ihG6">저장한 내용을 미리 볼 수 있어요.</p>
                 </div>
               </div>
             </header>
@@ -443,230 +404,31 @@
                 </div>
               </div>
               <div class="inner-contents">
-                <table style="width: 100%">
-                  <tbody>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <img
-                          src="https://cdn.wadiz.kr/ft/images/green001/2023/0621/20230621164038552_102.jpg/wadiz/format/jpg/quality/80"
-                          class="fr-fic fr-dib"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <a href="#coupon" rel="noopener noreferrer" target="_self"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090450082_43.gif"
-                            class="fr-fic fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="width: 50%; padding: 0 !important; border: none">
-                        <p id="on" style="margin: 0">
-                          <a href="#on" rel="noopener noreferrer" target="_self"
-                            ><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090147688_43.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib"
-                          /></a>
-                        </p>
-                      </td>
-                      <td style="width: 50%; padding: 0 !important; border: none">
-                        <a href="#off" rel="noopener noreferrer" target="_self"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090148148_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <img
-                          src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090148486_43.jpg/wadiz/format/jpg/quality/80"
-                          class="fr-fil fr-dib"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <br />
-                        <div
-                          data-collection-keyword="wlbon, on"
-                          data-domain="funding, store"
-                          data-environment="live"
-                          data-horizontal-spacing="12"
-                          data-image-height-ratio="70"
-                          data-limit="2"
-                          data-order="recent, recommend"
-                          data-vertical-spacing="30"
-                        >
-                          <br />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <a href="#all" rel="noopener noreferrer" target="_self"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090153889_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="width: 100%; padding: 0 !important; border: none">
-                        <p id="off" style="margin: 0">
-                          <a href="#on" rel="noopener noreferrer" target="_self"
-                            ><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090149465_43.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib"
-                          /></a>
-                        </p>
-                      </td>
-                      <td style="width: 100%; padding: 0 !important; border: none">
-                        <a href="#off" rel="noopener noreferrer" target="_self"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090150752_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <img
-                          src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609092534470_57.jpg/wadiz/format/jpg/quality/80"
-                          class="fr-fic fr-dib"
-                        />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <br />
-                        <div
-                          data-collection-keyword="wlboff, off"
-                          data-domain="funding, store"
-                          data-environment="live"
-                          data-horizontal-spacing="12"
-                          data-image-height-ratio="70"
-                          data-limit="2"
-                          data-order="popular, satisfaction"
-                          data-vertical-spacing="30"
-                        >
-                          <br />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <a href="#all" rel="noopener noreferrer" target="_self"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609091101004_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fic fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <p id="coupon" style="margin: 0">
-                          <a
-                            href="https://www.wadiz.kr/web/coupon-zone"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            ><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0615/20230615145846434_117.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib"
-                          /></a>
-                        </p>
-                        <p style="margin: 0"><br /></p>
-                        <div
-                          data-component-name="downloadable-coupons"
-                          data-max-width="90%"
-                          data-template-numbers="3152,3153,3154,3155"
-                        >
-                          <br />
-                        </div>
-                        <br /><br />
-                        <p style="margin: 0">
-                          <img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090156912_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                          /><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090158930_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                          />
-                          <a
-                            href="https://www.wadiz.kr/web/wreward/comingsoon/collection/gongganworkandlife2"
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            ><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090159823_43.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib"
-                          /></a>
-                          <a
-                            href="https://www.wadiz.kr/web/wreward/collection/gongganworkandlife?order=recommend&endYn=N&keyword="
-                            rel="noopener noreferrer"
-                            target="_blank"
-                            ><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090200223_43.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib" /><img
-                              src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090200649_43.jpg/wadiz/format/jpg/quality/80"
-                              class="fr-fil fr-dib"
-                          /></a>
-                        </p>
-                        <p id="all" style="margin: 0">
-                          <img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090154899_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                          />
-                          <img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609090155435_43.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fil fr-dib"
-                          />
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <!--최하단 컬렉션(전체)-->
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <br />
-                        <div
-                          data-collection-keyword="worklifebal, onoff"
-                          data-domain="funding, store"
-                          data-environment="live"
-                          data-horizontal-spacing="12"
-                          data-image-height-ratio="70"
-                          data-limit="30"
-                          data-order="recent, satisfaction"
-                          data-vertical-spacing="30"
-                        >
-                          <br />
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td colspan="2" style="width: 100%; padding: 0 !important; border: none">
-                        <a
-                          href="https://www.wadiz.kr/web/wreward/collection/worklifebal?order=recommend&endYn=N"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609094827168_95.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fic fr-dib"
-                        /></a>
-                        <a
-                          href="https://www.wadiz.kr/web/store/collection/onoff"
-                          rel="noopener noreferrer"
-                          target="_blank"
-                          ><img
-                            src="https://cdn.wadiz.kr/ft/images/green001/2023/0609/20230609094827651_95.jpg/wadiz/format/jpg/quality/80"
-                            class="fr-fic fr-dib"
-                        /></a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p><br /></p>
+                <p style="margin: 0">
+                  <img
+                    style="margin: 0"
+                    src="https://static.makercenter.wadiz.kr/board/image/068badac-e05e-4da1-bd15-29f097136539.jpg"
+                    class="fr-fic fr-dib"
+                  />
+                </p>
+                <p style="margin: 0">
+                  <img
+                    style="margin: 0"
+                    src="https://static.makercenter.wadiz.kr/board/image/c374d39d-bd94-458e-a1ff-f2c502a498ad.jpg"
+                    class="fr-fic fr-dib"
+                  />
+                </p>
+                <p>
+                  <a
+                    href="https://wadiz.channel.io/lounge"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><img
+                      style="margin: 0"
+                      src="https://static.makercenter.wadiz.kr/board/image/5815d2e5-088b-48d0-b8ea-7a32844a18da.jpg"
+                      class="fr-fic fr-dib nearest"
+                  /></a>
+                </p>
               </div>
               <div class="article-attached">
                 <ul></ul>
@@ -675,7 +437,7 @@
           </div>
           <div class="wcommunity-detail-bottom">
             <div class="wcommunity-share-area">
-              <button type="button" class="btn-symp"><span id="sympCount">1</span></button>
+              <button type="button" class="btn-symp"><span id="sympCount">0</span></button>
               <div class="btn-share">
                 <button class="kakao" onclick="wadiz.share.kakao();"></button>
                 <button class="facebook" onclick="wadiz.share.facebook();"></button>
@@ -689,7 +451,7 @@
               <div class="wboard-list">
                 <ul>
                   <li>
-                    <a href="/web/wboard/newsBoardDetail/8476?headWordId=&cPage=1">
+                    <a href="/">
                       <p class="title">
                         <em class="category">이벤트</em>
                         [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
@@ -720,54 +482,46 @@
           </div>
         </div>
       </div>
-      <input
-        type="hidden"
-        id="articleUrl"
-        value="https://www.wadiz.kr/web/wboard/newsBoardDetail/8476"
-      />
+
       <div id="fb-root"></div>
       <div id="footer">
         <footer id="footer" class="web-footer inner-utils">
-          <div class="FooterMenu_container__15kue">
-            <div class="FooterMenu_bar__22KhW">
-              <div class="FooterMenu_left__3rQKu">
-                <div class="FooterMenu_menu__3nRbk Linker_btnMore__1PEzz">
+          <div class="FMenu_container">
+            <div class="FMenu_bar">
+              <div class="FMenu_left">
+                <div class="FMenu_menu Linker_btnMore">
                   정책 · 약관
                   <!-- 약관 옆 화살표 이미지 -->
                   <img src="" alt="" />
                 </div>
-                <div class="FooterMenu_menu__3nRbk FooterMenu_bold__2zNg0 Linker_btnMore__1PEzz">
+                <div class="FMenu_menu FMenu_bold Linker_btnMore">
                   개인정보처리방침
                   <!-- 방침 옆 화살표 이미지 -->
                   <img src="" alt="" />
                 </div>
               </div>
-              <div class="FooterMenu_right__28Tuu">
-                <div class="FooterMenu_menu__3nRbk Linker_btnMore__1PEzz">
+              <div class="FMenu_right">
+                <div class="FMenu_menu Linker_btnMore">
                   제휴문의
                   <!-- 문의 옆 화살표 이미지 -->
                   <img src="" alt="" />
                 </div>
-                <a href="/" class="FooterMenu_menu__3nRbk" target="_blank" rel="noopener noreferrer"
+                <a href="/" class="FMenu_menu" target="_blank" rel="noopener noreferrer"
                   >공지사항
                   <!-- 공지사항 옆 이동 이미지 -->
                   <img src="" alt="" /></a
-                ><a
-                  href="/"
-                  class="FooterMenu_menu__3nRbk"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                ><a href="/" class="FMenu_menu" target="_blank" rel="noopener noreferrer"
                   >인재채용
                   <!-- 인재채용 옆 이동 이미지 -->
                   <img src="" alt=""
                 /></a>
-                <div class="FooterMenu_menu__3nRbk Linker_btnMore__1PEzz">
+                <div class="FMenu_menu Linker_btnMore">
                   SNS
                   <!-- sns 옆 화살표 이미지 -->
                   <img src="" alt="" />
                 </div>
-                <div class="FooterMenu_menu__3nRbk">
-                  <div class="FooterMenu_languageMenu__3Iplq Linker_btnMore__1PEzz">
+                <div class="FMenu_menu">
+                  <div class="FMenu_languageMenu Linker_btnMore">
                     <!-- language, 이건 이미지로만 이루어진듯 이미지 지우니 메뉴가 안나옴 -->
                     language
                   </div>
@@ -775,26 +529,22 @@
               </div>
             </div>
           </div>
-          <div class="FooterContainer_container__3LibG">
-            <div class="FooterContainer_inner__3Nket">
-              <section class="FooterContainer_leftSection__2BtHF">
-                <strong class="FooterContainer_title__1mcxQ">와디즈 고객센터</strong>
-                <div class="FooterContainer_buttonBlock__FQR2E">
-                  <button type="button" class="FooterContainer_directBtn__2ICcT">
+          <div class="FContainer_container">
+            <div class="FContainer_inner">
+              <section class="FContainer_leftSection">
+                <strong class="FContainer_title">와디즈 고객센터</strong>
+                <div class="FContainer_buttonBlock">
+                  <button type="button" class="FContainer_directBtn">
                     채팅 상담하기
                     <!-- 상담하기 옆 화살표 이미지 -->
                     <img src="" alt="" /></button
-                  ><a
-                    href="/"
-                    class="FooterContainer_directBtn__2ICcT"
-                    target="_blank"
-                    rel="noreferrer"
+                  ><a href="/" class="FContainer_directBtn" target="_blank" rel="noreferrer"
                     >문의 등록하기
                     <!-- 등록하기 옆 화살표 이미지 -->
                     <img src="" alt="" /></a
                   ><a
                     href="/"
-                    class="FooterContainer_directBtn__2ICcT FooterContainer_customcenterBtn__4TIQa"
+                    class="FContainer_directBtn FContainer_customcenterBtn"
                     target="_blank"
                     rel="noreferrer"
                     >도움말 센터 바로가기
@@ -802,22 +552,22 @@
                     <img src="" alt=""
                   /></a>
                 </div>
-                <dl class="FooterContainer_enableTime__B19o3">
+                <dl class="FContainer_enableTime">
                   <dt>상담 가능 시간</dt>
                   <dd>평일 오전 9시 ~ 오후 6시 (주말, 공휴일 제외)</dd>
                 </dl>
               </section>
-              <section class="FooterContainer_rightSection__2uaQk">
+              <section class="FContainer_rightSection">
                 <address>
-                  <ul class="FooterInfo_info__1aB0e">
+                  <ul class="FInfo_info">
                     <li>와디즈㈜</li>
                     <li>대표이사 신혜성</li>
                     <li>사업자등록번호 258-87-01370</li>
                     <li>통신판매업신고번호 2021-성남분당C-1153</li>
                     <li>경기 성남시 분당구 판교로 242 PDC A동 402호</li>
                   </ul>
-                  <div class="FooterInfo_contactInfoWrap__2u2vv">
-                    <ul class="FooterInfo_info__1aB0e FooterInfo_contactInfo__sPvNn">
+                  <div class="FInfo_contactInfoWrap">
+                    <ul class="FInfo_info FInfo_contactInfo">
                       <li>
                         <a
                           href="https://helpcenter.wadiz.kr/hc/ko/requests/new"
@@ -828,17 +578,17 @@
                       </li>
                       <li>유선 상담 <a href="tel:1661-9056">1661-9056</a></li>
                     </ul>
-                    <span class="FooterInfo_copyright__802qi">© wadiz Co., Ltd.</span>
+                    <span class="FInfo_copyright">© wadiz Co., Ltd.</span>
                   </div>
                 </address>
-                <div class="FooterContainer_infoNotice__3m1oJ">
+                <div class="FContainer_infoNotice">
                   <p>일부 상품의 경우 와디즈는 통신판매중개자이며 통신판매 당사자가 아닙니다.</p>
                   <p>
                     해당되는 상품의 경우 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게
                     있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.
                   </p>
                 </div>
-                <div class="FooterContainer_appStoreSection__2zpAZ">
+                <div class="FContainer_appStoreSection">
                   <!-- 이건 js로 이미지를 넣었는지 이미지 경로가 존재 하지 않음 -->
                   <a href="/" target="_blank" class="icon-google-play" rel="noopener noreferrer"
                     >Android앱</a
