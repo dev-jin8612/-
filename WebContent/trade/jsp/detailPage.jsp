@@ -74,8 +74,21 @@
                     <div>
                       <button class="nav_tapButton nav_listDetails">
                         더보기
-                        <!-- 더보기 오른쪽의 화살표 모양 이미지를 넣기 -->
-                        <img src="" alt="" />
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          focusable="false"
+                          role="presentation"
+                          class="withIcon_icon GNBDesktop_icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"
+                          ></path>
+                        </svg>                        
+
                       </button>
                       <div class="feed" role="navigation">
                         <div class="feed-a">
@@ -664,5 +677,7 @@
         </footer>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/listjs.js"></script>
 </body>
 </html>
