@@ -7,12 +7,9 @@
 <title>Insert title here</title>
 
 <link rel="stylesheet" href="../css/cssSet1.css" />
-<link rel="stylesheet" href="../css/cssSet2.css" />
-<link rel="stylesheet" href="../css/cssSet3.css" />
-<link rel="stylesheet" href="../css/custom.css" />
 </head>
-  <body>
-      <div id="page-container">
+   <body>
+    <div id="page-container">
       <div id="wz-header">
         <div class="web-header">
           <div class="web-header-mobile">
@@ -72,13 +69,25 @@
                     <a href="/" class="nav_tapButton"><span>스토어</span></a>
                   </li>
                   <li class="nav_tap">
-                    <div>
+                    <div class="feed_show">
                       <button class="nav_tapButton nav_listDetails">
                         더보기
-                        <!-- 더보기 오른쪽의 화살표 모양 이미지를 넣기 -->
-                        <img src="" alt="" />
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          focusable="false"
+                          role="presentation"
+                          class="withIcon_icon GNBDesktop_icon"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"
+                          ></path>
+                        </svg>
                       </button>
-                      <div class="feed" role="navigation">
+                      <div class="feed feed2" role="navigation">
                         <div class="feed-a">
                           <div class="feed-b">
                             <div class="feed-c" style="background-color: rgb(255, 248, 231)">
@@ -421,7 +430,7 @@
                   <div
                     class="thumb"
                     style="
-                      background-image: url(https://cdn.wadiz.kr/ft/images/green001/2023/0607/20230607134409356_0.jpg/wadiz/resize/400/format/jpg/quality/80);
+                      background-image: url(https://cdn.wadiz.kr/ft/images/green001/2023/0626/20230626223656350_0.jpg/wadiz/resize/400/format/jpg/quality/80);
                     "
                   ></div>
 
@@ -700,5 +709,7 @@
         </footer>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/listjs.js"></script>
   </body>
 </html>
