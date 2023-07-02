@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
 a,
 abbr,
 acronym,
@@ -90,6 +98,18 @@ video {
   padding: 0;
   vertical-align: baseline;
 }
+
+
+body {
+  line-height: 1.3;
+  word-break: keep-all;
+  color: #343a40;
+  font-family: 'Pretendard-Regular', 'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', -apple-system, blinkmacsystemfont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+}
 div {
   display: block;
 }
@@ -142,9 +162,16 @@ p {
   padding-left: 94px;
 }
 
-.Avatar_avatar > span {
+.Avatar-avatar {
+  position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50px);
+
+}
+
+.Avatar-hasImage {
     display: block;
-    position: absolute;
     opacity: 1;
     border-radius: 100%;
     background: no-repeat 50% / cover;
@@ -153,16 +180,6 @@ p {
   
   }
 
-.Avatar-avatar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-    height: 80px;
-    margin-bottom: 8px;
-
-  
-}
 
 .SupporterProfileInfo-supporterInfo {
   flex-basis: 370px;

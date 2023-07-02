@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>팔로워 팔로잉 목록</title>
 <link rel="stylesheet" href="following.css" />
+   <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
 <body>
  <link rel="stylesheet" href="https://static.wadiz.kr/static/iam/main.cb8b16fe.css" />

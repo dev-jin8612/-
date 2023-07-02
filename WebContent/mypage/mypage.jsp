@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>마이페이지</title>
 <link rel="stylesheet" href="mypage.css">
+ <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
 <body>
 
@@ -41,7 +44,7 @@
               <div class="SupporterProfile-inner">
 
                 <h3 class="BlindText-textHidden"></h3>
-                <div aria-hidden="true" class="Avatar_avatar">
+                <div aria-hidden="true" class="Avatar-avatar">
                     <span class="Avatar-hasImage" style="background-image: url(&quot;https://static.wadiz.kr/assets/icon/profile-icon-2.png&quot;);">
                     </span>
                 </div>
