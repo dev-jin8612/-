@@ -36,123 +36,34 @@
   font-display: swap;
 }
 
-*,
-:after,
-:before {
+*,:after,:before {
   box-sizing: border-box;
 }
 
-body,
-button,
-html,
-input,
-textarea {
+body,button,html,
+input,textarea {
   font-family: pretendard, Apple SD Gothic Neo, Segoe UI, Malgun Gothic, Apple Color Emoji,
     Segoe UI Emoji, Segoe UI Symbol, -apple-system, blinkmacsystemfont, sans-serif;
 }
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-a,
-abbr,
-acronym,
-address,
-applet,
-article,
-aside,
-audio,
-b,
-big,
-blockquote,
-body,
-button,
-canvas,
-caption,
-center,
-cite,
-code,
-dd,
-del,
-details,
-dfn,
-div,
-dl,
-dt,
-em,
-embed,
-fieldset,
-figcaption,
-figure,
-footer,
-form,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-header,
-hgroup,
-html,
-i,
-iframe,
-img,
-input,
-ins,
-kbd,
-label,
-legend,
-li,
-mark,
-menu,
-nav,
-object,
-ol,
-output,
-p,
-pre,
-q,
-ruby,
-s,
-samp,
-section,
-select,
-small,
-span,
-strike,
-strong,
-sub,
-summary,
-sup,
-table,
-tbody,
-td,
-textarea,
-tfoot,
-th,
-thead,
-time,
-tr,
-tt,
-u,
-ul,
-var,
-video {
+
+a,abbr,acronym,address,applet,article,
+aside,audio,b,big,blockquote,body,button,
+canvas,caption,center,cite,code,dd,del,
+details,dfn,div,dl,dt,em,embed,fieldset,
+figcaption,figure,footer,form,h1,h2,h3,
+h4,h5,h6,header,hgroup,html,i,iframe,img,
+input,ins,kbd,label,legend,li,mark,menu,
+nav,object,ol,output,p,pre,q,ruby,s,samp,
+section,select,small,span,strike,strong,
+sub,summary,sup,table,tbody,td,textarea,
+tfoot,th,thead,time,tr,tt,u,ul,var,video {
   margin: 0;
   border: 0;
   padding: 0;
   vertical-align: baseline;
 }
-article,
-aside,
-figcaption,
-figure,
-footer,
-header,
-nav,
-section {
+article,aside,figcaption,figure,
+footer,header,nav,section {
   display: block;
 }
 
@@ -160,40 +71,30 @@ div {
   display: block;
 }
 
-li,
-ol,
-ul {
+li,ol,ul {
   list-style: none;
 }
-blockquote,
-q {
+blockquote,q {
   quotes: none;
 }
 blockquote:after,
 blockquote:before,
-q:after,
-q:before {
+q:after,q:before {
   content: '';
   content: none;
 }
-canvas,
-img,
-picture,
-video {
+canvas,img,
+picture,video {
   max-width: 100%;
 }
-iframe,
-img,
-video {
+iframe,img,video {
   vertical-align: top;
 }
-img,
-video {
+img,video {
   max-width: 100%;
   height: auto;
 }
-a,
-button {
+a,button {
   outline: none;
   -webkit-appearance: none;
 }
@@ -202,26 +103,19 @@ a {
   text-decoration: none;
 }
 
-a,
-input,
-optgroup,
-select,
-textarea {
+a,input,optgroup,
+select,textarea {
   color: inherit;
 }
 
 button {
   background-color: transparent;
 }
-input,
-textarea {
+input,textarea {
   background: none;
 }
-body,
-button,
-input,
-select,
-textarea {
+body,button,input,
+select,textarea {
   font-family: inherit;
 }
 input::-webkit-input-placeholder {
@@ -236,8 +130,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body,
-table th {
+body,table th {
   font-weight: 400;
 }
 body {
@@ -607,6 +500,7 @@ html.wadiz-app .web-header {
   font-size: 14px;
   font-weight: 700;
 }
+
 @media screen and (min-width: 1097px) {
   .feed-c {
     width: 200px;
@@ -1302,45 +1196,6 @@ html.scroll-top #footer button.page-top {
   color: #545a60;
   font-size: 24px;
 }
-.web-footer .externals {
-  display: none;
-  overflow: hidden;
-  vertical-align: middle;
-}
-.web-footer .externals li {
-  float: left;
-  margin-bottom: 12px;
-  line-height: 24px;
-}
-.web-footer .externals-wrap > ul {
-  display: inline-block;
-  vertical-align: middle;
-}
-.web-footer .externals-wrap > ul:first-of-type > li {
-  margin-right: 28px;
-}
-.web-footer .externals-wrap > ul:last-of-type > li {
-  margin-right: 24px;
-}
-.web-footer .externals-wrap > ul:last-of-type > li:last-of-type {
-  margin-right: 0;
-}
-.web-footer .externals ul ul {
-  display: inline-block;
-  vertical-align: middle;
-}
-.web-footer .externals ul ul li {
-  margin-right: 0;
-  margin-bottom: 0;
-}
-.web-footer .externals ul ul li:after {
-  margin: 0 0.4em;
-  content: '|';
-}
-.web-footer .externals ul ul li:last-of-type:after {
-  margin: 0;
-  content: none;
-}
 .web-footer .question {
   display: block;
   position: fixed;
@@ -1594,18 +1449,18 @@ html.scroll-top footer.inner-utils button.page-top {
   position: relative;
   outline: none;
 }
-.Linker_btnMore > .Linker_linkerIcon__1QJpf {
+.Linker_btnMore > .Linker_linkerIcon {
   display: inline-block !important;
   transform: rotate(90deg);
   animation: Linker_activeHide__1p9gT 0.5s forwards;
   margin-left: 4px;
   color: rgba(0, 0, 0, 0.54);
 }
-.Linker_btnMore.Linker_active__mkIlt .Linker_linkerIcon__1QJpf {
+.Linker_btnMore.Linker_active .Linker_linkerIcon {
   animation: Linker_activeShow__3Lto7 0.5s forwards;
 }
 
-.FMenu_languageMenu {
+.FMenu_lang {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1613,7 +1468,7 @@ html.scroll-top footer.inner-utils button.page-top {
   cursor: pointer;
   width: 100%;
 }
-.FMenu_languageMenu [class*='ContactMenu_container'] {
+.FMenu_langu [class*='ContactMenu_container'] {
   width: 270px !important;
 }
 
@@ -2616,3 +2471,36 @@ svg:not(:root) {
   overflow-clip-margin: content-box;
   overflow: hidden;
 }
+
+
+
+
+
+.FooterMenu_bar__22KhW .FooterMenu_left__3rQKu .FooterMenu_menu__3nRbk, .FooterMenu_bar__22KhW .FooterMenu_right__28Tuu .FooterMenu_menu__3nRbk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    width: 50%;
+    height: 40px;
+    text-align: left;
+    color: #495057;
+    font-weight: 500;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    line-height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+@media screen and (min-width: 1097px){
+.FMenu_bar .FMenu_left .FMenu_menu, .FMenu_bar .FMenu_right .FMenu_menu {
+    padding: 0 12px 0 16px;
+    width: auto;
+}}
+
+/* 아람님 헤더 가져오면서 추가한 css */
+#changewidth, .all-category *{
+	width:100%
+}
+
+
