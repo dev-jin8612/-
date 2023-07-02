@@ -1,0 +1,144 @@
+.aaawww{display: flex; max-width: 1440px; margin: 0 auto; width: 100%; border-bottom: 1px solid #f2f4f6}
+.side {
+	padding:30px 20px;
+	margin-top: 0;
+	border-right: 1px solid #f2f4f6;
+}
+.aaawww .side-title{line-height: 38px;font-size: 28px;font-weight: 700; margin-bottom: 20px}
+.aaawww .side-img-wrap{
+	clear: right;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 3px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.aaawww .contents{
+	display: flex;
+	margin: 0 32px 16px 0;
+}
+.aaawww .img{
+	background-image: url("https://cdn2.wadiz.kr/2022/11/11/26e66aab-d1f2-44bf-941d-1b3bcbe70d95.png/wadiz/resize/800/format/jpg/quality/85/");
+	width: 100%;
+    height: 130px;
+}
+
+.main{display: flex; max-width: 1440px; margin: 0 auto; width: 100%; border-bottom: 1px solid #f2f4f6}
+.main .title{line-height: 38px;font-size: 28px;font-weight: 700; margin-bottom: 20px}
+.left{
+	padding:30px 20px;
+	margin-top: 0;
+	border-right: 1px solid #f2f4f6;
+}
+.left .img-wrap{
+	clear: right;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 3px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.left .img {
+    background: url("https://cdn.wadiz.kr/wwwwadiz/green001/2023/0512/20230512171600792_213344.png/wadiz/resize/600/format/jpg/quality/85/") no-repeat 50%/cover;
+    width: 100%;
+    height: 130px;
+}
+.left .infor .sub_title{
+	overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    width: 100%;
+    height: auto;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    margin-bottom: 5px;
+}
+
+.left .infor .user{
+	font-size: 14px;
+    font-weight: 600;
+    margin-right: 4px;
+    line-height: 20px;
+    color: #00c4c4;
+}
+
+.left .contents{
+    display: flex;
+    flex-wrap: wrap;
+}
+.left .list{
+	margin: 0 32px 16px 0;
+    width: calc(33.333% - 32.333px);
+    }
+.left .list:nth-child(5){
+margin-top: 0;
+    width: calc(66.666% - 31.666px);
+}
+
+.right{
+	padding:30px 20px;
+    min-width: 427px;
+    max-width: 427px;
+    
+}
+.right li{
+    display: flex;
+    justify-content: space-between;
+
+}
+.right li:not(:last-child){margin-bottom: 16px;}
+.right li .num{
+    line-height: 28px;
+    font-size: 21px;
+    border-radius: 3px;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #000;
+    width: 30px;
+    font-weight: 600
+
+}
+.right li .infor{
+ overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 4px;
+    width: 100%;
+    height: auto;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+
+.right .contents .img-wrap{
+	    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 3px;
+    overflow: hidden;
+    width: 90px;
+}
+.right .contents .img {
+    background: url("https://cdn.wadiz.kr/wwwwadiz/green001/2023/0612/20230612165150935_217620.png/wadiz/resize/200/format/jpg/quality/85/") no-repeat 50%/cover border-box;
+    transition-property: opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: .25s;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 64px;
+}
