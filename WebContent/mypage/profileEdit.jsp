@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>프로필 편집</title>
 <link rel="stylesheet" href="profileEdit.css">
+ <link rel="stylesheet" href="./css/font/font.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/layout.css">
 </head>
 <body>
   <div id="waccountWrap">
