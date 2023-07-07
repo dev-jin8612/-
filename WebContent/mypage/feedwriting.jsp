@@ -29,7 +29,7 @@
                 <div class="AppNavbar-maker">
                     <div class="Avatar-avatar Avatar-xs">
                         <span>
-                            ::before
+                        
                         </span>
                     </div> 
                     <div> 윤담 </div>
@@ -299,8 +299,6 @@
                                 <em class="helper ImageFormField_helper__3XC5c">2MB 이하의 JPG, JPEG, GIF, PNG 파일</em><br>
                                 <em class="helper ImageFormField_helper__3XC5c">해상도 630x400 픽셀 이상</em><br>
                                 <em class="helper ImageFormField_helper__3XC5c">여러 장 등록돼요.</em>
-
-
                             </div>
                             <!-- 첨부할 사진 선택하면 뜨는 "내가 고른 사진 프리뷰" 대가리-->
                             <div class="ImageFormField-imageWrapper" id="myPicPicture">
@@ -315,22 +313,16 @@
                                 </div>
                             </div>
                             <!-- 내가고른 사진 프리뷰 꼬리 -->
-
-
                         </div>
                     </div>
                 </div>
             </section>
-
             <div class="StoryMakerAgreementNoticeBox-container StoryMakerAgreementNoticeBox-disable"></div>
             <!-- 바로 위에거 쓸모없어보여서 아직 안만듦 -->
-
             <section class="Section-container StoryEditorWrapperItemWeb-container" style="max-width: 720px">
                 <div class="Section-header spacing-4">
                     <h2 class="Section-title Section-isRequired">피드 내용
-                        
                     </h2>
-                   
                 </div>
                 <div class="Section-content">
                     <div class="Editor-container StoryEditorWrapperItemWeb-editor">
@@ -345,13 +337,11 @@
                                             <button id="paragraphFormat-1" type="button" tabindex="-1" role="button" aria-controls="dropdown-menu-paragraphFormat-1" aria-expanded="false" aria-haspopup="true" title="문단 스타일" class="fr-command fr-btn fr-dropdown fr-selection" data-cmd="paragraphFormat">
                                                 <span style="width:80px">문단 스타일</span>
                                             </button>
-
-
                                             <!-- 빈칸 -->
-                                            <div id="dropdown-menu-paragraphFormat-1" class="fr-dropdown-menu" role="listbox" aria-labelledby="paragraphFormat-1" aria-hidden="true">
-                                                <div class="fr-dropdown-wrapper" role="presentation">
-                                                    <div class="fr-dropdown-content" role="presentation">
-                                                        <ul class="fr-dropdown-list" role="presentation">
+                                            <div id="dropdown-menu-paragraphFormat-1" class="fr-dropdown-menu">
+                                                <div class="fr-dropdown-wrapper" >
+                                                    <div class="fr-dropdown-content">
+                                                        <ul class="fr-dropdown-list" >
                                                             <li role="presentation">
                                                                 <h1 style="padding: 0 !important; margin: 0 !important; border: 0 !important; background-color: transparent !important; font-weight: bold !important; font-size: 2em !important; " role="presentation">
                                                                 <a class="fr-command" tabindex="-1" role="option" data-cmd="paragraphFormat" data-param1="H1" title="대제목 1">대제목 1</a>
@@ -381,8 +371,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                             <!-- 굵게 -->
                                             <button id="bold-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="굵게 (Ctrl+B)" class="fr-command fr-btn" data-cmd="bold">
                                                 <i aria-hidden="true">
@@ -402,10 +390,6 @@
                                                   <label aria-hidden="true">밑줄</label>
                                                 </i>
                                               <span class="fr-sr-only">밑줄</span></button>
-
-
-
-
                                                 <!-- 인용 -->
                                               <button id="quote-1" type="button" tabindex="-1" role="button" title="인용" class="fr-command fr-btn" data-cmd="quote">
                                                 <i aria-hidden="true">
@@ -415,8 +399,6 @@
                                                   <label aria-hidden="true">인용</label>
                                                 </i>
                                               <span class="fr-sr-only">인용</span></button>
-
-
                                                 <!-- 색상 -->
                                               <button id="textColor-1" type="button" tabindex="-1" role="button" title="색상" class="fr-command fr-btn" data-cmd="textColor" data-popup="true">
                                                 <i aria-hidden="true">
@@ -426,8 +408,6 @@
                                                   <label aria-hidden="true">색상</label>
                                                 </i>
                                               <span class="fr-sr-only">색상</span></button>
-
-
                                                 <!-- 형광펜 -->
                                               <button id="highlighter-1" type="button" tabindex="-1" role="button" title="형광펜" class="fr-command fr-btn" data-cmd="highlighter">
                                                 <i aria-hidden="true">
@@ -437,7 +417,6 @@
                                                   <label aria-hidden="true">형광펜</label>
                                                 </i>
                                               <span class="fr-sr-only">형광펜</span></button>
-
                                                 <!-- 정렬 -->
                                               <button id="align-1" type="button" tabindex="-1" role="button" aria-controls="dropdown-menu-align-1" aria-expanded="false" aria-haspopup="true" title="정렬" class="fr-command fr-btn fr-dropdown" data-cmd="align">
                                                 <i aria-hidden="true">
@@ -447,10 +426,6 @@
                                                   <label aria-hidden="true">정렬</label>
                                                 </i>
                                               <span class="fr-sr-only">정렬</span></button>
-
-                                                
-
-
                                                 <!-- 빈칸 (이거 왜 있는건지 모르겠음) -->
                                               <div id="dropdown-menu-align-1" class="fr-dropdown-menu" role="listbox" aria-labelledby="align-1" aria-hidden="true">
                                                 <div class="fr-dropdown-wrapper" role="presentation">
@@ -505,8 +480,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-
                                                 <!-- 숫자목록 -->
                                                 <button id="formatOL-1" type="button" tabindex="-1" role="button" title="숫자 목록" class="fr-command fr-btn" data-cmd="formatOL">
                                                     <i aria-hidden="true">
@@ -516,8 +489,6 @@
                                                       <label aria-hidden="true">숫자 목록</label>
                                                     </i>
                                                   <span class="fr-sr-only">숫자 목록</span></button>
-
-
                                                     <!-- 점 목록 -->
                                                   <button id="formatUL-1" type="button" tabindex="-1" role="button" title="점 목록" class="fr-command fr-btn" data-cmd="formatUL">
                                                     <i aria-hidden="true">
@@ -527,8 +498,6 @@
                                                       <label aria-hidden="true">점 목록</label>
                                                     </i>
                                                   <span class="fr-sr-only">점 목록</span></button>
-
-
                                                     <!-- 구분선 -->
                                                   <button id="insertHR-1" type="button" tabindex="-1" role="button" title="구분선" class="fr-command fr-btn" data-cmd="insertHR">
                                                     <i aria-hidden="true">
@@ -538,8 +507,6 @@
                                                       <label aria-hidden="true">구분선</label>
                                                     </i>
                                                   <span class="fr-sr-only">구분선</span></button>
-
-
                                                     <!-- 링크 -->
                                                   <button id="insertLink-1" type="button" tabindex="-1" role="button" title="링크 (Ctrl+K)" class="fr-command fr-btn" data-cmd="insertLink" data-popup="true">
                                                     <i aria-hidden="true">
@@ -549,10 +516,6 @@
                                                       <label aria-hidden="true">링크</label>
                                                     </i>
                                                   <span class="fr-sr-only">링크</span></button>
-
-
-
-
                                                     <!-- 이미지 -->
                                                   <button id="insertImage-1" type="button" tabindex="-1" role="button" title="이미지 (Ctrl+P)" class="fr-command fr-btn" data-cmd="insertImage" data-popup="true">
                                                     <i aria-hidden="true">
@@ -562,8 +525,6 @@
                                                       <label aria-hidden="true">이미지</label>
                                                     </i>
                                                   <span class="fr-sr-only">이미지</span></button>
-
-
                                                     <!-- 동영상 -->
                                                   <button id="insertVideo-1" type="button" tabindex="-1" role="button" title="동영상" class="fr-command fr-btn" data-cmd="insertVideo" data-popup="true">
                                                     <i aria-hidden="true">
@@ -573,10 +534,6 @@
                                                       <label aria-hidden="true">동영상</label>
                                                     </i>
                                                   <span class="fr-sr-only">동영상</span></button>
-
-
-
-
                                                     <!-- 표 -->
                                                   <button id="insertTable-1" type="button" tabindex="-1" role="button" title="표" class="fr-command fr-btn" data-cmd="insertTable" data-popup="true">
                                                     <i aria-hidden="true">
@@ -597,38 +554,22 @@
                                                 <br>
                                             </p>
                                         </div>  -->
-                                    <!-- 본문 쓰는 곳 2 -->
+                                    <!-- 본문 쓰는 곳 2, 수정이 많이 필요할 듯 함 -->
                                     <div class="fr-wrapper" dir="auto" style="height: 600px; overflow: auto;">
                                             <div style="min-height: 600px;" class="fr-element fr-view fr-element-scroll-visible" dir="auto" contenteditable="true" aria-disabled="false" spellcheck="true">
                                                 <h3>이 곳에 여러분들의 여행 스토리를 올려주세요!</h3>
                                             </div>
                                             <span class="fr-placeholder" style="font-size: 16px; line-height: 28px; margin-top: 12px; padding-top: 20px; padding-left: 20px; margin-left: 0px; padding-right: 20px; margin-right: 0px; text-align: left;">내용을 입력해 주세요.</span>  
                                     </div>
-
-
-
-
-                                        <span class="fr-placeholder" style="font-size: 16px; line-height: 28px; margin-top: 12px; padding-top: 20px; padding-left: 20px; margin-left: 0px; padding-right: 20px; margin-right: 0px; text-align: left;">내용을 입력해 주세요.</span>
-                                    </div>
                                     <div class="fr-second-toolbar">
                                         <span class="fr-counter" style="bottom: 0.571429px; margin-right: 7px;">글자 수 : 0</span>
                                     </div>
-                                    
-
-
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
           </form>
           <div class="StoryContainer-btnWrapper">
             <button class="Button-button save-button" type="button" style="width: 420px; max-width: 100%">

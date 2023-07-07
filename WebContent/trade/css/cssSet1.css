@@ -2472,11 +2472,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-
-
-
-
-.FooterMenu_bar__22KhW .FooterMenu_left__3rQKu .FooterMenu_menu__3nRbk, .FooterMenu_bar__22KhW .FooterMenu_right__28Tuu .FooterMenu_menu__3nRbk {
+.FooterMenu_bar__22KhW .FooterMenu_left__3rQKu .FooterMenu_menu__3nRbk,
+.FooterMenu_bar__22KhW .FooterMenu_right__28Tuu .FooterMenu_menu__3nRbk {
     display: flex;
     flex-direction: row;
     align-items: center;

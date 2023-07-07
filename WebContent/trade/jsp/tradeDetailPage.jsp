@@ -11,7 +11,7 @@
 
 <body>
     <div id="page-container">
-          <header>
+    <header>
       <div class="header">
         <div class="inner-header">
           <!-- logo, 함께해요 만들때 수정해야함 -->
