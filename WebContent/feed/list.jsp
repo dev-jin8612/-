@@ -298,6 +298,7 @@
                       <ul>
                         <li><div class="img-wrap"></div></li>
                         <li><div class="img-wrap"></div></li>
+                        <li><div class="img-wrap"></div></li>
                       </ul>
                     </div>
                     <span class="arrow left"></span>
@@ -305,8 +306,6 @@
                     <!-- 페이지네이션 -->
                     <div class="page">
                       <ul>
-                        <li class="active"><span class="sound-only">1</span></li>
-                        <li><span class="sound-only">2</span></li>
                       </ul>
                     </div>
                   </div>
@@ -349,7 +348,6 @@
                     <!-- 이미지 썸네일 -->
                     <div class="thumb">
                       <ul>
-                        <li><div class="img-wrap"></div></li>
                         <li><div class="img-wrap"></div></li>
                       </ul>
                     </div>
@@ -444,6 +442,9 @@
       </div>
     </div><!--layer-popup-->
   </body>
+
+  <script type="text/javascript" src="js/list.js"></script>
+
   <script>
     $(".feed-quick li").on("click",function(){
       $(".feed-quick li").not(this).removeClass('active');
@@ -460,4 +461,5 @@
       }
     });
   </script>
+
 </html>

@@ -238,11 +238,11 @@
           <div class="container-wrap">
             <div class="left-area">
               <div class="gallery-area">
-                <div class="gallery-img">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210430666_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <!-- <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210445072_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210452426_208783.jpg/wadiz/format/jpg/quality/80/" alt=""> -->
-                </div>
+                <ul class="gallery-img">
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210430666_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210445072_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210452426_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                </ul>
                 <div class="arrow-area">
                   <span class="arrow left"></span>
                   <span class="arrow right"></span>
@@ -261,10 +261,88 @@
                   <span class="link-share"></span>
                 </div>
               </div>
+
+              <!-- 댓글영역 -->
+              <div class="comment-area">
+                <ul>
+                  <li>
+                    <div class="user-info">
+                      <a href="">
+                        <span class="user-img"></span>
+                        <span class="user-name">윤담</span>
+                        <span class="date">2시간 전</span>
+                      </a>
+                    </div>
+                    <div class="comment-cont">
+                      좋은 피드네요ㅎㅎ 재밌게 보고갑니다~
+                    </div>
+                    <div class="like-reply">
+                      <div class="like">좋아요 <span class="cout">10개</span></div>
+                      <div class="reply"><button type="button">답글 <span>1개</span></button></div>
+                    </div>
+                    <!-- 답글 wrap -->
+                    <div class="reply-wrap">
+                      <div class="reply-cont-wrap">
+                        <ul>
+                          <li>
+                            <div class="left">
+                              <a href="">
+                                <span class="user-img"></span>
+                              </a>
+                            </div><!--//left-->
+                            <!-- right -->
+                            <div class="right">
+                              <span class="user-name">유아람</span>
+                              <span class="date">2시간 전</span>
+                              <div class="reply-txt">안녕하세요:) 감사합니다</div>
+                            </div>
+                            <!-- //right -->
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 답글 폼 area -->
+                      <div class="reply-form-area">
+                        <div class="user-info">
+                          <div class="user-img"></div>
+                        </div>
+                        <div class="input-area">
+                          <form action="">
+                            <textarea rows="" cols="" placeholder="내용을 입력해 주세요."></textarea>
+                            <div class="btn-area">
+                              <div class="byte">
+                                <span class="present">0</span>
+                                <span class="max">2,000</span>
+                              </div>                			
+                              <button class="full_btn" type="button">등록</button>
+                            </div>
+                          </form>
+                        </div>
+                      </div><!--//reply-form-area-->
+                    </div>
+                    <!-- 답글 wrap -->
+                  </li>
+                </ul>
+              </div>
+              <!-- 댓글 인풋 -->
+              <div class="comment-form">
+              	<form action="">
+                  <div class="form-area">
+                    <div class="user-img"></div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글달기"></textarea>
+                    <button type="button" class="xi-send" aria-label="댓글달기 버튼"></button>
+                  </div><!--//form-area-->
+              	</form>
+              </div>
+            </div><!--//right-area-->
+
             </div>
+
           </div>
         </div>
     </div>
     <!-- //피드 -->
   </body>
+
+  <script type="text/javascript" src="js/view.js"></script>
+
 </html>
