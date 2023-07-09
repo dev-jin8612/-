@@ -4,23 +4,21 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>팔로워 팔로잉 목록</title>
-<link rel="stylesheet" href="following.css" />
-<link rel="stylesheet" href="footer.css" />
-   <link rel="stylesheet" href="./css/font/font.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    
+<title>Insert title here</title>
+
+
+<link rel="stylesheet" href="../css/cssSet1.css" />
+<link rel="stylesheet" href="../../feed/css/layout.css" />
 </head>
-<body>
-	<header>
-	
+   <body>
+    <div id="page-container">
+    <header>
       <div class="header">
         <div class="inner-header">
-          <!-- logo -->
-          <h1 class="feed-tit">피드</h1>
+          <!-- logo, 함께해요 만들때 수정해야함 -->
+          <h1 class="feed-tit">교환해요!</h1>
           <h1 class="logo">
-            <span class="sound-only"></span>
+            <span class="sound-only">와디즈</span>
             <a href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="85" height="25" viewBox="0 0 85 25">
                 <path
@@ -46,7 +44,7 @@
                     <path fill-rule="evenodd"clip-rule="evenodd"d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
                   </svg>
                 </button>
-                <div class="all-category">
+                <div class="all-category" id="changewidth">
                     <div class="layer-bg"></div>
                     <div class="inner-cate">
                         <div>
@@ -223,140 +221,144 @@
         </div>
       </div>
     </header>
+      <form id="forwardForm" method="get">
+        <input type="hidden" id="returnURL" name="returnURL" />
+      </form>
+      <input type="hidden" id="sessionLoginCheck" value="false" />
 
-   
-   
-   
-    <div id="page-container">
-      <div id="my-follow-app" style="min-height: 100vh">
-        <div class="MyFollowAppContainer-container">
-          <div class="MyFollowAppContainer-contents">
-          <!-- 팔로잉/팔로워 제목 -->
-            <p class="MyFollowAppContainer-header">팔로잉 / 팔로워</p>
-            
-            <!-- 선택할 수 있는 팔로잉/팔로워 카테고리 -->
-            <div class="MyFollowAppContainer-tabsWrapper">
-              <div class="Tabs-tabsWrapper">
-                <ul class="Tabs-ul">
-                  <li data-index="0">
-                    <button type="button" class="Tab-tab-First-btn Tab-active" role="tab" data-value="0" >
-                      <span>
-                        <p>팔로잉</p>
-                      </span>
-                    </button>
-                  </li>
+      <main class="board wzui">
+        <div class="ui-header">
+          <h2 class="title">공지 사항</h2>
+        </div>
+        <div class="ui-tabs">
+          <ul>
+            <li class="active"><a href="#">전체</a></li>
+            <li>
+              <a href="#1">공지</a>
+            </li>
+            <li>
+              <a href="#2">이벤트</a>
+            </li>
+            <li>
+              <a href="#38">보도자료</a>
+            </li>
+          </ul>
+        </div>
 
+        <div class="board-main">
+          <ul>
+            <!-- 이곳에 백에서 받아온 데이터를 넣는건가?
+            아무튼 리스트 보이는 구간, 예시로 하나만 남김 -->
+            <li>
+              <a class="article" href="/">
+                <em class="category">이벤트</em>
+                <em class="status closed">진행 중</em>
+                <em class="notice">중요</em>
+                <em class="notice">BEST</em>
+                <div class="info">
+                  <div
+                    class="thumb"
+                    style="
+                      background-image: url(https://cdn.wadiz.kr/ft/images/green001/2023/0626/20230626223656350_0.jpg/wadiz/resize/400/format/jpg/quality/80);
+                    "
+                  ></div>
 
-                  <li data-index="1">
-                    <button type="button" class="Tab-tab-Second-btn" role="tab" data-value="1">
-                      <span>
-                        <p>팔로워</p>
-                      </span>
-                    </button>
-                  </li>
-                </ul>
+                  <h3 class="title">
+                    [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
+                  </h3>
+                  <span class="author">와디즈</span><span class="created-at">2023.06.07</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="board-footer">
+          <div class="pagination">
+            <!-- 모바일용은 임시로 display:none으로 해두겠음 -->
+            <!-- 모바일용 버튼, 이전 목록 대신 이미지 나와야됨 -->
+            <button
+              class="prev-page icon-chevron-left mobile-only"
+              style="display: none"
+              onclick="movePage(0)"
+              disabled
+            >
+              <span class="text-hidden">이전 목록</span>
+            </button>
+            <div class="page">
+              <!-- 모바일용 페이지 리스트 -->
+              <div class="mobile-only" style="display: none">
+                <span class="current-count">1</span>/<span class="total-count"
+                  ><span>105</span> 페이지</span
+                >
+              </div>
+
+              <!-- 데스크탑용 버튼, 이미지 나와야됨 -->
+              <div class="desktop-only">
+                <button class="prev-page icon-chevron-left" onclick="movePage(0)" disabled>
+                  <span class="text-hidden">이전 목록</span>
+                </button>
+
+                <!-- 데스크탑용 페이지 리스트 -->
+                <a class="current" href="#" onclick="movePage(1)">1</a>
+                <a href="#" onclick="movePage(2)">2</a>
+                <a href="#" onclick="movePage(3)">3</a>
+                <a href="#" onclick="movePage(4)">4</a>
+                <a href="#" onclick="movePage(5)">5</a>
+                <a href="#" onclick="movePage(6)">6</a>
+
+                <!-- 데스크탑용 버튼 -->
+                <button class="next-page icon-chevron-right" onclick="movePage(7)">
+                  <span class="text-hidden">다음 목록</span>
+                </button>
               </div>
             </div>
-            <!-- 팔로잉/팔로워 카테고리 끝~~! -->
-            
-            
-            
-            <!-- 팔로잉/팔로워 카드 -->
-            <div >
-                <div class="TabsPanels-tabPanels">
-                    <div class="page-container">
-						<!-- 이거 하나당 팔로잉 혹은 팔로워 1개 -->
-                        <div class="FollowingCard-container">
-                            <div class="FollowingCard-contents">
-                                <a href="/web/maker/detail/73485" class="FollowingCard-leftPanel">
-                                    <div class="FollowingCard-avatarWrapper">
-                                        <div class="Avatar-avatar-FollowingCard-avatar">
-                                            <span class="Avatar-hasImage" style="background-image: url(&quot;https://cdn.wadiz.kr/ft/images/maker/2023/0511/20230511151032855_null.jpg/wadiz/format/jpg/quality/80/optimize&quot;), url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYzl1cmF3eHIyYSIgZD0iTTAgMGg4MHY4MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9IjZ2emt3OXN5NWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYzl1cmF3eHIyYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCA0MGMwIDIyLjA5Mi0xNy45MDkgNDAtNDAgNDBTMCA2Mi4wOTIgMCA0MCAxNy45MDkgMCA0MCAwczQwIDE3LjkwOCA0MCA0MCIgZmlsbD0iI0U5RUNFRiIgbWFzaz0idXJsKCM2dnprdzlzeTViKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJtMjIuMzA1IDI2LjkxNC4yMyAyLjEyMWMtLjAxLjI5LjA0OS41NTkuMTgxLjgwNy4wODUuMjYxLjIyOC40ODUuNDMzLjY3Ni4xOS4yMDMuNDEzLjM0OC42NzQuNDMyLjI0OS4xMzIuNTE5LjE5MS44MDYuMThsLjU1Ny0uMDc1Yy4zNTUtLjA5OS42NjMtLjI3OS45MjQtLjUzN2wuMzI4LS40MjVjLjE5LS4zMjYuMjg1LS42OC4yODctMS4wNTgtLjA3OC0uNzA2LS4xNTQtMS40MTUtLjIzLTIuMTIxLjAxLS4yOS0uMDUtLjU1OS0uMTgtLjgwN2ExLjU3IDEuNTcgMCAwIDAtLjQzNC0uNjc1IDEuNTUzIDEuNTUzIDAgMCAwLS42NzQtLjQzMyAxLjU4NCAxLjU4NCAwIDAgMC0uODA3LS4xOGMtLjE4NS4wMjYtLjM3Mi4wNS0uNTU3LjA3NWEyLjA4MyAyLjA4MyAwIDAgMC0uOTI1LjUzOGwtLjMyNi40MjRjLS4xOS4zMjctLjI4NS42NzktLjI4NyAxLjA1OE01My44ODIgMjcuMzI4djIuNTIyYzAgLjUzOC4yMzMgMS4xMDIuNjEzIDEuNDgyLjE5LjIwMy40MTQuMzQ4LjY3NC40MzMuMjUuMTMuNTE4LjE5LjgwNy4xOC41NDItLjAyNCAxLjEwNC0uMjAyIDEuNDgxLS42MTMuMzc2LS40MS42MTQtLjkxNC42MTQtMS40ODJ2LTIuNTIyYzAtLjUzNi0uMjM0LTEuMS0uNjE0LTEuNDhhMS41NzYgMS41NzYgMCAwIDAtLjY3NC0uNDM0IDEuNTczIDEuNTczIDAgMCAwLS44MDctLjE4Yy0uNTQyLjAyNC0xLjEwNC4yMDItMS40ODEuNjE0LS4zNzYuNDA5LS42MTMuOTEzLS42MTMgMS40OE0zNi4yOTcgMjUuOTQ1Yy0uNzQzIDQuMzM1LTEuNDg0IDguNjczLTIuMjI1IDEzLjAxLS4xODQgMS4wNzUuMjg1IDIuMzA3IDEuNDYzIDIuNTc2IDEuMDE0LjIzIDIuMzc4LS4zMDkgMi41NzYtMS40NjJsMi4yMjUtMTMuMDExYy4xODQtMS4wNzUtLjI4NS0yLjMwOC0xLjQ2My0yLjU3Ny0xLjAxNS0uMjMtMi4zOC4zMDgtMi41NzYgMS40NjRNNDUuMTU4IDUwLjM4NmMtLjE2LS4zMy0uMTAxLS40NzctLjA0NS0uODA2LS4xMTEuMTc1LS4xMjUuMjAxLS4wNDIuMDc3YS4zNy4zNyAwIDAgMSAuMjAzLS4xNzhjLS4yMi4xMTctLjIzNS4xMzgtLjA0Ny4wNjRhMy40MyAzLjQzIDAgMCAxLS4zOTMuMTE2Yy0uMDgyLjAyLS42NTkuMS0uMjY1LjA1Ny0xLjExNS4xMjQtMi4yNC4xOS0zLjM2LjI4NWwtNi44NzcuNTc3Yy0xLjA4OS4wOTItMi4xNDguODk3LTIuMDk1IDIuMDk0LjA0OCAxLjA1Ni45MjYgMi4xOTIgMi4wOTUgMi4wOTNsOC44NC0uNzRjMS40NS0uMTIzIDMuMDQxLS4xMyA0LjI4Ny0uOTggMS42LTEuMDkzIDIuMTYzLTMuMDI4IDEuMzE2LTQuNzcyLS40OC0uOTktMS45NjYtMS4zMzMtMi44NjYtLjc1Mi0xLjAxMy42NTQtMS4yNjMgMS44MDctLjc1IDIuODY1IiBmaWxsPSIjQ0REM0Q4Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=&quot;); border: 1px solid rgb(221, 226, 230);"></span>
-                                        </div>
-                                    </div>
-                                    <div class="FollowingCard-info">
-                                        <p class="FollowingCard-name">로그인</p>
-                                        <p class="FollowingCard-detail">팔로워 124</p>
-                                    </div>
-                                </a>
-                                <div class="FollowingCard-rightPanel">
-          
-                                    <button class="Button-button-3MO4n Button-secondary" type="button">
-                                        <span>
-                                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon-icon-2KxnX" aria-hidden="true" style="width: 14px; height: 14px;">
-                                                <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                            </svg>
-                                            <span class="Button-children">팔로잉</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-            <!-- 개수 하나 끝 -->
-            
-            
-            <!-- 나누는 선 -->
-                            <div class="FollowingCard-divider"></div>
-                        </div>
-
-
-
-			<!-- 두번째꺼 -->
-                        <div class="FollowingCard-container-3">
-                            <div class="FollowingCard-contents">
-                                <a href="/web/maker/detail/73485" class="FollowingCard-leftPanel">
-                                    <div class="FollowingCard-avatarWrapper">
-                                        <div class="Avatar-avatar-FollowingCard-avatar">
-                                            <span class="Avatar-hasImage" style="background-image: url(&quot;https://cdn.wadiz.kr/ft/images/maker/2023/0511/20230511151032855_null.jpg/wadiz/format/jpg/quality/80/optimize&quot;), url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYzl1cmF3eHIyYSIgZD0iTTAgMGg4MHY4MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9IjZ2emt3OXN5NWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYzl1cmF3eHIyYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCA0MGMwIDIyLjA5Mi0xNy45MDkgNDAtNDAgNDBTMCA2Mi4wOTIgMCA0MCAxNy45MDkgMCA0MCAwczQwIDE3LjkwOCA0MCA0MCIgZmlsbD0iI0U5RUNFRiIgbWFzaz0idXJsKCM2dnprdzlzeTViKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJtMjIuMzA1IDI2LjkxNC4yMyAyLjEyMWMtLjAxLjI5LjA0OS41NTkuMTgxLjgwNy4wODUuMjYxLjIyOC40ODUuNDMzLjY3Ni4xOS4yMDMuNDEzLjM0OC42NzQuNDMyLjI0OS4xMzIuNTE5LjE5MS44MDYuMThsLjU1Ny0uMDc1Yy4zNTUtLjA5OS42NjMtLjI3OS45MjQtLjUzN2wuMzI4LS40MjVjLjE5LS4zMjYuMjg1LS42OC4yODctMS4wNTgtLjA3OC0uNzA2LS4xNTQtMS40MTUtLjIzLTIuMTIxLjAxLS4yOS0uMDUtLjU1OS0uMTgtLjgwN2ExLjU3IDEuNTcgMCAwIDAtLjQzNC0uNjc1IDEuNTUzIDEuNTUzIDAgMCAwLS42NzQtLjQzMyAxLjU4NCAxLjU4NCAwIDAgMC0uODA3LS4xOGMtLjE4NS4wMjYtLjM3Mi4wNS0uNTU3LjA3NWEyLjA4MyAyLjA4MyAwIDAgMC0uOTI1LjUzOGwtLjMyNi40MjRjLS4xOS4zMjctLjI4NS42NzktLjI4NyAxLjA1OE01My44ODIgMjcuMzI4djIuNTIyYzAgLjUzOC4yMzMgMS4xMDIuNjEzIDEuNDgyLjE5LjIwMy40MTQuMzQ4LjY3NC40MzMuMjUuMTMuNTE4LjE5LjgwNy4xOC41NDItLjAyNCAxLjEwNC0uMjAyIDEuNDgxLS42MTMuMzc2LS40MS42MTQtLjkxNC42MTQtMS40ODJ2LTIuNTIyYzAtLjUzNi0uMjM0LTEuMS0uNjE0LTEuNDhhMS41NzYgMS41NzYgMCAwIDAtLjY3NC0uNDM0IDEuNTczIDEuNTczIDAgMCAwLS44MDctLjE4Yy0uNTQyLjAyNC0xLjEwNC4yMDItMS40ODEuNjE0LS4zNzYuNDA5LS42MTMuOTEzLS42MTMgMS40OE0zNi4yOTcgMjUuOTQ1Yy0uNzQzIDQuMzM1LTEuNDg0IDguNjczLTIuMjI1IDEzLjAxLS4xODQgMS4wNzUuMjg1IDIuMzA3IDEuNDYzIDIuNTc2IDEuMDE0LjIzIDIuMzc4LS4zMDkgMi41NzYtMS40NjJsMi4yMjUtMTMuMDExYy4xODQtMS4wNzUtLjI4NS0yLjMwOC0xLjQ2My0yLjU3Ny0xLjAxNS0uMjMtMi4zOC4zMDgtMi41NzYgMS40NjRNNDUuMTU4IDUwLjM4NmMtLjE2LS4zMy0uMTAxLS40NzctLjA0NS0uODA2LS4xMTEuMTc1LS4xMjUuMjAxLS4wNDIuMDc3YS4zNy4zNyAwIDAgMSAuMjAzLS4xNzhjLS4yMi4xMTctLjIzNS4xMzgtLjA0Ny4wNjRhMy40MyAzLjQzIDAgMCAxLS4zOTMuMTE2Yy0uMDgyLjAyLS42NTkuMS0uMjY1LjA1Ny0xLjExNS4xMjQtMi4yNC4xOS0zLjM2LjI4NWwtNi44NzcuNTc3Yy0xLjA4OS4wOTItMi4xNDguODk3LTIuMDk1IDIuMDk0LjA0OCAxLjA1Ni45MjYgMi4xOTIgMi4wOTUgMi4wOTNsOC44NC0uNzRjMS40NS0uMTIzIDMuMDQxLS4xMyA0LjI4Ny0uOTggMS42LTEuMDkzIDIuMTYzLTMuMDI4IDEuMzE2LTQuNzcyLS40OC0uOTktMS45NjYtMS4zMzMtMi44NjYtLjc1Mi0xLjAxMy42NTQtMS4yNjMgMS44MDctLjc1IDIuODY1IiBmaWxsPSIjQ0REM0Q4Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=&quot;); 
-                                            border: 1px solid rgb(221, 226, 230);"></span>
-                                        </div>
-                                    </div>
-                                    <div class="FollowingCard-info">
-                                        <p class="FollowingCard-name">귀여운 윤버들</p>
-                                        <p class="FollowingCard-detail">팔로워 오천명</p>
-                                    </div>
-                                </a>
-                                <div class="FollowingCard-rightPanel">
-                              
-                                    <button class="Button-button-3MO4n Button-secondary" type="button">
-                                        <span>
-                                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon-icon-2KxnX" aria-hidden="true" style="width: 14px; height: 14px;">
-                                                <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                            </svg>
-                                            <span class="Button-children">팔로잉</span>
-                                        </span>
-                                    </button>
-
-
-
-
-                                </div>
-                            </div>
-                            <div class="FollowingCard-divider"></div>
-                        </div>
-<!-- 두번째꺼 끝 -->
-
-
-
-                    </div>
-                </div>
-            </div>
+            <!-- 모바일용 버튼 -->
+            <button
+              class="next-page icon-chevron-right mobile-only"
+              style="display: none"
+              onclick="movePage(2)"
+            >
+              <span class="text-hidden">다음 목록</span>
+            </button>
           </div>
-
-
-
-
+          <div class="search">
+            <form method="post" id="news-board-search">
+              <div class="filter-container">
+                <select id="searchSelectInBoard" class="filter" name="">
+                  <option value="tc">제목+내용</option>
+                  <option value="t">제목</option>
+                  <option value="c">내용</option>
+                </select>
+              </div>
+              <div class="field">
+                <label class="text-hidden" for=""></label>
+                <input
+                  id="searchTextInBoard"
+                  name="searchTextInBoard"
+                  class="search-form"
+                  type="text"
+                  value=""
+                />
+                <button class="btn-search dense" type="submit">검색</button>
+              </div>
+            </form>
+            <form
+              id="formSearch"
+              name="formSearchBoard"
+              action="/web/wboard/newsBoardList/"
+              method="post"
+            >
+              <input id="searchText1" name="searchText1" type="hidden" value="" />
+              <input id="searchSelect1" name="searchSelect1" type="hidden" value="" />
+              <input id="searchSelect2" name="searchSelect2" type="hidden" value="" />
+              <input id="searchSelect4" name="searchSelect4" type="hidden" value="" />
+              <input id="searchSelect5" name="searchSelect5" type="hidden" value="" />
+            </form>
+          </div>
         </div>
-      </div>
+      </main>
 
-
-
-
-
-
-
-
-    <!-- 푸터  -->
-	 <div id="footer">
+      <div id="footer">
         <footer id="footer" class="web-footer inner-utils">
           <div class="FMenu_container">
             <div class="FMenu_bar">
@@ -393,7 +395,7 @@
                   <img src="" alt="" />
                 </div>
                 <div class="FMenu_menu">
-                  <div class="FMenu_languageMenu Linker_btnMore">
+                  <div class="FMenu_lang Linker_btnMore">
                     <!-- language, 이건 이미지로만 이루어진듯 이미지 지우니 메뉴가 안나옴 -->
                     language
                   </div>
@@ -471,70 +473,10 @@
               </section>
             </div>
           </div>
-          <div class="externals">
-            <div class="externals-wrap">
-              <ul>
-                <li>
-                  <span title="카카오톡 옐로아이디">
-                    <!-- sns 누르면 첫 펀딩 옆 카카오 이미지 -->
-                    <img src="" alt=""
-                  /></span>
-                  <ul>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">투자</a>
-                    </li>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">펀딩</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span title="페이스북"
-                    ><!-- sns 누르면 두 번째 펀딩 옆 페북 이미지 -->
-                    <img src="" alt=""
-                  /></span>
-                  <ul>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">투자</a>
-                    </li>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">펀딩</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul>
-                <!-- 이 밑은 이미지에 글귀도 같이 포함되 있어
-                    이미지가 없으면 안보임 그래서 임시로 글을 써 넣었음 -->
-                <li>
-                  <a href="/" target="_blank" title="브런치" rel="noopener noreferrer"
-                    ><!-- sns 누르면 브런치 옆 이미지 -->
-                    <img src="" alt="브런치" />브런치</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="인스타그램" rel="noopener noreferrer"
-                    ><!-- sns 누르면 인스타그램 옆 이미지 -->
-                    <img src="" alt="인스타그램" />인스타그램</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="네이버 블로그" rel="noopener noreferrer"
-                    ><!-- sns 누르면 블로그 옆 이미지 -->
-                    <img src="" alt="네이버 블로그" />네이버 블로그</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="유튜브" rel="noopener noreferrer"
-                    ><!-- sns 누르면 유튜브 옆 이미지 -->
-                    <img src="" alt="유튜브" />유튜브</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
         </footer>
+      </div>
     </div>
-</body>
-<script src="following.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../../feed/js/layout.js"></script>
+  </body>
 </html>
