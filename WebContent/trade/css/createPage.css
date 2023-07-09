@@ -8,6 +8,11 @@ html {
   overflow: auto;
 }
 
+
+#root{
+  background-color: white;
+}
+
 a,
 abbr,
 acronym,
@@ -148,18 +153,18 @@ section {
   }
 }
 
-.ALcontainer .ALmain__ {
-  padding-top: 56px;
+.ALcontainer .ALmain {
+  /* padding-top: 56px; */
 }
 @media screen and (min-width: 769px) {
-  .ALcontainer .ALmain__ {
+  .ALcontainer .ALmain {
     display: -ms-flexbox;
     display: flex;
     height: 100%;
   }
 }
 @media screen and (min-width: 769px) {
-  .ALcontainer .ALmain__ .ALcontents {
+  .ALcontainer .ALmain .ALcontents {
     position: relative;
     -ms-flex: 1 1;
     flex: 1 1;
@@ -250,9 +255,10 @@ section {
   width: 100%;
   height: 100%;
 }
+body,
 button,
 input,
-span,
+select,
 textarea {
   font-family: inherit;
 }
@@ -581,10 +587,6 @@ label.wz.radio > input {
   font-feature-settings: normal;
   font-variant: normal;
 }
-.StorySummaryField_container__25ePA {
-  margin-top: 40px;
-  width: 100%;
-}
 .Form_form.wz.form .Form_field.field {
   margin-top: 0;
   margin-bottom: 40px;
@@ -711,7 +713,7 @@ label.wz.radio > input {
   border-left-color: #dde2e6;
   position: relative;
   z-index: 1;
-  height: 600px;
+  height: 250px;
   overflow: auto;
 }
 
@@ -870,4 +872,11 @@ label.wz.radio > input {
   .for_hidden {
     visibility: hidden;
   }
+}
+.Section_container.Section_header .Section_title {
+  line-height: 28px;
+  font-size: 18px;
+  font-weight: 700;
+  display: -ms-flexbox;
+  display: flex;
 }

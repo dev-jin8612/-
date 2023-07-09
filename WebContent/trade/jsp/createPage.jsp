@@ -9,7 +9,7 @@
 
 <link rel="stylesheet" href="../css/createPage.css" />
 </head>
-<body>
+  <body>
     <div id="root">
       <div id="ALContainer" class="ALcontainer">
         <div class="ALmain">
@@ -140,20 +140,18 @@
                   <section class="Section_container SEWI_container" style="max-width: 720px">
                     <div class="Section_content">
                       <div class="Editor_container SEWI_editor">
-                        <div class="Editor_editor Editor_disabled">
-                          <div class="wysiwyg-editor">
-                            <div class="fr-box fr-basic fr-top" role="application">
-                              <div class="fr-wrapper show-placeholder" dir="auto">
-                                <div
-                                  style="min-height: 590px"
-                                  class="fr-element fr-view fr-element-scroll-visible"
-                                  contenteditable="true"
-                                  dir="auto"
-                                  aria-disabled="false"
-                                  spellcheck="true"
-                                >
-                                  <p></p>
-                                </div>
+                        <div class="wysiwyg-editor">
+                          <div class="fr-box fr-basic fr-top" role="application">
+                            <div class="fr-wrapper show-placeholder" dir="auto">
+                              <div
+                                style="min-height: 590px"
+                                class="fr-element fr-view fr-element-scroll-visible"
+                                contenteditable="true"
+                                dir="auto"
+                                aria-disabled="false"
+                                spellcheck="true"
+                              >
+                                <p></p>
                               </div>
                             </div>
                           </div>
