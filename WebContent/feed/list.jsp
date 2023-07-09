@@ -79,6 +79,7 @@
                       <ul>
                         <li><div class="img-wrap"></div></li>
                         <li><div class="img-wrap"></div></li>
+                        <li><div class="img-wrap"></div></li>
                       </ul>
                     </div>
                     <span class="arrow left"></span>
@@ -86,8 +87,6 @@
                     <!-- 페이지네이션 -->
                     <div class="page">
                       <ul>
-                        <li class="active"><span class="sound-only">1</span></li>
-                        <li><span class="sound-only">2</span></li>
                       </ul>
                     </div>
                   </div>
@@ -130,7 +129,6 @@
                     <!-- 이미지 썸네일 -->
                     <div class="thumb">
                       <ul>
-                        <li><div class="img-wrap"></div></li>
                         <li><div class="img-wrap"></div></li>
                       </ul>
                     </div>
@@ -225,64 +223,5 @@
       </div>
     </div><!--layer-popup-->
   </body>
-  <script>
-    $(".feed-quick li").on("click",function(){
-      $(".feed-quick li").not(this).removeClass('active');
-      $(this).addClass('active')
-    })
-    $(window).on("wheel", function (event){
-      if (event.originalEvent.deltaY < 0) {
-        // wheeled up
-        $('.user-filter').addClass('scroll-on');
-      }
-      else {
-        // wheeled down
-        $('.user-filter').removeClass('scroll-on');
-      }
-    });
-    
-    let i = 0;
-    function slideFn(params) {
-      $(".arrow").on("click",function(e){
-        let $slideUl = $(this).siblings(".thumb").find("ul");
-        let $slideUlWidth = $slideUl.width();
-        let $slideLi = $slideUl.find("li");
-        let $ulLeft = $slideUl.offset().left;
-
-        if($(this).index() == 1){
-            
-            const gap = $slideLi.eq(1).offset().left - $slideLi.eq(0).offset().left;
-            const goto = -i * gap + 'px';
-            console.log("왼쪽" +  goto);
-            $slideUl.css("left", goto);		
-            if (i <= 0){
-              console.log("0이랑 같거나 작음");
-              i = $slideLi.length;
-            };
-            i--
-            
-  
-          }else if($(this).has('left')){
-           
-          const gap = $slideLi.eq(1).offset().left - $slideLi.eq(0).offset().left;
-          const goto = -i * gap + 'px';
-          console.log("오른쪽" + goto);
-          $slideUl.css("left", goto);	
-
-          if (i >= $slideLi.length - 1){
-            // console.log(i);
-            i = -1;
-          }
-          i++
-        
-        }
-        console.log("현재",i);
-      })
-    }
-    slideFn();
-
-
-    
-    
-  </script>
+  <script type="text/javascript" src="js/list.js"></script>
 </html>

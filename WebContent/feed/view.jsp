@@ -21,11 +21,11 @@
           <div class="container-wrap">
             <div class="left-area">
               <div class="gallery-area">
-                <div class="gallery-img">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210430666_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <!-- <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210445072_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210452426_208783.jpg/wadiz/format/jpg/quality/80/" alt=""> -->
-                </div>
+                <ul class="gallery-img">
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210430666_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210445072_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                	<li><img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210452426_208783.jpg/wadiz/format/jpg/quality/80/" alt=""></li>
+                </ul>
                 <div class="arrow-area">
                   <span class="arrow left"></span>
                   <span class="arrow right"></span>
@@ -136,7 +136,7 @@
               	<form action="">
                   <div class="form-area">
                     <div class="user-img"></div>
-                    <input type="text" name="" id="commentForm" placeholder="댓글달기">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="댓글달기"></textarea>
                     <button type="button" class="xi-send" aria-label="댓글달기 버튼"></button>
                   </div><!--//form-area-->
               	</form>
@@ -147,15 +147,5 @@
     </div>
     <!-- //피드 -->
   </body>
-  <script type="text/javascript">
-  	/* 좋아요 버튼 클릭 시 active */
-  	$(".comment-like button").on("click",function(){
-      $(this).toggleClass("on");
-    });
-  	/* 답글달기 버튼 클릭 시 답글창 on */
-	$(".reply button").on("click",function(){
-		$(".reply-wrap").toggleClass("active");
-	})
-
-  </script>
+  <script type="text/javascript" src="js/view.js"></script>
 </html>
