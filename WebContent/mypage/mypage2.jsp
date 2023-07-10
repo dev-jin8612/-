@@ -639,4 +639,5 @@
 
 </div><!-- PageContainer 닫는 div  -->
 </body>
+<script src="./js/mypage.js"></script>
 </html>

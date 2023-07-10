@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>피드작성</title>
 
 
 <link rel="stylesheet" href="../css/createPage.css" />

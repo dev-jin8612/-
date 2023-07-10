@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>교환해요 상세페이지</title>
 
 <link rel="stylesheet" href="../css/modal.css" />
 <link rel="stylesheet" href="../css/tradeRequest.css" />
