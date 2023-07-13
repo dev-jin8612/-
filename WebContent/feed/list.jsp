@@ -223,5 +223,5 @@
       </div>
     </div><!--layer-popup-->
   </body>
-  <script type="text/javascript" src="js/list.js"></script>
+<script src="./js/list.js"></script>
 </html>
