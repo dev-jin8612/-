@@ -253,6 +253,7 @@
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <div class="right-area content-wrap">
               <!-- 유저 정보 -->
               <div class="user-info">
@@ -277,11 +278,16 @@
                   <div class="ico-wrap">
                     <i class="xi-message-o"></i>
 =======
+=======
+>>>>>>> a4c22f069cb657fb43ca012d633e383b5427283c
             <div class="right-area">
               <div class="common-info-area">
                 <div class="top">
                   <div class="breadcrumb">
                     
+<<<<<<< HEAD
+>>>>>>> a4c22f069cb657fb43ca012d633e383b5427283c
+=======
 >>>>>>> a4c22f069cb657fb43ca012d633e383b5427283c
                   </div>
                   <span class="link-share"></span>
@@ -369,8 +375,15 @@
     <!-- //피드 -->
   </body>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </html>
 <script type="text/javascript" src="./js/view.js"></script>
+=======
+
+  <script type="text/javascript" src="js/view.js"></script>
+
+</html>
+>>>>>>> a4c22f069cb657fb43ca012d633e383b5427283c
 =======
 
   <script type="text/javascript" src="js/view.js"></script>
