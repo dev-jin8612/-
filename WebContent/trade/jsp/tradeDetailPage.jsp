@@ -4,23 +4,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>팔로워 팔로잉 목록</title>
-<link rel="stylesheet" href="following.css" />
-<link rel="stylesheet" href="footer.css" />
-   <link rel="stylesheet" href="./css/font/font.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/layout.css">
-    
+<title>Insert title here</title>
+<link rel="stylesheet" href="../css/cssSet1.css" />
+<link rel="stylesheet" href="../../feed/css/layout.css" />
 </head>
+
 <body>
-	<header>
-	
+    <div id="page-container">
+          <header>
       <div class="header">
         <div class="inner-header">
-          <!-- logo -->
-          <h1 class="feed-tit">피드</h1>
+          <!-- logo, 함께해요 만들때 수정해야함 -->
+          <h1 class="feed-tit">교환해요!</h1>
           <h1 class="logo">
-            <span class="sound-only"></span>
+            <span class="sound-only">와디즈</span>
             <a href="/">
               <svg xmlns="http://www.w3.org/2000/svg" width="85" height="25" viewBox="0 0 85 25">
                 <path
@@ -46,7 +43,7 @@
                     <path fill-rule="evenodd"clip-rule="evenodd"d="M7.924 2.576l-.848.848L15.65 12l-8.575 8.576.848.848L17.35 12 7.924 2.576z"></path>
                   </svg>
                 </button>
-                <div class="all-category">
+                <div class="all-category" id="changewidth">
                     <div class="layer-bg"></div>
                     <div class="inner-cate">
                         <div>
@@ -223,140 +220,112 @@
         </div>
       </div>
     </header>
+      
 
-   
-   
-   
-    <div id="page-container">
-      <div id="my-follow-app" style="min-height: 100vh">
-        <div class="MyFollowAppContainer-container">
-          <div class="MyFollowAppContainer-contents">
-          <!-- 팔로잉/팔로워 제목 -->
-            <p class="MyFollowAppContainer-header">팔로잉 / 팔로워</p>
-            
-            <!-- 선택할 수 있는 팔로잉/팔로워 카테고리 -->
-            <div class="MyFollowAppContainer-tabsWrapper">
-              <div class="Tabs-tabsWrapper">
-                <ul class="Tabs-ul">
-                  <li data-index="0">
-                    <button type="button" class="Tab-tab-First-btn Tab-active" role="tab" data-value="0" >
-                      <span>
-                        <p>팔로잉</p>
-                      </span>
-                    </button>
+      <form id="forwardForm" method="get">
+        <input type="hidden" id="returnURL" name="returnURL" />
+      </form>
+      <input type="hidden" id="sessionLoginCheck" value="false" />
+
+      <div id="newContainer">
+        <div id="wBoardWrap">
+          <div class="wboard-wrap">
+            <div class="wboard-detail-content">
+              <div class="article-top">
+                <p class="title">
+                  [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
+                </p>
+                <div class="info">
+                  <em
+                    class="user-img"
+                    style="
+                      background-image: url(https://static.wadiz.kr/assets/icon/apple-touch-icon.png);
+                    "
+                  ></em>
+                  <span class="user-info">와디즈 <br />2023.06.07</span>
+                </div>
+              </div>
+              <div class="inner-contents">
+                <p style="margin: 0">
+                  <img
+                    style="margin: 0"
+                    src="https://static.makercenter.wadiz.kr/board/image/068badac-e05e-4da1-bd15-29f097136539.jpg"
+                    class="fr-fic fr-dib"
+                  />
+                </p>
+                <p style="margin: 0">
+                  <img
+                    style="margin: 0"
+                    src="https://static.makercenter.wadiz.kr/board/image/c374d39d-bd94-458e-a1ff-f2c502a498ad.jpg"
+                    class="fr-fic fr-dib"
+                  />
+                </p>
+                <p>
+                  <a
+                    href="https://wadiz.channel.io/lounge"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    ><img
+                      style="margin: 0"
+                      src="https://static.makercenter.wadiz.kr/board/image/5815d2e5-088b-48d0-b8ea-7a32844a18da.jpg"
+                      class="fr-fic fr-dib nearest"
+                  /></a>
+                </p>
+              </div>
+              <div class="article-attached">
+                <ul></ul>
+              </div>
+            </div>
+          </div>
+          <div class="wcommunity-detail-bottom">
+            <div class="wcommunity-share-area">
+              <button type="button" class="btn-symp"><span id="sympCount">0</span></button>
+              <div class="btn-share">
+                <button class="kakao" onclick="wadiz.share.kakao();"></button>
+                <button class="facebook" onclick="wadiz.share.facebook();"></button>
+                <button class="twitter" onclick="wadiz.share.twitter();"></button>
+              </div>
+            </div>
+          </div>
+          <div class="wboard-detail-bottom">
+            <div class="wboard-comment">
+              <p class="comment-num"><em>이벤트</em> 말머리의 다른 게시글</p>
+              <div class="wboard-list">
+                <ul>
+                  <li>
+                    <a href="/">
+                      <p class="title">
+                        <em class="category">이벤트</em>
+                        [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
+                      </p>
+                      <p class="info">
+                        <span class="date"> 와디즈 2023.06.07 </span>
+                      </p>
+                    </a>
                   </li>
 
-
-                  <li data-index="1">
-                    <button type="button" class="Tab-tab-Second-btn" role="tab" data-value="1">
-                      <span>
-                        <p>팔로워</p>
-                      </span>
-                    </button>
+                  <li>
+                    <a href="/web/wboard/newsBoardDetail/8474?headWordId=&cPage=1">
+                      <p class="title">
+                        <em class="category">이벤트</em>
+                        [메이커 모집] 추석 기획전 참여 메이커 모집 (~7/3)
+                      </p>
+                      <p class="info">
+                        <span class="date"> 와디즈 2023.06.07 </span>
+                      </p>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <!-- 팔로잉/팔로워 카테고리 끝~~! -->
-            
-            
-            
-            <!-- 팔로잉/팔로워 카드 -->
-            <div >
-                <div class="TabsPanels-tabPanels">
-                    <div class="page-container">
-						<!-- 이거 하나당 팔로잉 혹은 팔로워 1개 -->
-                        <div class="FollowingCard-container">
-                            <div class="FollowingCard-contents">
-                                <a href="/web/maker/detail/73485" class="FollowingCard-leftPanel">
-                                    <div class="FollowingCard-avatarWrapper">
-                                        <div class="Avatar-avatar-FollowingCard-avatar">
-                                            <span class="Avatar-hasImage" style="background-image: url(&quot;https://cdn.wadiz.kr/ft/images/maker/2023/0511/20230511151032855_null.jpg/wadiz/format/jpg/quality/80/optimize&quot;), url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYzl1cmF3eHIyYSIgZD0iTTAgMGg4MHY4MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9IjZ2emt3OXN5NWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYzl1cmF3eHIyYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCA0MGMwIDIyLjA5Mi0xNy45MDkgNDAtNDAgNDBTMCA2Mi4wOTIgMCA0MCAxNy45MDkgMCA0MCAwczQwIDE3LjkwOCA0MCA0MCIgZmlsbD0iI0U5RUNFRiIgbWFzaz0idXJsKCM2dnprdzlzeTViKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJtMjIuMzA1IDI2LjkxNC4yMyAyLjEyMWMtLjAxLjI5LjA0OS41NTkuMTgxLjgwNy4wODUuMjYxLjIyOC40ODUuNDMzLjY3Ni4xOS4yMDMuNDEzLjM0OC42NzQuNDMyLjI0OS4xMzIuNTE5LjE5MS44MDYuMThsLjU1Ny0uMDc1Yy4zNTUtLjA5OS42NjMtLjI3OS45MjQtLjUzN2wuMzI4LS40MjVjLjE5LS4zMjYuMjg1LS42OC4yODctMS4wNTgtLjA3OC0uNzA2LS4xNTQtMS40MTUtLjIzLTIuMTIxLjAxLS4yOS0uMDUtLjU1OS0uMTgtLjgwN2ExLjU3IDEuNTcgMCAwIDAtLjQzNC0uNjc1IDEuNTUzIDEuNTUzIDAgMCAwLS42NzQtLjQzMyAxLjU4NCAxLjU4NCAwIDAgMC0uODA3LS4xOGMtLjE4NS4wMjYtLjM3Mi4wNS0uNTU3LjA3NWEyLjA4MyAyLjA4MyAwIDAgMC0uOTI1LjUzOGwtLjMyNi40MjRjLS4xOS4zMjctLjI4NS42NzktLjI4NyAxLjA1OE01My44ODIgMjcuMzI4djIuNTIyYzAgLjUzOC4yMzMgMS4xMDIuNjEzIDEuNDgyLjE5LjIwMy40MTQuMzQ4LjY3NC40MzMuMjUuMTMuNTE4LjE5LjgwNy4xOC41NDItLjAyNCAxLjEwNC0uMjAyIDEuNDgxLS42MTMuMzc2LS40MS42MTQtLjkxNC42MTQtMS40ODJ2LTIuNTIyYzAtLjUzNi0uMjM0LTEuMS0uNjE0LTEuNDhhMS41NzYgMS41NzYgMCAwIDAtLjY3NC0uNDM0IDEuNTczIDEuNTczIDAgMCAwLS44MDctLjE4Yy0uNTQyLjAyNC0xLjEwNC4yMDItMS40ODEuNjE0LS4zNzYuNDA5LS42MTMuOTEzLS42MTMgMS40OE0zNi4yOTcgMjUuOTQ1Yy0uNzQzIDQuMzM1LTEuNDg0IDguNjczLTIuMjI1IDEzLjAxLS4xODQgMS4wNzUuMjg1IDIuMzA3IDEuNDYzIDIuNTc2IDEuMDE0LjIzIDIuMzc4LS4zMDkgMi41NzYtMS40NjJsMi4yMjUtMTMuMDExYy4xODQtMS4wNzUtLjI4NS0yLjMwOC0xLjQ2My0yLjU3Ny0xLjAxNS0uMjMtMi4zOC4zMDgtMi41NzYgMS40NjRNNDUuMTU4IDUwLjM4NmMtLjE2LS4zMy0uMTAxLS40NzctLjA0NS0uODA2LS4xMTEuMTc1LS4xMjUuMjAxLS4wNDIuMDc3YS4zNy4zNyAwIDAgMSAuMjAzLS4xNzhjLS4yMi4xMTctLjIzNS4xMzgtLjA0Ny4wNjRhMy40MyAzLjQzIDAgMCAxLS4zOTMuMTE2Yy0uMDgyLjAyLS42NTkuMS0uMjY1LjA1Ny0xLjExNS4xMjQtMi4yNC4xOS0zLjM2LjI4NWwtNi44NzcuNTc3Yy0xLjA4OS4wOTItMi4xNDguODk3LTIuMDk1IDIuMDk0LjA0OCAxLjA1Ni45MjYgMi4xOTIgMi4wOTUgMi4wOTNsOC44NC0uNzRjMS40NS0uMTIzIDMuMDQxLS4xMyA0LjI4Ny0uOTggMS42LTEuMDkzIDIuMTYzLTMuMDI4IDEuMzE2LTQuNzcyLS40OC0uOTktMS45NjYtMS4zMzMtMi44NjYtLjc1Mi0xLjAxMy42NTQtMS4yNjMgMS44MDctLjc1IDIuODY1IiBmaWxsPSIjQ0REM0Q4Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=&quot;); border: 1px solid rgb(221, 226, 230);"></span>
-                                        </div>
-                                    </div>
-                                    <div class="FollowingCard-info">
-                                        <p class="FollowingCard-name">로그인</p>
-                                        <p class="FollowingCard-detail">팔로워 124</p>
-                                    </div>
-                                </a>
-                                <div class="FollowingCard-rightPanel">
-          
-                                    <button class="Button-button-3MO4n Button-secondary" type="button">
-                                        <span>
-                                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon-icon-2KxnX" aria-hidden="true" style="width: 14px; height: 14px;">
-                                                <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                            </svg>
-                                            <span class="Button-children">팔로잉</span>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-            <!-- 개수 하나 끝 -->
-            
-            
-            <!-- 나누는 선 -->
-                            <div class="FollowingCard-divider"></div>
-                        </div>
-
-
-
-			<!-- 두번째꺼 -->
-                        <div class="FollowingCard-container-3">
-                            <div class="FollowingCard-contents">
-                                <a href="/web/maker/detail/73485" class="FollowingCard-leftPanel">
-                                    <div class="FollowingCard-avatarWrapper">
-                                        <div class="Avatar-avatar-FollowingCard-avatar">
-                                            <span class="Avatar-hasImage" style="background-image: url(&quot;https://cdn.wadiz.kr/ft/images/maker/2023/0511/20230511151032855_null.jpg/wadiz/format/jpg/quality/80/optimize&quot;), url(&quot;data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZGVmcz4KICAgICAgICA8cGF0aCBpZD0iYzl1cmF3eHIyYSIgZD0iTTAgMGg4MHY4MEgweiIvPgogICAgPC9kZWZzPgogICAgPGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4KICAgICAgICA8Zz4KICAgICAgICAgICAgPG1hc2sgaWQ9IjZ2emt3OXN5NWIiIGZpbGw9IiNmZmYiPgogICAgICAgICAgICAgICAgPHVzZSB4bGluazpocmVmPSIjYzl1cmF3eHIyYSIvPgogICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgIDxwYXRoIGQ9Ik04MCA0MGMwIDIyLjA5Mi0xNy45MDkgNDAtNDAgNDBTMCA2Mi4wOTIgMCA0MCAxNy45MDkgMCA0MCAwczQwIDE3LjkwOCA0MCA0MCIgZmlsbD0iI0U5RUNFRiIgbWFzaz0idXJsKCM2dnprdzlzeTViKSIvPgogICAgICAgIDwvZz4KICAgICAgICA8cGF0aCBkPSJtMjIuMzA1IDI2LjkxNC4yMyAyLjEyMWMtLjAxLjI5LjA0OS41NTkuMTgxLjgwNy4wODUuMjYxLjIyOC40ODUuNDMzLjY3Ni4xOS4yMDMuNDEzLjM0OC42NzQuNDMyLjI0OS4xMzIuNTE5LjE5MS44MDYuMThsLjU1Ny0uMDc1Yy4zNTUtLjA5OS42NjMtLjI3OS45MjQtLjUzN2wuMzI4LS40MjVjLjE5LS4zMjYuMjg1LS42OC4yODctMS4wNTgtLjA3OC0uNzA2LS4xNTQtMS40MTUtLjIzLTIuMTIxLjAxLS4yOS0uMDUtLjU1OS0uMTgtLjgwN2ExLjU3IDEuNTcgMCAwIDAtLjQzNC0uNjc1IDEuNTUzIDEuNTUzIDAgMCAwLS42NzQtLjQzMyAxLjU4NCAxLjU4NCAwIDAgMC0uODA3LS4xOGMtLjE4NS4wMjYtLjM3Mi4wNS0uNTU3LjA3NWEyLjA4MyAyLjA4MyAwIDAgMC0uOTI1LjUzOGwtLjMyNi40MjRjLS4xOS4zMjctLjI4NS42NzktLjI4NyAxLjA1OE01My44ODIgMjcuMzI4djIuNTIyYzAgLjUzOC4yMzMgMS4xMDIuNjEzIDEuNDgyLjE5LjIwMy40MTQuMzQ4LjY3NC40MzMuMjUuMTMuNTE4LjE5LjgwNy4xOC41NDItLjAyNCAxLjEwNC0uMjAyIDEuNDgxLS42MTMuMzc2LS40MS42MTQtLjkxNC42MTQtMS40ODJ2LTIuNTIyYzAtLjUzNi0uMjM0LTEuMS0uNjE0LTEuNDhhMS41NzYgMS41NzYgMCAwIDAtLjY3NC0uNDM0IDEuNTczIDEuNTczIDAgMCAwLS44MDctLjE4Yy0uNTQyLjAyNC0xLjEwNC4yMDItMS40ODEuNjE0LS4zNzYuNDA5LS42MTMuOTEzLS42MTMgMS40OE0zNi4yOTcgMjUuOTQ1Yy0uNzQzIDQuMzM1LTEuNDg0IDguNjczLTIuMjI1IDEzLjAxLS4xODQgMS4wNzUuMjg1IDIuMzA3IDEuNDYzIDIuNTc2IDEuMDE0LjIzIDIuMzc4LS4zMDkgMi41NzYtMS40NjJsMi4yMjUtMTMuMDExYy4xODQtMS4wNzUtLjI4NS0yLjMwOC0xLjQ2My0yLjU3Ny0xLjAxNS0uMjMtMi4zOC4zMDgtMi41NzYgMS40NjRNNDUuMTU4IDUwLjM4NmMtLjE2LS4zMy0uMTAxLS40NzctLjA0NS0uODA2LS4xMTEuMTc1LS4xMjUuMjAxLS4wNDIuMDc3YS4zNy4zNyAwIDAgMSAuMjAzLS4xNzhjLS4yMi4xMTctLjIzNS4xMzgtLjA0Ny4wNjRhMy40MyAzLjQzIDAgMCAxLS4zOTMuMTE2Yy0uMDgyLjAyLS42NTkuMS0uMjY1LjA1Ny0xLjExNS4xMjQtMi4yNC4xOS0zLjM2LjI4NWwtNi44NzcuNTc3Yy0xLjA4OS4wOTItMi4xNDguODk3LTIuMDk1IDIuMDk0LjA0OCAxLjA1Ni45MjYgMi4xOTIgMi4wOTUgMi4wOTNsOC44NC0uNzRjMS40NS0uMTIzIDMuMDQxLS4xMyA0LjI4Ny0uOTggMS42LTEuMDkzIDIuMTYzLTMuMDI4IDEuMzE2LTQuNzcyLS40OC0uOTktMS45NjYtMS4zMzMtMi44NjYtLjc1Mi0xLjAxMy42NTQtMS4yNjMgMS44MDctLjc1IDIuODY1IiBmaWxsPSIjQ0REM0Q4Ii8+CiAgICA8L2c+Cjwvc3ZnPgo=&quot;); 
-                                            border: 1px solid rgb(221, 226, 230);"></span>
-                                        </div>
-                                    </div>
-                                    <div class="FollowingCard-info">
-                                        <p class="FollowingCard-name">귀여운 윤버들</p>
-                                        <p class="FollowingCard-detail">팔로워 오천명</p>
-                                    </div>
-                                </a>
-                                <div class="FollowingCard-rightPanel">
-                              
-                                    <button class="Button-button-3MO4n Button-secondary" type="button">
-                                        <span>
-                                            <svg viewBox="0 0 48 48" focusable="false" role="presentation" class="withIcon-icon-2KxnX" aria-hidden="true" style="width: 14px; height: 14px;">
-                                                <path d="M18 39.6L4.8 26.4l3.36-3.36L18 32.76l21.84-21.72 3.36 3.36z"></path>
-                                            </svg>
-                                            <span class="Button-children">팔로잉</span>
-                                        </span>
-                                    </button>
-
-
-
-
-                                </div>
-                            </div>
-                            <div class="FollowingCard-divider"></div>
-                        </div>
-<!-- 두번째꺼 끝 -->
-
-
-
-                    </div>
-                </div>
+            <div class="wboard-detail-btn-wrap">
+              <a class="wz button" href="#this" onClick="moveList()">목록으로 돌아가기</a>
             </div>
           </div>
-
-
-
-
         </div>
       </div>
 
-
-
-
-
-
-
-
-    <!-- 푸터  -->
-	 <div id="footer">
+            <div id="footer">
         <footer id="footer" class="web-footer inner-utils">
           <div class="FMenu_container">
             <div class="FMenu_bar">
@@ -393,7 +362,7 @@
                   <img src="" alt="" />
                 </div>
                 <div class="FMenu_menu">
-                  <div class="FMenu_languageMenu Linker_btnMore">
+                  <div class="FMenu_lang Linker_btnMore">
                     <!-- language, 이건 이미지로만 이루어진듯 이미지 지우니 메뉴가 안나옴 -->
                     language
                   </div>
@@ -471,70 +440,11 @@
               </section>
             </div>
           </div>
-          <div class="externals">
-            <div class="externals-wrap">
-              <ul>
-                <li>
-                  <span title="카카오톡 옐로아이디">
-                    <!-- sns 누르면 첫 펀딩 옆 카카오 이미지 -->
-                    <img src="" alt=""
-                  /></span>
-                  <ul>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">투자</a>
-                    </li>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">펀딩</a>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <span title="페이스북"
-                    ><!-- sns 누르면 두 번째 펀딩 옆 페북 이미지 -->
-                    <img src="" alt=""
-                  /></span>
-                  <ul>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">투자</a>
-                    </li>
-                    <li>
-                      <a href="/" target="_blank" rel="noopener noreferrer">펀딩</a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-              <ul>
-                <!-- 이 밑은 이미지에 글귀도 같이 포함되 있어
-                    이미지가 없으면 안보임 그래서 임시로 글을 써 넣었음 -->
-                <li>
-                  <a href="/" target="_blank" title="브런치" rel="noopener noreferrer"
-                    ><!-- sns 누르면 브런치 옆 이미지 -->
-                    <img src="" alt="브런치" />브런치</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="인스타그램" rel="noopener noreferrer"
-                    ><!-- sns 누르면 인스타그램 옆 이미지 -->
-                    <img src="" alt="인스타그램" />인스타그램</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="네이버 블로그" rel="noopener noreferrer"
-                    ><!-- sns 누르면 블로그 옆 이미지 -->
-                    <img src="" alt="네이버 블로그" />네이버 블로그</a
-                  >
-                </li>
-                <li>
-                  <a href="/" target="_blank" title="유튜브" rel="noopener noreferrer"
-                    ><!-- sns 누르면 유튜브 옆 이미지 -->
-                    <img src="" alt="유튜브" />유튜브</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
         </footer>
+      </div>
+    
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../../feed/js/layout.js"></script>
 </body>
-<script src="following.js"></script>
 </html>
