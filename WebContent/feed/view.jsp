@@ -43,14 +43,6 @@
               </div>
               <!-- 본문 -->
               <div class="content">
-                <div class="hashtag-wrap">
-                  <ul>
-                    <li>#일본여행</li>
-                    <li>#도쿄</li>
-                    <li>#재밌는여행</li>
-                    <li>#함께해요</li>
-                  </ul>
-                </div>
                 <p>
                   특별한 날에 어울리는 트럼프 카드를 소개합니다. 손에 착착 감기는 귀여운 <로티&로리 플레잉카드> 카드를 펼치는 순간, 내 방이 바로 롯데월드가 됩니다!
                 </p>
@@ -147,5 +139,5 @@
     </div>
     <!-- //피드 -->
   </body>
-  <script type="text/javascript" src="js/view.js"></script>
 </html>
+<script type="text/javascript" src="./js/view.js"></script>
