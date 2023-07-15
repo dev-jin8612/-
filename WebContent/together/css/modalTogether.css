@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-iframe,
-img,
-video {
+iframe,img,video {
   vertical-align: top;
 }
 
