@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<<<<<<< HEAD:src/com/app/mybatis/mapper/loginMapper.xml
 <mapper namespace="login">
 <!-- 	회원가입, 데이터 베이스를 다른 사람꺼 쓸려면 쿼리문 수정해야됨 -->
 	<insert id="insert">
@@ -16,4 +17,13 @@
 		select id from tbl_member 
 		where member_id = #{memberId} and member_password = #{memberPassword}
 	</select>
+=======
+<mapper namespace="member">
+
+	<select id="checkId" resultType="_int">
+		select count(id) from member
+			where id = #{id}
+	</select>
+	
+>>>>>>> e15456351d622965e33c864018d9b48f226742eb:src/com/app/mybatis/mapper/memberMapper.xml
 </mapper>

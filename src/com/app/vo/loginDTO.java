@@ -1,5 +1,6 @@
 package com.app.vo;
 
+<<<<<<< HEAD:src/com/app/vo/loginDTO.java
 public class loginDTO {
 	private Long Id;
 	private String memberId;
@@ -117,7 +118,64 @@ public class loginDTO {
 		return "memberVO [Id=" + Id + ", memberId=" + memberId + ", memberPassword=" + memberPassword + ", memberName="
 				+ memberName + ", memberNick=" + memberNick + ", memberImg=" + memberImg + ", memberHP=" + memberHP
 				+ "]";
+=======
+public class MemberDTO {
+	private String id;
+	private String memberpw;
+	private String membername;
+	private String memberimg;
+	private String memberhp;
+	
+	public MemberDTO() {;}
+
+	public String getId() {
+		return id;
+>>>>>>> e15456351d622965e33c864018d9b48f226742eb:src/com/app/vo/memberDTO.java
 	}
 
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getMemberpw() {
+		return memberpw;
+	}
+
+	public void setMemberpw(String memberpw) {
+		this.memberpw = memberpw;
+	}
+
+	public String getMembername() {
+		return membername;
+	}
+
+	public void setMembername(String membername) {
+		this.membername = membername;
+	}
+
+	public String getMemberimg() {
+		return memberimg;
+	}
+
+	public void setMemberimg(String memberimg) {
+		this.memberimg = memberimg;
+	}
+
+	public String getMemberhp() {
+		return memberhp;
+	}
+
+	public void setMemberhp(String memberhp) {
+		this.memberhp = memberhp;
+	}
+
+	@Override
+	public String toString() {
+		return "MemberDTO [id=" + id + ", memberpw=" + memberpw + ", membername=" + membername + ", memberimg="
+				+ memberimg + ", memberhp=" + memberhp + "]";
+	}
+	
+	
+	
 	
 }

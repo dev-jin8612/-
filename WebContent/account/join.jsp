@@ -12,6 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <script charset="UTF-8" src="./js/layout.js"></script>
   <script charset="UTF-8" src="./js/join.js" defer></script>
+  <script charset="UTF-8" src="./js/join_back.js" defer></script>
   <title>와디즈 회원가입</title>
 </head>
 <!-- 공통헤더 -->
@@ -37,21 +38,21 @@
 
   <main class="join-container">
     <div class="inner-container">
-      <h2 class="join-title">이메일 간편가입</h2>
+      <h2 class="join-title">text 회원가입</h2>
 
       <form action="">
         <div class="input-area">
           <div class="input-con email">
-            <label for="userEmail">이메일</label>
+            <label for="userEmail">아이디</label>
             <div class="flex-wrap">
-              <input type="email" id="userEmail" name="userName" class="input_txt" placeholder="이메일 계정">
-              <button type="button" class="full_btn emailBtn" disabled>인증하기</button>
+              <input type="text" id="userId" name="userId" class="input_txt" placeholder="아이디 입력">
+              <button type="button" class="full_btn emailBtn" onclick="idcheck()">인증하기</button>
             </div>
           </div>
 
           <div class="input-con">
-            <label for="userName">이름</label>
-            <input type="text" id="userName" name="userName" class="input_txt" placeholder="이름 입력">
+            <label for="userName">별명</label>
+            <input type="text" id="userName" name="userName" class="input_txt" placeholder="별명 입력">
           </div>
 
           <div class="input-con">
@@ -83,7 +84,7 @@
         </label>
       </div>
       <div class="login-btn-area">
-        <button type="button" class="full_btn" disabled>완료</button>
+        <button type="button" class="full_btn">완료</button>
       </div>
     </div>
     </div>
