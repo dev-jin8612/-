@@ -71,7 +71,7 @@
 		<div class="inner-container">
 			<h2 class="login-title">로그인</h2>
 			<!-- 백 작업용 form action, name, method 추가 -->
-			<form action="${pageContext.request.contextPath}/loginOk.member"
+			<form action="${pageContext.request.contextPath}/loginOk.login"
 				name="login" method="post">
 				<div class="input-area">
 					<div class="input-con">

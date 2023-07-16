@@ -1,6 +1,6 @@
 package com.app.vo;
 
-public class memberDTO {
+public class loginDTO {
 	private Long Id;
 	private String memberId;
 	private String memberPassword;
@@ -73,7 +73,7 @@ public class memberDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		memberDTO other = (memberDTO) obj;
+		loginDTO other = (loginDTO) obj;
 		if (Id == null) {
 			if (other.Id != null)
 				return false;

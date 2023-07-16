@@ -14,7 +14,7 @@ import com.app.controller.LoginOkController;
 import com.app.controller.LogoutController;
 import com.app.controller.CheckIdOkController;
 
-public class memberFrontController extends HttpServlet {
+public class LoginFrontController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

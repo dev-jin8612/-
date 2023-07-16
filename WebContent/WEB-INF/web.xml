@@ -12,13 +12,13 @@
 
 
 	<servlet>
-		<servlet-name>Member</servlet-name>
-		<servlet-class>com.app.controller.memberFrontController</servlet-class>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.app.controller.LoginFrontController</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>Member</servlet-name>
-		<url-pattern>*.member</url-pattern>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>*.login</url-pattern>
 	</servlet-mapping>
 
 </web-app>

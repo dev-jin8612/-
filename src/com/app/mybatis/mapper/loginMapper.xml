@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="member">
+<mapper namespace="login">
 <!-- 	회원가입, 데이터 베이스를 다른 사람꺼 쓸려면 쿼리문 수정해야됨 -->
 	<insert id="insert">
 		insert into tbl_member

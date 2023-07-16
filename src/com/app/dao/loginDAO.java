@@ -5,17 +5,17 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
-import com.app.vo.memberDTO;
+import com.app.vo.loginDTO;
 
-public class memberDAO {
+public class loginDAO {
 	public SqlSession sqlSession;
 	
-	public memberDAO() {
+	public loginDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
 //	회원가입
-	public void insert(memberDTO memberVO) {
+	public void insert(loginDTO memberVO) {
 		sqlSession.insert("member.insert", memberVO);
 	}
 	
@@ -31,6 +31,6 @@ public class memberDAO {
 		loginMap.put("memberPassword", memberPassword);
 		System.out.println(memberPassword);
 		
-		return sqlSession.selectOne("member.login", loginMap);
+		return sqlSession.selectOne("login.login", loginMap);
 	}
 }
