@@ -75,12 +75,12 @@
 				name="login" method="post">
 				<div class="input-area">
 					<div class="input-con">
-						<input type="email" id="userName" name="userName"
+						<input type="email" id="memberId" name="memberId"
 							class="input_txt" placeholder="이메일 입력">
 						<p class="message_wrap">이메일 형식이 올바르지 않습니다.</p>
 					</div>
 					<div class="input-con">
-						<input type="password" id="userPassword" name="userPassword"
+						<input type="password" id="memberPassword" name="memberPassword"
 							class="input_txt" placeholder="비밀번호 입력">
 						<p class="message_wrap">와디즈에 등록되지 않은 아이디거나, 아이디 또는 비밀번호가 회원정보와
 							일치하지 않습니다.</p>
@@ -133,7 +133,7 @@
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/account/js/layout.js"></script>
-<script src="${pageContext.request.contextPath}/account/js/loginOK.js"></script>
+<script charset="UTF-8" src="./js/loginOK.js" defer></script>
 <script src="${pageContext.request.contextPath}/account/js/login.js"></script>
 </html>
 

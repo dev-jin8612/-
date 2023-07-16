@@ -13,7 +13,7 @@
 	</select>
 	
 	<select id="login" resultType="long">
-		select member_id from tbl_member 
+		select id from tbl_member 
 		where member_id = #{memberId} and member_password = #{memberPassword}
 	</select>
 </mapper>

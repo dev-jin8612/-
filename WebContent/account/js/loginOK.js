@@ -2,9 +2,9 @@
  * 삭제하기 말아주세요
  */
 // id 태그 정보 가져오기, 태그 명 변경해야됨
-const $id = $("input#userName");
+const $id = $("input#memberId");
 // 비번 태그 정보 가져오기, 태그 명 변경해야됨
-const $password = $("input#userPassword");
+const $password = $("input#memberPassword");
 
 
 function send() {
@@ -18,7 +18,7 @@ function send() {
         return;
     }
 /*비밀번호 암호화*/
-$password.val(btoa($password.val()));
+//$password.val(btoa($password.val()));
 // 서브밋
 document.login.submit();
 }

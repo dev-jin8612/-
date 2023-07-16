@@ -22,6 +22,8 @@ public class memberFrontController extends HttpServlet {
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
 		Result result = null;
 
+//		System.out.println("aa");
+
 		if (target.equals("checkIdOk")) {
 			result = new CheckIdOkController().execute(req, resp);
 		} else if (target.equals("join")) {
@@ -30,12 +32,24 @@ public class memberFrontController extends HttpServlet {
 			result.setPath("account/join.jsp");
 		} else if (target.equals("joinOk")) {
 			result = new JoinOkController().execute(req, resp);
-		} else if(target.equals("login")){
-			result = new LoginController().execute(req, resp);
-		} else if(target.equals("loginOk")) {
+		} else if (target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
-		} else if(target.equals("logout")) {
+		} else if (target.equals("logout")) {
 			result = new LogoutController().execute(req, resp);
+		} else if (target.equals("feed")) {
+			result = new Result();
+			result.setPath("feed/view.jsp");
+		}
+		/*
+		 * 와디즈는 자동 로그인이 없기에 주석 처리 else if(target.equals("login")){ result = new
+		 * LoginController().execute(req, resp); }
+		 */
+		if (result != null) {
+			if (result.isRedirect()) {
+				resp.sendRedirect(result.getPath());
+			} else {
+				req.getRequestDispatcher(result.getPath()).forward(req, resp);
+			}
 		}
 	}
 

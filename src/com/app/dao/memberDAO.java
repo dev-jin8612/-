@@ -29,6 +29,7 @@ public class memberDAO {
 		HashMap<String, String> loginMap = new HashMap<String, String>();
 		loginMap.put("memberId", memberId);
 		loginMap.put("memberPassword", memberPassword);
+		System.out.println(memberPassword);
 		
 		return sqlSession.selectOne("member.login", loginMap);
 	}
