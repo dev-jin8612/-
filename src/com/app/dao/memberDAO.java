@@ -1,35 +1,20 @@
 package com.app.dao;
 
-import java.util.HashMap;
-
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
-import com.app.vo.memberDTO;
+import com.app.vo.MemberDTO;
 
-public class memberDAO {
+public class MemberDAO { 
 	public SqlSession sqlSession;
-	
-	public memberDAO() {
+
+	public MemberDAO() { 
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-//	회원가입
-	public void insert(memberDTO memberVO) {
-		sqlSession.insert("member.insert", memberVO);
+//	목록
+	public boolean checkId(String id) {
+		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
 	}
 	
-//	아이디 중복검사
-	public String selectIdentification(String memberId) {
-		return sqlSession.selectOne("member.selectMemberId", memberId);
-	}
-	
-//	로그인
-	public Long login(String memberId, String memberPassword) {
-		HashMap<String, String> loginMap = new HashMap<String, String>();
-		loginMap.put("memberId", memberId);
-		loginMap.put("memberPassword", memberPassword);
-		
-		return sqlSession.selectOne("member.login", loginMap);
-	}
 }
