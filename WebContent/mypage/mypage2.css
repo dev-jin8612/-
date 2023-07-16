@@ -156,7 +156,7 @@ p {
 @media screen and (min-width: 769px){
 .SupporterProfileInfo-infoCountBox dt { margin-top: 2px;}}
 .SupporterProfileInfo-infoCountBox dt { line-height: 18px; font-size: 12px; font-weight: 400;}
-.SupporterProfileInfo-infoCountBox dd { line-height: 20px; font-size: 14px; font-weight: 700;}
+.SupporterProfileInfo-infoCountBox dd { line-height: 20px; font-size: 14px; font-weight: 700; margin: 0 auto}
 
 .BlindText_textHidden{ position: absolute;
     margin: -1px;
@@ -203,7 +203,9 @@ a.Button-button { display: inline-block; text-decoration: none;}
 .Button-button span {
     display: inline-flex;
     align-items: center;
-    vertical-align: top;}
+    vertical-align: top;
+    justify-content: center;
+    }
 .Button-button .Button-children { vertical-align: top;}
 .Button-button span {
     display: inline-flex;
@@ -236,7 +238,7 @@ a.Button-button { display: inline-block; text-decoration: none;}
     width: 100%;
     background: #fff;
     box-shadow: 0 1px 0 0 rgba(0,0,0,.08);
-    z-index: 100;
+    z-index: 5;
     transition-property: background-color,-webkit-backdrop-filter,backdrop-filter;
     transition-duration: .5s;
 }
@@ -311,7 +313,8 @@ a.Button-button { display: inline-block; text-decoration: none;}
     width: 100%;
 }
 @media screen and (min-width: 960px){
-.myprofile-wrap .mypage-project .List ul{width: 918px;}}
+.myprofile-wrap .mypage-project .List ul{width: 918px; display: flex; flex-wrap: wrap;}
+}
 @media screen and (min-width: 960px){
 .mypage-project .List ul { width: 960px; margin: -2px auto 0; padding: 0 9px;}}
 
@@ -340,7 +343,7 @@ a.Button-button { display: inline-block; text-decoration: none;}
     width: 100%;
 }
 .project-card, .project-card * {
-    box-sizing: content-box!important;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 960px){
@@ -365,9 +368,7 @@ a.Button-button { display: inline-block; text-decoration: none;}
     border-top: none;
     background: #fff;
 }
-.project-card, .project-card * {
-    box-sizing: content-box!important;
-}
+
 
 .project-card .card-info-section h4 {
     padding: 16px 0 0;
@@ -422,8 +423,8 @@ a.Button-button { display: inline-block; text-decoration: none;}
 
 .heart-wrapper{
 	position: absolute;
-    left: 0;
-    top: 0;
+    left: 12px;
+    top: 12px;
     display: block;
     padding: 0 6px;
     height: 24px;
