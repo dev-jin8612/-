@@ -7,7 +7,11 @@
 	</settings>
 	
 	<typeAliases>
+<<<<<<< HEAD
 		<typeAlias type="com.app.vo.memberVO" alias="memberVO"/>
+=======
+		<typeAlias type="com.app.vo.MemberDTO" alias="MemberDTO"/>
+>>>>>>> d3b30d5218eb6e601937257a8573c37ff247d666
 	</typeAliases>
 
 	<environments default="mysql"> 

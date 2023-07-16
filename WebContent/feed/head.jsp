@@ -1,43 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<<<<<<< HEAD
-<!-- 공통헤더 -->
-=======
->>>>>>> d3b30d5218eb6e601937257a8573c37ff247d666
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <!-- 공통헤더 css -->
-    <link rel="stylesheet" href="../inc/css/font/font.css">
-    <link rel="stylesheet" href="../inc/css/reset.css">
-    <link rel="stylesheet" href="../inc/css/xeicon/xeicon.min.css">
-    <link rel="stylesheet" href="../inc/css/header.css">
-    <!-- //공통헤더 css -->
-    <!-- 페이지 css -->
-    <link rel="stylesheet" href="./css/layout.css">
-    <!-- 페이지 css -->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
-=======
     <link rel="stylesheet" href="./css/font/font.css">
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/xeicon/xeicon.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
->>>>>>> d3b30d5218eb6e601937257a8573c37ff247d666
     <script charset="UTF-8" src="./js/layout.js"></script>
     <title>feed</title>
 </head>
 <body>
-<<<<<<< HEAD
-<jsp:include page="../inc/head.jsp"></jsp:include>
-<!-- 공통헤더 -->
-=======
-    <header>
+	<header>
       <div class="header">
         <div class="inner-header">
           <!-- logo -->
+          <h1 class="feed-tit">피드</h1>
           <h1 class="logo">
             <span class="sound-only">와디즈</span>
             <a href="/">
@@ -242,52 +222,3 @@
         </div>
       </div>
     </header>
->>>>>>> d3b30d5218eb6e601937257a8573c37ff247d666
-    <!-- 피드 -->
-    <div id="container" class="main-con">
-      <div class="inner-con">
-        <!-- top 탭 메뉴 -->
-        <div class="tab-area">
-          <ul>
-            <li class="tab-menu on"><a href="#">스토리</a></li>
-            <li class="tab-menu"><a href="#">새소식<span class="count">15</span></a></li>
-            <li class="tab-menu"><a href="#">커뮤니티<span class="count">4</span></a></li>
-            <li class="tab-menu"><a href="#">서포터<span class="count">23</span></a></li>
-            <li class="tab-menu"><a href="#">환불/정책</a></li>
-          </ul>
-        </div>
-        <!-- 콘텐츠 항목 -->
-        <div class="container-area">
-          <div class="container-wrap">
-            <div class="left-area">
-              <div class="gallery-area">
-                <div class="gallery-img">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210430666_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <!-- <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210445072_208783.jpg/wadiz/format/jpg/quality/80/" alt="">
-                  <img src="https://cdn.wadiz.kr/wwwwadiz/green001/2023/0422/20230422210452426_208783.jpg/wadiz/format/jpg/quality/80/" alt=""> -->
-                </div>
-                <div class="arrow-area">
-                  <span class="arrow left"></span>
-                  <span class="arrow right"></span>
-                </div>
-                <div class="page-wrap">
-                  <span><span class="current-num">1</span>/<span class="count-num">3</span></span>
-                </div>
-              </div>
-            </div>
-            <div class="right-area">
-              <div class="common-info-area">
-                <div class="top">
-                  <div class="breadcrumb">
-                    
-                  </div>
-                  <span class="link-share"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-    </div>
-    <!-- //피드 -->
-  </body>
-</html>

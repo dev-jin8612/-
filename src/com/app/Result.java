@@ -25,8 +25,4 @@ public class Result {
 		this.isRedirect = isRedirect;
 	}
 
-	@Override
-	public String toString() {
-		return "Result [path=" + path + ", isRedirect=" + isRedirect + "]";
-	}
 }

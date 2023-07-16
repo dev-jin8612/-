@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-<!-- 	회원가입, 데이터 베이스를 다른 사람꺼 쓸려면 쿼리문 수정해야됨 -->
-	<insert id="insert">
-		insert into tbl_member
-		(member_id, member_password, member_name, member_nick, member_hp, member_img)
-		values(#{memberId}, #{memberPassword}, #{memberName}, #{memberNick}, #{memberHP}, #{memberImg})
-	</insert>
-	
-	<select id="selectMemberId" resultType="string">
-		select member_id from tbl_member where member_id = #{memberId}
+
+	<select id="checkId" resultType="_int">
+		select count(id) from member
+			where id = #{id}
 	</select>
 	
-	<select id="login" resultType="long">
-		select member_id from tbl_member 
-		where member_id = #{memberId} and member_password = #{memberPassword}
-	</select>
 </mapper>
