@@ -7,7 +7,7 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.app.post.vo.PostVO" alias="postVO"/>
+		<typeAlias type="com.app.vo.MemberDTO" alias="MemberDTO"/>
 	</typeAliases>
 
 	<environments default="mysql"> 

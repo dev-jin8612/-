@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./css/xeicon/xeicon.min.css">
     <link rel="stylesheet" href="./css/layout.css">
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
     <script charset="UTF-8" src="./js/layout.js"></script>
     <title>feed</title>
 </head>
