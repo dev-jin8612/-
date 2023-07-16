@@ -1,6 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- 공통헤더 -->
-<jsp:include page="head.jsp"></jsp:include>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 공통헤더 css -->
+    <link rel="stylesheet" href="../inc/css/font/font.css">
+    <link rel="stylesheet" href="../inc/css/reset.css">
+    <link rel="stylesheet" href="../inc/css/xeicon/xeicon.min.css">
+    <link rel="stylesheet" href="../inc/css/header.css">
+    <!-- //공통헤더 css -->
+    <!-- 페이지 css -->
+    <link rel="stylesheet" href="./css/layout.css">
+    <!-- 페이지 css -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+    <script charset="UTF-8" src="./js/layout.js"></script>
+    <title>feed</title>
+</head>
+<body>
+<jsp:include page="../inc/head.jsp"></jsp:include>
 <!-- 공통헤더 -->
     <!-- 피드 -->
     <div id="container" class="feed-list">

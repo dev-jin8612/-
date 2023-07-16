@@ -16,7 +16,7 @@
 <body>
 <div id="PageContainer">
 <!-- 헤더   -->
-
+<jsp:include page="head.jsp"></jsp:include>
 	
 
 <!-- 컨텐츠 -->
