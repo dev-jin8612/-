@@ -165,8 +165,8 @@
 						</button>
 					</div>
 					<ul>
-						<li>
-							<button type="button" style="color: #00b2b2;">1</button>
+						<li class="active">
+							<button type="button">1</button>
 						</li>
 						<li>
 							<button type="button">2</button>
@@ -180,74 +180,178 @@
 					</ul>
 				</div>
 			</div>
-			<ul>
-				<li><a>
-						<div class="contents">
-							<div class="img-box">
-								<div class="img"></div>
-							</div>
-							<div class="text">
-								<div class="trade-title">
-									<h1>교환 물품명</h1>
-								</div>
-								<div class="trade-contents">
-									<p>내용</p>
-								</div>
-								<div class="svg">
-									교환 신청
-									<svg viewBox="0 0 24 24" fill="none" focusable="false"
-										role="presentation" aria-hidden="true">
-										<path></path>
-									</svg>
+			<div class="slide-wrap">
+				<ul class="slide-ul">
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용1</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
 								</div>
 							</div>
-						</div>
-				</a></li>
-				<li><a>
-						<div class="contents">
-							<div class="img-box">
-								<div class="img"></div>
-							</div>
-							<div class="text">
-								<div class="trade-title">
-									<h1>교환 물품명</h1>
-								</div>
-								<div class="trade-contents">
-									<p>내용</p>
-								</div>
-								<div class="svg">
-									교환 신청
-									<svg viewBox="0 0 24 24" fill="none" focusable="false"
-										role="presentation" aria-hidden="true">
-										<path></path>
-									</svg>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
 								</div>
 							</div>
-						</div>
-				</a></li>
-				<li><a>
-						<div class="contents">
-							<div class="img-box">
-								<div class="img"></div>
-							</div>
-							<div class="text">
-								<div class="trade-title">
-									<h1>교환 물품명</h1>
-								</div>
-								<div class="trade-contents">
-									<p>내용</p>
-								</div>
-								<div class="svg">
-									교환 신청
-									<svg viewBox="0 0 24 24" fill="none" focusable="false"
-										role="presentation" aria-hidden="true">
-										<path></path>
-									</svg>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
 								</div>
 							</div>
-						</div>
-				</a></li>
-			</ul>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용2</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용3</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a>
+							<div class="contents">
+								<div class="img-box"><div class="img"></div></div>
+								<div class="text">
+									<div class="trade-title"><h1>교환 물품명</h1></div>
+									<div class="trade-contents"><p>내용</p></div>
+									<div class="svg">
+										교환 신청 <svg viewBox="0 0 24 24" fill="none" focusable="false"role="presentation" aria-hidden="true"><path></path></svg>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
@@ -265,5 +369,54 @@
 			$('.user-filter').removeClass('scroll-on');
 		}
 	});
+	
+	/* 슬라이드 */
+	// 버튼 엘리먼트 선택하기
+	let count = 0;
+	const btnPrev = document.querySelector(".trade .left-button");
+	const btnNext = document.querySelector(".trade .right-button");
+	const galleryUl = document.querySelector(".trade .slide-ul")
+	const galleryLi = document.querySelectorAll(".trade .slide-ul li")
+	const pageLi = document.querySelectorAll(".page li");
+
+	$(".page li").on("click", function(){  
+        const liIdx=$(this).index();
+ 		const gap = (galleryUl.clientWidth) / 4;
+		const goto = (-gap * liIdx) + "px";
+	    galleryUl.style.left = goto; 
+	    
+         $(".page li").not(this).removeClass("active");
+         $(this).addClass("active");
+     });
+	
+	btnNext.addEventListener("click",(el)=>{
+		if(count >= 3)count = -1;
+
+		$(pageLi).not(count + 1).removeClass("active");
+		$(pageLi).eq(count + 1).addClass("active");
+		
+		
+		++ count
+		const gap = (galleryUl.clientWidth) / 4;
+		const goto = (-gap * count) + "px";
+	    galleryUl.style.left = goto;   
+
+	})
+
+	btnPrev.addEventListener("click",(el)=>{
+	 	if(count <= 0) count = 4;
+	 	
+		$(pageLi).not(count - 1).removeClass("active");
+		$(pageLi).eq(count - 1).addClass("active");
+
+	    -- count
+	    const gap = (galleryUl.clientWidth) / 4;
+		const goto = (-gap * count) + "px";
+	    galleryUl.style.left = goto;
+		console.log(count);
+
+	})
+	
+	
 </script>
 </html>
