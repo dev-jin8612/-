@@ -8,14 +8,14 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.memberDAO;
-import com.app.vo.memberDTO;
+import com.app.dao.loginDAO;
+import com.app.vo.loginDTO;
 
 public class JoinOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		memberDAO memberDAO = new memberDAO();
-		memberDTO memberDTO = new memberDTO();
+		loginDAO memberDAO = new loginDAO();
+		loginDTO memberDTO = new loginDTO();
 		Result result = new Result();
 
 //	사용자가 화면에서 입력한 값을 전부 받아온다.

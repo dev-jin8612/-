@@ -1,5 +1,5 @@
   const $emailInput = $("input[type=email]");
-  const $passwordInput = $("#userPassword");
+  const $passwordInput = $("#memberPassword");
   const $emailInputVal = $emailInput.val();
   const $logintBtn = $(".login-btn-area button");
   const $emailFilter =  /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;

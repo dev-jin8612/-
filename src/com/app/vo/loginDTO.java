@@ -1,6 +1,6 @@
 package com.app.vo;
 
-public class memberDTO {
+public class loginDTO {
 	private Long Id;
 	private String memberId;
 	private String memberPassword;
@@ -8,50 +8,63 @@ public class memberDTO {
 	private String memberNick;
 	private String memberImg;
 	private String memberHP;
-	
+
 	public Long getId() {
 		return Id;
 	}
+
 	public void setId(Long id) {
 		Id = id;
 	}
+
 	public String getMemberId() {
 		return memberId;
 	}
+
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
+
 	public String getMemberPassword() {
 		return memberPassword;
 	}
+
 	public void setMemberPassword(String memberPassword) {
 		this.memberPassword = memberPassword;
 	}
+
 	public String getMemberName() {
 		return memberName;
 	}
+
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
+
 	public String getMemberNick() {
 		return memberNick;
 	}
+
 	public void setMemberNick(String memberNick) {
 		this.memberNick = memberNick;
 	}
+
 	public String getMemberImg() {
 		return memberImg;
 	}
+
 	public void setMemberImg(String memberImg) {
 		this.memberImg = memberImg;
 	}
+
 	public String getMemberHP() {
 		return memberHP;
 	}
+
 	public void setMemberHP(String memberHP) {
 		this.memberHP = memberHP;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -65,6 +78,7 @@ public class memberDTO {
 		result = prime * result + ((memberPassword == null) ? 0 : memberPassword.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -73,7 +87,7 @@ public class memberDTO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		memberDTO other = (memberDTO) obj;
+		loginDTO other = (loginDTO) obj;
 		if (Id == null) {
 			if (other.Id != null)
 				return false;
@@ -111,7 +125,7 @@ public class memberDTO {
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "memberVO [Id=" + Id + ", memberId=" + memberId + ", memberPassword=" + memberPassword + ", memberName="
@@ -119,5 +133,4 @@ public class memberDTO {
 				+ "]";
 	}
 
-	
 }

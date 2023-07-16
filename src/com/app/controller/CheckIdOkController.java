@@ -12,12 +12,12 @@ import org.json.JSONObject;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.memberDAO;
+import com.app.dao.loginDAO;
 
 public class CheckIdOkController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		memberDAO memberDAO = new memberDAO();
+		loginDAO memberDAO = new loginDAO();
 		String memberId = memberDAO.selectIdentification(req.getParameter("memberId"));
 		boolean check = memberId == null;
 		

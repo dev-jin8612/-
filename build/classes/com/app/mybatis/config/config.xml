@@ -7,7 +7,8 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.app.vo.memberVO" alias="memberVO"/>
+		<typeAlias type="com.app.vo.loginDTO" alias="loginDTO"/>
+		<typeAlias type="com.app.vo.MemberDTO" alias="MemberDTO"/>
 	</typeAliases>
 
 	<environments default="mysql"> 
@@ -23,7 +24,8 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"/>
+		<mapper resource="com/app/mybatis/mapper/loginMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"></mapper>
 	</mappers>
 	
 </configuration>
