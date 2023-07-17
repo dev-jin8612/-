@@ -8,11 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
-import com.app.controller.JoinOkController;
-import com.app.controller.LoginController;
 import com.app.controller.LoginOkController;
 import com.app.controller.LogoutController;
-import com.app.controller.CheckIdOkController;
 
 public class LoginFrontController extends HttpServlet {
 
@@ -24,26 +21,19 @@ public class LoginFrontController extends HttpServlet {
 
 //		System.out.println("aa");
 
-		if (target.equals("checkIdOk")) {
-			result = new CheckIdOkController().execute(req, resp);
-		} else if (target.equals("join")) {
+		if (target.equals("join")) {
 			result = new Result();
 //			나중에 메인페이로 이동하게 만들기
 			result.setPath("account/join.jsp");
-		} else if (target.equals("joinOk")) {
-			result = new JoinOkController().execute(req, resp);
 		} else if (target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 		} else if (target.equals("logout")) {
 			result = new LogoutController().execute(req, resp);
 		} else if (target.equals("feed")) {
 			result = new Result();
-			result.setPath("feed/view.jsp");
+			result.setPath("feed/");
 		}
-		/*
-		 * 와디즈는 자동 로그인이 없기에 주석 처리 else if(target.equals("login")){ result = new
-		 * LoginController().execute(req, resp); }
-		 */
+		
 		if (result != null) {
 			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
