@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<<<<<<< HEAD:src/com/app/mybatis/mapper/loginMapper.xml
 <mapper namespace="login">
 <!-- 	회원가입, 데이터 베이스를 다른 사람꺼 쓸려면 쿼리문 수정해야됨 -->
 	<insert id="insert">
-		insert into tbl_member
-		(member_id, member_password, member_name, member_nick, member_hp, member_img)
-		values(#{memberId}, #{memberPassword}, #{memberName}, #{memberNick}, #{memberHP}, #{memberImg})
+		insert into member
+		(id, member_pw, member_name, member_hp, member_img)
+		values(#{memberId}, #{memberPassword}, #{memberName}, #{memberHP}, #{memberImg})
 	</insert>
 	
 	<select id="selectMemberId" resultType="string">
-		select member_id from tbl_member where member_id = #{memberId}
+		select id from member where id = #{memberId}
 	</select>
 	
-	<select id="login" resultType="long">
-		select id from tbl_member 
-		where member_id = #{memberId} and member_password = #{memberPassword}
+	<select id="login" resultType="string">
+		select id from member 
+		where id = #{memberId} and member_pw = #{memberPassword}
 	</select>
-=======
-<mapper namespace="member">
 
 	<select id="checkId" resultType="_int">
 		select count(id) from member
 			where id = #{id}
 	</select>
-	
->>>>>>> e15456351d622965e33c864018d9b48f226742eb:src/com/app/mybatis/mapper/memberMapper.xml
 </mapper>

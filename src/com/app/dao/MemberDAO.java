@@ -1,5 +1,7 @@
 package com.app.dao;
 
+import java.util.HashMap;
+
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
@@ -15,6 +17,15 @@ public class MemberDAO {
 //	목록
 	public boolean checkId(String id) {
 		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
+	}
+	
+//	로그인
+	public String login(String memberId, String memberPassword) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("memberId", memberId);
+		loginMap.put("memberPassword", memberPassword);
+		
+		return sqlSession.selectOne("login.login", loginMap);
 	}
 	
 }
