@@ -1,28 +1,30 @@
 package com.app.vo;
 
-public class BoardDTO {
+public class FeedDTO {
 	
-	private String boardid;
+	private String feed;
 	private String id;
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-	private String boardsort;
-	private String boardstatus;
-//	board sub
+//	follow
 	private String meberid;
 //	img
 	private int num;
 	private String img;
+//	reply
+	private String contents;
+	private String reply_id;
+	private String re_reply;
 	
-	public BoardDTO() {;}
+	public FeedDTO() {;}
 
-	public String getBoardid() {
-		return boardid;
+	public String getFeed() {
+		return feed;
 	}
 
-	public void setBoardid(String boardid) {
-		this.boardid = boardid;
+	public void setFeed(String feed) {
+		this.feed = feed;
 	}
 
 	public String getId() {
@@ -57,22 +59,6 @@ public class BoardDTO {
 		this.boarddate = boarddate;
 	}
 
-	public String getBoardsort() {
-		return boardsort;
-	}
-
-	public void setBoardsort(String boardsort) {
-		this.boardsort = boardsort;
-	}
-
-	public String getBoardstatus() {
-		return boardstatus;
-	}
-
-	public void setBoardstatus(String boardstatus) {
-		this.boardstatus = boardstatus;
-	}
-
 	public String getMeberid() {
 		return meberid;
 	}
@@ -97,11 +83,34 @@ public class BoardDTO {
 		this.img = img;
 	}
 
-	@Override
-	public String toString() {
-		return "BoardDTO [boardid=" + boardid + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
-				+ boardcontents + ", boarddate=" + boarddate + ", boardsort=" + boardsort + ", boardstatus="
-				+ boardstatus + ", meberid=" + meberid + ", num=" + num + ", img=" + img + "]";
+	public String getContents() {
+		return contents;
 	}
 
+	public void setContents(String contents) {
+		this.contents = contents;
+	}
+
+	public String getReply_id() {
+		return reply_id;
+	}
+
+	public void setReply_id(String reply_id) {
+		this.reply_id = reply_id;
+	}
+
+	public String getRe_reply() {
+		return re_reply;
+	}
+
+	public void setRe_reply(String re_reply) {
+		this.re_reply = re_reply;
+	}
+
+	@Override
+	public String toString() {
+		return "FeedDTO [feed=" + feed + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
+				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
+				+ ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply + "]";
+	}
 }
