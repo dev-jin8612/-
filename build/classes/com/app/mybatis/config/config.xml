@@ -7,8 +7,8 @@
 	</settings>
 	
 	<typeAliases>
-		<typeAlias type="com.app.vo.loginDTO" alias="loginDTO"/>
 		<typeAlias type="com.app.vo.MemberDTO" alias="MemberDTO"/>
+		<typeAlias type="com.app.vo.TradeDTO" alias="TradeDTO"/>
 	</typeAliases>
 
 	<environments default="mysql"> 
@@ -24,8 +24,8 @@
 	</environments>
 	
 	<mappers>
-		<mapper resource="com/app/mybatis/mapper/loginMapper.xml"></mapper>
 		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/tradeMapper.xml"></mapper>
 	</mappers>
 	
 </configuration>
