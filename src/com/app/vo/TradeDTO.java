@@ -7,6 +7,7 @@ public class TradeDTO {
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
+	private String boardstatus;
 //	follow
 	private String meberid;
 //	img
@@ -59,6 +60,14 @@ public class TradeDTO {
 		this.boarddate = boarddate;
 	}
 
+	public String getBoardstatus() {
+		return boardstatus;
+	}
+
+	public void setBoardstatus(String board_status) {
+		this.boardstatus = board_status;
+	}
+
 	public String getMeberid() {
 		return meberid;
 	}
@@ -109,8 +118,9 @@ public class TradeDTO {
 
 	@Override
 	public String toString() {
-		return "TradeDTO [trade=" + trade + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
-				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
-				+ ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply + "]";
+		return "TradeDTO [boardstatus=" + boardstatus + ", boardcontents=" + boardcontents + ", boarddate="
+				+ boarddate + ", boardtitle=" + boardtitle + ", contents=" + contents + ", id=" + id + ", img=" + img
+				+ ", meberid=" + meberid + ", num=" + num + ", re_reply=" + re_reply + ", reply_id=" + reply_id
+				+ ", trade=" + trade + "]";
 	}
 }
