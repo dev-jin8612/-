@@ -3,7 +3,7 @@
 <mapper namespace="trade">
 
 	<select id="list" resultType="TradeDTO">
-		select * from trade
+		select * from tbl_trade
 	</select>
 	
 </mapper>
