@@ -72,7 +72,7 @@
 				id="form1" name="login" method="post">
 				<div class="input-area">
 					<div class="input-con">
-						<input type="email" id="id" name="id" class="input_txt"
+						<input type="text" id="memberid" name="memberid" class="input_txt"
 							placeholder="이메일 입력">
 						<p class="message_wrap">이메일 형식이 올바르지 않습니다.</p>
 					</div>

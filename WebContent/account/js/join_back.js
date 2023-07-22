@@ -1,10 +1,10 @@
 function idcheck() {
-	let id = $("input#id").val();
+	let id = $("input#memberid").val();
 
 	$.ajax({
 		url: "idCheck.member",
 		type: "post",
-		data: "id=" + id,
+		data: "memberid=" + id,
 		dataType: "json",
 		success: function(checkId) {
 			if (checkId) {
@@ -20,8 +20,5 @@ function idcheck() {
 
 // 완료 버튼 누르면 join request 실행
 function send() {
-	const $id = $("input#id");
-	const $password1 = $("input#memberpw2");
-
 	document.getElementById("form1").submit();
 }

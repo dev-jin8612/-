@@ -21,7 +21,7 @@ public class MemberFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getRequestURI().lastIndexOf("/") + 1).split("\\.")[0];
 		Result result = null;
 
-//		System.out.println(req.getParameter("id"));
+//		System.out.println("aa");
 
 		if (target.equals("idCheck")) {
 			result = new MemberController().execute(req, resp);

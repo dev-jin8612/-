@@ -12,9 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.FileDAO;
 import com.app.dao.MemberDAO;
-import com.app.vo.FileVO;
 import com.app.vo.MemberDTO;
 import com.oreilly.servlet.MultipartRequest;
 import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
@@ -24,8 +22,6 @@ public class JoinOkController implements Action{
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
 		MemberDTO memberDTO = new MemberDTO();
-		FileVO fileVO = new FileVO();
-		FileDAO fileDAO = new FileDAO();
 		Result result = new Result();
 		Path path = null;
 		
@@ -35,33 +31,28 @@ public class JoinOkController implements Action{
 
 		MultipartRequest multipartRequest = new MultipartRequest(req, root, fileSize, "UTF-8", new DefaultFileRenamePolicy());
 		
-		memberDTO.setId(multipartRequest.getParameter("id"));
+		memberDTO.setMemberid(multipartRequest.getParameter("memberid"));
 		memberDTO.setMemberpw(multipartRequest.getParameter("memberpw2"));
 		memberDTO.setMembername(multipartRequest.getParameter("membername"));
-		memberDTO.setMemberimg(multipartRequest.getParameter("memberimg"));
+		memberDTO.setMembernick(multipartRequest.getParameter("membernick"));
 		memberDTO.setMemberhp(multipartRequest.getParameter("memberhp"));
 		
-		memberDAO.insert(memberDTO);
+		System.out.println(multipartRequest.getParameter("memberid"));
 		
-		fileVO.setMemberId(memberDAO.selectCurrentSequence());
 		Enumeration<String> inputTypeFileNames = multipartRequest.getFileNames();
 		
 		while(inputTypeFileNames.hasMoreElements()) {
 			String inputTypeFileName = inputTypeFileNames.nextElement();
 			String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
 			if(fileSystemName == null) {continue;}
-			fileVO.setFileSystemName(fileSystemName);
-			fileVO.setFileOriginalName(multipartRequest.getOriginalFileName(inputTypeFileName));
-			path = Path.of(root + fileSystemName);
-			fileVO.setFileSize(Files.size(path));
-			
-			fileDAO.insert(fileVO);
+//			memberDTO.setMemberimg(multipartRequest.getParameter("memberimg"));
+			memberDTO.setMemberimg(root + fileSystemName);
 		}
+		memberDAO.insert(memberDTO);
 		
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/login.member");
 		
-		return null;
+		return result;
 	}
-	
 }

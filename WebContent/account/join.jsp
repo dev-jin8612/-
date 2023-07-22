@@ -51,31 +51,18 @@
 		<div class="inner-container">
 			<h2 class="join-title">text 회원가입</h2>
 
-			<form action="${pageContext.request.contextPath}/login.member"
-				id="form1" name="join" method="post">
+			<form action="${pageContext.request.contextPath}/joinOk.member"
+				id="form1" name="join" method="post" enctype="multipart/form-data">
 				<div class="input-area">
 					<div class="input-con email">
 						<label for="userEmail">아이디</label>
 						<div class="flex-wrap">
-							<input type="text" id="id" name="id"
+							<input type="text" id="memberid" name="memberid"
 								class="input_txt" placeholder="아이디 입력">
 							<button type="button" class="full_btn emailBtn"
 								onclick="idcheck()">인증하기</button>
 						</div>
 					</div>
-					
-					<div class="input-con">
-						<label for="membername">이름</label> <input type="text"
-							id="membername" name="membername" class="input_txt"
-							placeholder="이름 입력">
-					</div>
-
-					<div class="input-con">
-						<label for="membernick">별명</label> <input type="text"
-							id="membernick" name="membernick" class="input_txt"
-							placeholder="별명 입력">
-					</div>
-
 					<div class="input-con">
 						<label for="memberpw1">비밀번호</label>
 						<div class="password-wrap">
@@ -93,6 +80,24 @@
 								<i class="xi-eye"></i>
 							</button>
 						</div>
+					</div>
+					
+					<div class="input-con">
+						<label for="membername">이름</label> <input type="text"
+							id="membername" name="membername" class="input_txt"
+							placeholder="이름 입력">
+					</div>
+
+					<div class="input-con">
+						<label for="membernick">별명</label> <input type="text"
+							id="membernick" name="membernick" class="input_txt"
+							placeholder="별명 입력">
+					</div>
+
+					<div class="input-con">
+						<label for="memberhp">전화 번호</label> <input type="text"
+							id="memberhp" name="memberhp" class="input_txt"
+							placeholder="전화번호 입력">
 					</div>
 				</div>
 
@@ -116,8 +121,8 @@
 							<div class="IULField_container">
 								첨부 파일을 업로드해 주세요.
 								<div class="IULButton_container spacing-2">
-									<input class="is-hidden" type="file" name="upload"
-										accept="image/JPG,image/JPEG,image/PNG" />
+									<input class="is-hidden" type="file" name="memberimg" id="memberimg"
+										accept="image/JPG,image/JPEG,image/PNG"/>
 									<button
 										class="Button_button Button_tertiaryGrey Button_contained Button_sm Button_circular"
 										type="button">
@@ -177,7 +182,7 @@
 					<h3>약관확인</h3>
 					<p>약관에 동의하셔야 해당 서비스를 이용할 수 있습니다.</p>
 				</div>
-				<form action="">
+				<form action="${pageContext.request.contextPath}/login.member">
 					<!-- 전체동의 -->
 					<div class="all-check">
 						<input type="checkbox" name="allAgree" id="allAgree2"
