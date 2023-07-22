@@ -17,7 +17,6 @@ public class MemberDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-<<<<<<< HEAD
 //	紐⑸줉
 	public boolean checkId(String id) {
 		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
@@ -32,12 +31,6 @@ public class MemberDAO {
 		return sqlSession.selectOne("login.login", loginMap);
 	}
 	
-//	mypage 마이페이지 프로필 정보 출력 - 0720유아람 추가
-	public Member2VO myProfile(Long id) {
-		return sqlSession.selectOne("member.profile", id);
-	}
-	
-=======
 //	아이디 찾기
 	public boolean checkId(String id) {
 		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
@@ -56,5 +49,10 @@ public class MemberDAO {
 
 		return sqlSession.selectOne("member.login", loginMap);
 	}
->>>>>>> 417ebcd40abd9ea84d7d82a7316329f30bf36156
+	
+//	mypage 마이페이지 프로필 정보 출력 - 0720유아람 추가
+	public Member2VO myProfile(Long id) {
+		return sqlSession.selectOne("member.profile", id);
+	}
+	
 }

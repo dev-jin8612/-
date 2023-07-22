@@ -26,16 +26,16 @@ public class MyProfileController implements Action {
 		resp.setContentType("text/html; charset=UTF-8");
 		
 		Result result = new Result();
-		System.out.println("ÄÁÆ®·Ñ·¯ µé¾î¿È");
 		MemberDAO memberDAO = new MemberDAO();
 		Member2VO member2vo = new Member2VO();
 		
-//		·Î±×ÀÎ Á¤º¸
+		System.out.println("ì»¨íŠ¸ë¡¤ëŸ¬ ë“¤ì–´ì˜´");
+//		ï¿½Î±ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		int intValue = 1;
 		Long longValue = Long.valueOf(intValue);
 		member2vo = memberDAO.myProfile(longValue);
 		
-//		°´Ã¼¸¦ JSON °´Ã¼·Î
+//		ï¿½ï¿½Ã¼ï¿½ï¿½ JSON ï¿½ï¿½Ã¼ï¿½ï¿½
 		JSONObject member = new JSONObject();
 		
 		try {
