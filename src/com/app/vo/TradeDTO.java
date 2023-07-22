@@ -2,125 +2,240 @@ package com.app.vo;
 
 public class TradeDTO {
 	
-	private String trade;
-	private String id;
+	private Long id;
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-	private String boardstatus;
-//	follow
-	private String meberid;
+	private Long memberid;
+//	함께해요
+	private String togetherappcontent;
+//	좋아요, 댓글
+	private Long togetherid;
+//	교환 신청
+	private Long tradeappcontent;
+	private Long tradeid;
 //	img
-	private int num;
-	private String img;
+	private String filesystemname;
+	private String fileoriginalname;
+	private Long filesize;
+	private Long tradeimg;
 //	reply
+	private int renum;
 	private String contents;
-	private String reply_id;
-	private String re_reply;
+	private String replyid;
+	private String rereply;
+	private String date;
 	
 	public TradeDTO() {;}
 
-	public String getTrade() {
-		return trade;
-	}
-
-	public void setTrade(String trade) {
-		this.trade = trade;
-	}
-
-	public String getId() {
+	Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getBoardtitle() {
+	String getBoardtitle() {
 		return boardtitle;
 	}
 
-	public void setBoardtitle(String boardtitle) {
+	void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	public String getBoardcontents() {
+	String getBoardcontents() {
 		return boardcontents;
 	}
 
-	public void setBoardcontents(String boardcontents) {
+	void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	public String getBoarddate() {
+	String getBoarddate() {
 		return boarddate;
 	}
 
-	public void setBoarddate(String boarddate) {
+	void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	public String getBoardstatus() {
-		return boardstatus;
+	Long getMemberid() {
+		return memberid;
 	}
 
-	public void setBoardstatus(String board_status) {
-		this.boardstatus = board_status;
+	void setMemberid(Long memberid) {
+		this.memberid = memberid;
 	}
 
-	public String getMeberid() {
-		return meberid;
+	String getTogetherappcontent() {
+		return togetherappcontent;
 	}
 
-	public void setMeberid(String meberid) {
-		this.meberid = meberid;
+	void setTogetherappcontent(String togetherappcontent) {
+		this.togetherappcontent = togetherappcontent;
 	}
 
-	public int getNum() {
-		return num;
+	Long getTogetherid() {
+		return togetherid;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	void setTogetherid(Long togetherid) {
+		this.togetherid = togetherid;
 	}
 
-	public String getImg() {
-		return img;
+	Long getTradeappcontent() {
+		return tradeappcontent;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	void setTradeappcontent(Long tradeappcontent) {
+		this.tradeappcontent = tradeappcontent;
 	}
 
-	public String getContents() {
+	Long getTradeid() {
+		return tradeid;
+	}
+
+	void setTradeid(Long tradeid) {
+		this.tradeid = tradeid;
+	}
+
+	String getFilesystemname() {
+		return filesystemname;
+	}
+
+	void setFilesystemname(String filesystemname) {
+		this.filesystemname = filesystemname;
+	}
+
+	String getFileoriginalname() {
+		return fileoriginalname;
+	}
+
+	void setFileoriginalname(String fileoriginalname) {
+		this.fileoriginalname = fileoriginalname;
+	}
+
+	Long getFilesize() {
+		return filesize;
+	}
+
+	void setFilesize(Long filesize) {
+		this.filesize = filesize;
+	}
+
+	Long getTradeimg() {
+		return tradeimg;
+	}
+
+	void setTradeimg(Long tradeimg) {
+		this.tradeimg = tradeimg;
+	}
+
+	int getRenum() {
+		return renum;
+	}
+
+	void setRenum(int renum) {
+		this.renum = renum;
+	}
+
+	String getContents() {
 		return contents;
 	}
 
-	public void setContents(String contents) {
+	void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	public String getReply_id() {
-		return reply_id;
+	String getReplyid() {
+		return replyid;
 	}
 
-	public void setReply_id(String reply_id) {
-		this.reply_id = reply_id;
+	void setReplyid(String replyid) {
+		this.replyid = replyid;
 	}
 
-	public String getRe_reply() {
-		return re_reply;
+	String getRereply() {
+		return rereply;
 	}
 
-	public void setRe_reply(String re_reply) {
-		this.re_reply = re_reply;
+	void setRereply(String rereply) {
+		this.rereply = rereply;
+	}
+
+	String getDate() {
+		return date;
+	}
+
+	void setDate(String date) {
+		this.date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "TradeDTO [boardstatus=" + boardstatus + ", boardcontents=" + boardcontents + ", boarddate="
-				+ boarddate + ", boardtitle=" + boardtitle + ", contents=" + contents + ", id=" + id + ", img=" + img
-				+ ", meberid=" + meberid + ", num=" + num + ", re_reply=" + re_reply + ", reply_id=" + reply_id
-				+ ", trade=" + trade + "]";
+		return "TradeDTO [id=" + id + ", boardtitle=" + boardtitle + ", boardcontents=" + boardcontents + ", boarddate="
+				+ boarddate + ", memberid=" + memberid + ", togetherappcontent=" + togetherappcontent + ", togetherid="
+				+ togetherid + ", tradeappcontent=" + tradeappcontent + ", tradeid=" + tradeid + ", filesystemname="
+				+ filesystemname + ", fileoriginalname=" + fileoriginalname + ", filesize=" + filesize + ", tradeimg="
+				+ tradeimg + ", renum=" + renum + ", contents=" + contents + ", replyid=" + replyid + ", rereply="
+				+ rereply + ", date=" + date + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((filesize == null) ? 0 : filesize.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((memberid == null) ? 0 : memberid.hashCode());
+		result = prime * result + ((togetherid == null) ? 0 : togetherid.hashCode());
+		result = prime * result + ((tradeid == null) ? 0 : tradeid.hashCode());
+		result = prime * result + ((tradeimg == null) ? 0 : tradeimg.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TradeDTO other = (TradeDTO) obj;
+		if (filesize == null) {
+			if (other.filesize != null)
+				return false;
+		} else if (!filesize.equals(other.filesize))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (memberid == null) {
+			if (other.memberid != null)
+				return false;
+		} else if (!memberid.equals(other.memberid))
+			return false;
+		if (togetherid == null) {
+			if (other.togetherid != null)
+				return false;
+		} else if (!togetherid.equals(other.togetherid))
+			return false;
+		if (tradeid == null) {
+			if (other.tradeid != null)
+				return false;
+		} else if (!tradeid.equals(other.tradeid))
+			return false;
+		if (tradeimg == null) {
+			if (other.tradeimg != null)
+				return false;
+		} else if (!tradeimg.equals(other.tradeimg))
+			return false;
+		return true;
+	}
+
+	
 }
