@@ -14,88 +14,89 @@ public class MemberDTO {
 	
 	public MemberDTO() {;}
 
-	Long getId() {
+	
+
+	public Long getId() {
 		return id;
 	}
 
 
 
-	void setId(Long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
 
 
-	String getMemberid() {
+	public String getMemberid() {
 		return memberid;
 	}
 
 
 
-	void setMemberid(String memberid) {
+	public void setMemberid(String memberid) {
 		this.memberid = memberid;
 	}
 
 
 
-	String getMemberpw() {
+	public String getMemberpw() {
 		return memberpw;
 	}
 
 
 
-	void setMemberpw(String memberpw) {
+	public void setMemberpw(String memberpw) {
 		this.memberpw = memberpw;
 	}
 
 
 
-	String getMembername() {
+	public String getMembername() {
 		return membername;
 	}
 
 
 
-	void setMembername(String membername) {
+	public void setMembername(String membername) {
 		this.membername = membername;
 	}
 
 
 
-	String getMemberimg() {
+	public String getMemberimg() {
 		return memberimg;
 	}
 
 
 
-	void setMemberimg(String memberimg) {
+	public void setMemberimg(String memberimg) {
 		this.memberimg = memberimg;
 	}
 
 
 
-	String getMemberhp() {
+	public String getMemberhp() {
 		return memberhp;
 	}
 
 
 
-	void setMemberhp(String memberhp) {
+	public void setMemberhp(String memberhp) {
 		this.memberhp = memberhp;
 	}
 
 
 
-	Long getFollowerid() {
+	public Long getFollowerid() {
 		return followerid;
 	}
 
 
 
-	void setFollowerid(Long followerid) {
+	public void setFollowerid(Long followerid) {
 		this.followerid = followerid;
 	}
-
 
 
 	@Override
@@ -104,6 +105,8 @@ public class MemberDTO {
 				+ membername + ", memberimg=" + memberimg + ", memberhp=" + memberhp + ", followerid=" + followerid
 				+ "]";
 	}
+
+
 
 	@Override
 	public int hashCode() {
