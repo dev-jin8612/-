@@ -26,6 +26,9 @@ public class LoginOkController implements Action {
 		Result result = new Result();
 		result.setRedirect(true);
 
+		session.setAttribute("memberid", memberid);
+		session.setAttribute("memberpw", memberpw);
+		
 		System.out.println(memberpw);
 		
 		Id = memberDAO.login(memberid, memberpw);
