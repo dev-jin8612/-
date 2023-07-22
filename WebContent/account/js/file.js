@@ -9,7 +9,6 @@ $('.Button_circular').on('click', function () {
 // 완료 버튼 누르면 join request 실행
 const $id = $("input#id");
 const $password1 = $("input#memberpw2");
-const $password2 = $("input#membername");
 
 
 function send() {
@@ -22,5 +21,5 @@ function send() {
         return;
     }
 // 서브밋
-document.member.submit();
+	document.getElementById("form1").submit();
 }

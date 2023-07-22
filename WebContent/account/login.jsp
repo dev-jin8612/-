@@ -14,7 +14,7 @@
 -->
 <link rel="stylesheet"
 	href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-	 
+
 <!-- 백 작업용 경로 -->
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/account/css/font/font.css">
@@ -69,11 +69,11 @@
 			<h2 class="login-title">로그인</h2>
 			<!-- 백 작업용 form action, name, method 추가 -->
 			<form action="${pageContext.request.contextPath}/loginOk.member"
-				name="login" method="post">
+				id="form1" name="login" method="post">
 				<div class="input-area">
 					<div class="input-con">
-						<input type="email" id="id" name="id"
-							class="input_txt" placeholder="이메일 입력">
+						<input type="email" id="id" name="id" class="input_txt"
+							placeholder="이메일 입력">
 						<p class="message_wrap">이메일 형식이 올바르지 않습니다.</p>
 					</div>
 					<div class="input-con">
@@ -87,7 +87,7 @@
 					<a href="#">로그인 정보를 잊으셨나요?</a>
 				</p>
 				<div class="login-btn-area">
-					<button type="button" class="full_btn" onclick="send()">로그인</button>
+					<button type="submit" class="full_btn" onclick="send()">로그인</button>
 				</div>
 			</form>
 			<!-- sns 로그인 -->
@@ -134,7 +134,7 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script src="${pageContext.request.contextPath}/account/js/layout.js"></script>
 <script charset="UTF-8"
-	src="${pageContext.request.contextPath}/account/js/loginOK.js" defer></script>
+	src="${pageContext.request.contextPath}/account/js/loginOK.js"></script>
 <script src="${pageContext.request.contextPath}/account/js/login.js"></script>
 </html>
 

@@ -52,7 +52,7 @@
 			<h2 class="join-title">text 회원가입</h2>
 
 			<form action="${pageContext.request.contextPath}/login.member"
-				name="join" method="post">
+				id="form1" name="join" method="post">
 				<div class="input-area">
 					<div class="input-con email">
 						<label for="userEmail">아이디</label>

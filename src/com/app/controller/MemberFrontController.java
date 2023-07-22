@@ -23,7 +23,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new MemberController().execute(req, resp);
 		} else if (target.equals("login")) {
 			result = new Result();
-			result.setPath("account/");
+			result.setPath("account/login.jsp");
 		} else if (target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 		} else if (target.equals("logout")) {
@@ -35,7 +35,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new JoinOkController().execute(req, resp);
 		} else if (target.equals("feed")) {
 			result = new Result();
-			result.setPath("feed/");
+			result.setPath("feed/list.jsp");
 		}
 
 		if (result != null) {
