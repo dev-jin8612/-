@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.controller.MemberController;
+import com.app.controller.JoinOkController;
+import com.app.controller.LoginOkController;
+import com.app.controller.LogoutController;
 
 public class MemberFrontController extends HttpServlet {
 	@Override

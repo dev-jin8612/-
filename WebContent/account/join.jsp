@@ -63,10 +63,16 @@
 								onclick="idcheck()">인증하기</button>
 						</div>
 					</div>
+					
+					<div class="input-con">
+						<label for="membername">이름</label> <input type="text"
+							id="membername" name="membername" class="input_txt"
+							placeholder="이름 입력">
+					</div>
 
 					<div class="input-con">
-						<label for="membername">별명</label> <input type="text"
-							id="membername" name="membername" class="input_txt"
+						<label for="membernick">별명</label> <input type="text"
+							id="membernick" name="membernick" class="input_txt"
 							placeholder="별명 입력">
 					</div>
 
@@ -110,7 +116,7 @@
 							<div class="IULField_container">
 								첨부 파일을 업로드해 주세요.
 								<div class="IULButton_container spacing-2">
-									<input class="is-hidden" type="file"
+									<input class="is-hidden" type="file" name="upload"
 										accept="image/JPG,image/JPEG,image/PNG" />
 									<button
 										class="Button_button Button_tertiaryGrey Button_contained Button_sm Button_circular"
@@ -143,7 +149,7 @@
 					</label>
 				</div>
 				<div class="login-btn-area">
-					<button type="button" class="full_btn" onclick="send()">완료</button>
+					<button type="button" id="com" class="full_btn" onclick="send()" disabled>완료</button>
 				</div>
 			</form>
 		</div>
