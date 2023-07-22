@@ -3,7 +3,12 @@
 <mapper namespace="trade">
 
 	<select id="list" resultType="TradeDTO">
-		select * from tbl_trade
+		select board_title, board_contents, board_date, board_status, member_id from tbl_trade
+	</select>
+	
+	<select id="insert">
+		insert into tbl_trade (board_title, board_date, board_status, member_id)
+		values (#{boardtitle}, now(), #{boardstatus}, #{memberid})
 	</select>
 	
 </mapper>

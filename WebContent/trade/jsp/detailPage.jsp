@@ -6,11 +6,15 @@
 <meta charset="UTF-8">
 <title>교환해요 상세페이지</title>
 
-<link rel="stylesheet" href="../css/modal.css" />
-<link rel="stylesheet" href="../css/tradeRequest.css" />
-<link rel="stylesheet" href="../css/cssSet1.css" />
-<link rel="stylesheet" href="../../feed/css/layout.css" />
-<link rel="stylesheet" href="../css/detailsPage.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/modal.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/tradeRequest.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/cssSet1.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/feed/css/layout.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/detailsPage.css" />
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/font/font.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/xeicon/xeicon.min.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/header.css">
+
 </head>
 
   <body>
