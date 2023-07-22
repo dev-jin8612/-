@@ -22,5 +22,4 @@ public class MemberController implements Action{
 		
 		return null;
 	}
-
 }
