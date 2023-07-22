@@ -6,12 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 공통헤더 css -->
-    <link rel="stylesheet" href="../../inc/css/font/font.css">
-    <link rel="stylesheet" href="../../inc/css/xeicon/xeicon.min.css">
-    <link rel="stylesheet" href="../../inc/css/header.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/font/font.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/xeicon/xeicon.min.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/header.css">
     <!-- //공통헤더 css -->
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="../css/cssSet1.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/cssSet1.css" />
     <!-- 페이지 css -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
@@ -19,7 +19,7 @@
     <title>교환해요 리스트</title>
 </head>
 <body>
-<jsp:include page="../../inc/head.jsp"></jsp:include>
+<jsp:include page="${pageContext.request.contextPath}/inc/head.jsp"></jsp:include>
 <!-- 공통헤더 -->
     <div id="page-container">
       <form id="forwardForm" method="get">
@@ -60,7 +60,7 @@
                   <div
                     class="thumb"
                     style="
-                      background-image: url(https://cdn.wadiz.kr/ft/images/green001/2023/0626/20230626223656350_0.jpg/wadiz/resize/400/format/jpg/quality/80);
+                      background-image: url(https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg);
                     "
                   ></div>
 
@@ -282,28 +282,34 @@
     <script type="text/javascript">
     	start();
     	function start() {
-    		
+    		var list = "list";
     		$.ajax({
     			url: "list.trade",
     			type: "post",
-    			data: {},
+    			data: "infor=" + list,
     			dataType: "json",
     			success: function(list){
     				for(i=0; i<list.length; i++){
-    				var check = list[i].boardstatus;
+    				const check = list[i].boardstatus;
     				var stat = "";
     				if(check == "ti"){
     					stat = "교환 중";
     				}
     				else{
     					stat = "교환 완료";
-    				} 
+    				}
     				
     	    		var ul_list = $("#ul_list"); //ul_list선언
     	    		ul_list.append("<li>"+
     					'<a class="article" href="/">' +
     					 	'<em class="category">교환</em>' +
-    		                '<em class="status closed">' + stat +"</em></a></li>"); //ul_list안쪽에 li추가
+    		                '<em class="status closed">' + stat +"</em>" +
+    		                "<div class='info'>" +
+    		                  "<div class='thumb' style='background-image: url(https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg);'></div>" +
+    		                  "<h3 class='title'>" + list[i].boardtitle + "</h3>" +
+    		                  "<span class='author'>와디즈</span><span class='created-at'>" + list[i].boarddate.substring(0,11) + "</span>" +
+    		                "</div>" +
+    		                "</a></li>"); //ul_list안쪽에 li추가
     				}
     				
     				
