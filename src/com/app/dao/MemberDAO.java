@@ -10,13 +10,14 @@ import com.app.mybatis.config.MyBatisConfig;
 import com.app.vo.Member2VO;
 import com.app.vo.MemberDTO;
 
-public class MemberDAO { 
+public class MemberDAO {
 	public SqlSession sqlSession;
 
-	public MemberDAO() { 
+	public MemberDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
+<<<<<<< HEAD
 //	紐⑸줉
 	public boolean checkId(String id) {
 		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
@@ -36,4 +37,24 @@ public class MemberDAO {
 		return sqlSession.selectOne("member.profile", id);
 	}
 	
+=======
+//	아이디 찾기
+	public boolean checkId(String id) {
+		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
+	}
+
+//	회원가입
+	public void insert(MemberDTO memberDTO) {
+		sqlSession.insert("member.insert", memberDTO);
+	}
+
+//	로그인
+	public String login(String id, String memberpw) {
+		HashMap<String, String> loginMap = new HashMap<String, String>();
+		loginMap.put("id", id);
+		loginMap.put("memberpw", memberpw);
+
+		return sqlSession.selectOne("member.login", loginMap);
+	}
+>>>>>>> 417ebcd40abd9ea84d7d82a7316329f30bf36156
 }
