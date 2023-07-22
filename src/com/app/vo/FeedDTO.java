@@ -2,125 +2,220 @@ package com.app.vo;
 
 public class FeedDTO {
 	
-	private String feed;
-	private String id;
+	private Long id;
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-//	좋아요, following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
-	private String meberid;
+	private Long memberid;
+//	following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
+	private Long followingid;
+//	좋아요, 댓글
+	private Long feedid;
 //	img
-	private int num;
-	private String img;
+	private String filesystemname;
+	private String fileoriginalname;
+	private Long filesize;
+	private Long feedimg;
 //	reply
-	private String f_id;
+	private int renum;
 	private String contents;
-	private String reply_id;
-	private String re_reply;
+	private String replyid;
+	private String rereply;
+	private String feedredate;
 	
 	public FeedDTO() {;}
 
-	public String getFeed() {
-		return feed;
-	}
-
-	public void setFeed(String feed) {
-		this.feed = feed;
-	}
-
-	public String getId() {
+	Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getBoardtitle() {
+	String getBoardtitle() {
 		return boardtitle;
 	}
 
-	public void setBoardtitle(String boardtitle) {
+	void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	public String getBoardcontents() {
+	String getBoardcontents() {
 		return boardcontents;
 	}
 
-	public void setBoardcontents(String boardcontents) {
+	void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	public String getBoarddate() {
+	String getBoarddate() {
 		return boarddate;
 	}
 
-	public void setBoarddate(String boarddate) {
+	void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	public String getMeberid() {
-		return meberid;
+	Long getMemberid() {
+		return memberid;
 	}
 
-	public void setMeberid(String meberid) {
-		this.meberid = meberid;
+	void setMemberid(Long memberid) {
+		this.memberid = memberid;
 	}
 
-	public int getNum() {
-		return num;
+	Long getFollowingid() {
+		return followingid;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	void setFollowingid(Long followingid) {
+		this.followingid = followingid;
 	}
 
-	public String getImg() {
-		return img;
+	Long getFeedid() {
+		return feedid;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	void setFeedid(Long feedid) {
+		this.feedid = feedid;
 	}
 
-	public String getF_id() {
-		return f_id;
+	String getFilesystemname() {
+		return filesystemname;
 	}
 
-	public void setF_id(String f_id) {
-		this.f_id = f_id;
+	void setFilesystemname(String filesystemname) {
+		this.filesystemname = filesystemname;
 	}
 
-	public String getContents() {
+	String getFileoriginalname() {
+		return fileoriginalname;
+	}
+
+	void setFileoriginalname(String fileoriginalname) {
+		this.fileoriginalname = fileoriginalname;
+	}
+
+	Long getFilesize() {
+		return filesize;
+	}
+
+	void setFilesize(Long filesize) {
+		this.filesize = filesize;
+	}
+
+	Long getFeedimg() {
+		return feedimg;
+	}
+
+	void setFeedimg(Long feedimg) {
+		this.feedimg = feedimg;
+	}
+
+	int getRenum() {
+		return renum;
+	}
+
+	void setRenum(int renum) {
+		this.renum = renum;
+	}
+
+	String getContents() {
 		return contents;
 	}
 
-	public void setContents(String contents) {
+	void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	public String getReply_id() {
-		return reply_id;
+	String getReplyid() {
+		return replyid;
 	}
 
-	public void setReply_id(String reply_id) {
-		this.reply_id = reply_id;
+	void setReplyid(String replyid) {
+		this.replyid = replyid;
 	}
 
-	public String getRe_reply() {
-		return re_reply;
+	String getRereply() {
+		return rereply;
 	}
 
-	public void setRe_reply(String re_reply) {
-		this.re_reply = re_reply;
+	void setRereply(String rereply) {
+		this.rereply = rereply;
+	}
+
+	String getFeedredate() {
+		return feedredate;
+	}
+
+	void setFeedredate(String feedredate) {
+		this.feedredate = feedredate;
 	}
 
 	@Override
 	public String toString() {
-		return "FeedDTO [feed=" + feed + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
-				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
-				+ ", f_id=" + f_id + ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply
-				+ "]";
+		return "FeedDTO [id=" + id + ", boardtitle=" + boardtitle + ", boardcontents=" + boardcontents + ", boarddate="
+				+ boarddate + ", memberid=" + memberid + ", followingid=" + followingid + ", feedid=" + feedid
+				+ ", filesystemname=" + filesystemname + ", fileoriginalname=" + fileoriginalname + ", filesize="
+				+ filesize + ", feedimg=" + feedimg + ", renum=" + renum + ", contents=" + contents + ", replyid="
+				+ replyid + ", rereply=" + rereply + ", feedredate=" + feedredate + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((feedid == null) ? 0 : feedid.hashCode());
+		result = prime * result + ((feedimg == null) ? 0 : feedimg.hashCode());
+		result = prime * result + ((filesize == null) ? 0 : filesize.hashCode());
+		result = prime * result + ((followingid == null) ? 0 : followingid.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((memberid == null) ? 0 : memberid.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		FeedDTO other = (FeedDTO) obj;
+		if (feedid == null) {
+			if (other.feedid != null)
+				return false;
+		} else if (!feedid.equals(other.feedid))
+			return false;
+		if (feedimg == null) {
+			if (other.feedimg != null)
+				return false;
+		} else if (!feedimg.equals(other.feedimg))
+			return false;
+		if (filesize == null) {
+			if (other.filesize != null)
+				return false;
+		} else if (!filesize.equals(other.filesize))
+			return false;
+		if (followingid == null) {
+			if (other.followingid != null)
+				return false;
+		} else if (!followingid.equals(other.followingid))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (memberid == null) {
+			if (other.memberid != null)
+				return false;
+		} else if (!memberid.equals(other.memberid))
+			return false;
+		return true;
+	}
+	
+	
 }
