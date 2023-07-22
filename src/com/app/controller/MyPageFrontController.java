@@ -19,8 +19,11 @@ public class MyPageFrontController extends HttpServlet{
 		System.out.println(req.getRequestURI());
 		
 		if(target.equals("myProfile")) {
-			System.out.println("프컨틀어옴");
 			result = new MyProfileController().execute(req, resp);
+		}else if(target.equals("myFeed")){
+			result = new MyFeedListController().execute(req, resp);
+		}else if(target.equals("myTogether")) {
+			result = new MyTogetherListContriller().execute(req, resp);
 		}
 		if(result != null) {
 			if(result.isRedirect()) {

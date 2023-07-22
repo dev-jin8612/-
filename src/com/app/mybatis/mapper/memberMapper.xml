@@ -15,8 +15,8 @@
 	<select id="login" resultType="string">
 		select id from member where id = #{id} and member_pw = #{memberpw}
 	</select>
-	<select id="profile" resultType="member2VO">
-		select id, member_id, member_password, member_name, member_nick, member_img, member_hp
+	<select id="profile" resultType="memberDTO">
+		select id, member_id, member_pw, member_name, member_nick, member_img, member_hp
 		from tbl_member where id = #{id}
 	</select>
 </mapper>

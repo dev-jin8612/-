@@ -8,7 +8,8 @@
 	
 	<typeAliases>
 		<typeAlias type="com.app.vo.MemberDTO" alias="memberDTO"/>
-		<typeAlias type="com.app.vo.Member2VO" alias="member2VO"/>
+		<typeAlias type="com.app.vo.FeedDTO" alias="FeedDTO"/>
+		<typeAlias type="com.app.vo.TogetherDTO" alias="TogetherDTO"/>
 	</typeAliases>
 
 	<environments default="mysql"> 
@@ -25,6 +26,9 @@
 	
 	<mappers>
 		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/feedMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/followMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/togetherMapper.xml"></mapper>
 	</mappers>
 	
 </configuration>

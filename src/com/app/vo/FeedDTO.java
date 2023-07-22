@@ -11,6 +11,7 @@ public class FeedDTO {
 	private Long followingid;
 //	좋아요, 댓글
 	private Long feedid;
+	private int goodCnt;
 //	img
 	private String filesystemname;
 	private String fileoriginalname;
@@ -25,131 +26,206 @@ public class FeedDTO {
 	
 	public FeedDTO() {;}
 
-	Long getId() {
+
+	public Long getId() {
 		return id;
 	}
 
-	void setId(Long id) {
+
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	String getBoardtitle() {
+
+
+	public String getBoardtitle() {
 		return boardtitle;
 	}
 
-	void setBoardtitle(String boardtitle) {
+
+
+	public void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	String getBoardcontents() {
+
+
+	public String getBoardcontents() {
 		return boardcontents;
 	}
 
-	void setBoardcontents(String boardcontents) {
+
+
+	public void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	String getBoarddate() {
+
+
+	public String getBoarddate() {
 		return boarddate;
 	}
 
-	void setBoarddate(String boarddate) {
+
+
+	public void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	Long getMemberid() {
+
+
+	public Long getMemberid() {
 		return memberid;
 	}
 
-	void setMemberid(Long memberid) {
+
+
+	public void setMemberid(Long memberid) {
 		this.memberid = memberid;
 	}
 
-	Long getFollowingid() {
+
+
+	public Long getFollowingid() {
 		return followingid;
 	}
 
-	void setFollowingid(Long followingid) {
+
+
+	public void setFollowingid(Long followingid) {
 		this.followingid = followingid;
 	}
 
-	Long getFeedid() {
+
+
+	public Long getFeedid() {
 		return feedid;
 	}
 
-	void setFeedid(Long feedid) {
+
+
+	public void setFeedid(Long feedid) {
 		this.feedid = feedid;
 	}
 
-	String getFilesystemname() {
+
+
+	public int getGoodCnt() {
+		return goodCnt;
+	}
+
+
+
+	public void setGoodCnt(int goodCnt) {
+		this.goodCnt = goodCnt;
+	}
+
+
+
+	public String getFilesystemname() {
 		return filesystemname;
 	}
 
-	void setFilesystemname(String filesystemname) {
+
+
+	public void setFilesystemname(String filesystemname) {
 		this.filesystemname = filesystemname;
 	}
 
-	String getFileoriginalname() {
+
+
+	public String getFileoriginalname() {
 		return fileoriginalname;
 	}
 
-	void setFileoriginalname(String fileoriginalname) {
+
+
+	public void setFileoriginalname(String fileoriginalname) {
 		this.fileoriginalname = fileoriginalname;
 	}
 
-	Long getFilesize() {
+
+
+	public Long getFilesize() {
 		return filesize;
 	}
 
-	void setFilesize(Long filesize) {
+
+
+	public void setFilesize(Long filesize) {
 		this.filesize = filesize;
 	}
 
-	Long getFeedimg() {
+
+
+	public Long getFeedimg() {
 		return feedimg;
 	}
 
-	void setFeedimg(Long feedimg) {
+
+
+	public void setFeedimg(Long feedimg) {
 		this.feedimg = feedimg;
 	}
 
-	int getRenum() {
+
+
+	public int getRenum() {
 		return renum;
 	}
 
-	void setRenum(int renum) {
+
+
+	public void setRenum(int renum) {
 		this.renum = renum;
 	}
 
-	String getContents() {
+
+
+	public String getContents() {
 		return contents;
 	}
 
-	void setContents(String contents) {
+
+
+	public void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	String getReplyid() {
+
+
+	public String getReplyid() {
 		return replyid;
 	}
 
-	void setReplyid(String replyid) {
+
+
+	public void setReplyid(String replyid) {
 		this.replyid = replyid;
 	}
 
-	String getRereply() {
+
+
+	public String getRereply() {
 		return rereply;
 	}
 
-	void setRereply(String rereply) {
+
+
+	public void setRereply(String rereply) {
 		this.rereply = rereply;
 	}
 
-	String getFeedredate() {
+
+
+	public String getFeedredate() {
 		return feedredate;
 	}
 
-	void setFeedredate(String feedredate) {
+
+
+	public void setFeedredate(String feedredate) {
 		this.feedredate = feedredate;
 	}
 
@@ -157,10 +233,12 @@ public class FeedDTO {
 	public String toString() {
 		return "FeedDTO [id=" + id + ", boardtitle=" + boardtitle + ", boardcontents=" + boardcontents + ", boarddate="
 				+ boarddate + ", memberid=" + memberid + ", followingid=" + followingid + ", feedid=" + feedid
-				+ ", filesystemname=" + filesystemname + ", fileoriginalname=" + fileoriginalname + ", filesize="
-				+ filesize + ", feedimg=" + feedimg + ", renum=" + renum + ", contents=" + contents + ", replyid="
-				+ replyid + ", rereply=" + rereply + ", feedredate=" + feedredate + "]";
+				+ ", goodCnt=" + goodCnt + ", filesystemname=" + filesystemname + ", fileoriginalname="
+				+ fileoriginalname + ", filesize=" + filesize + ", feedimg=" + feedimg + ", renum=" + renum
+				+ ", contents=" + contents + ", replyid=" + replyid + ", rereply=" + rereply + ", feedredate="
+				+ feedredate + "]";
 	}
+
 
 	@Override
 	public int hashCode() {
@@ -216,6 +294,5 @@ public class FeedDTO {
 			return false;
 		return true;
 	}
-	
 	
 }
