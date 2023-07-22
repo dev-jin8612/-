@@ -20,12 +20,12 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
     <script charset="UTF-8" src="../inc/js/layout.js"></script>
+    <script charset="UTF-8" src="/mypage/mypage.js"></script>
     <title>마이페이지</title>
 </head>
 <body>
 <jsp:include page="../inc/head.jsp"></jsp:include>
 <!-- 공통헤더 -->
-<div>${pageContext.request.contextPath}</div>
 <!-- 컨텐츠 -->
 <div id="wadizContainer">
 	<div id="mypageWrap">
@@ -58,15 +58,15 @@
 									<!-- 스크랩 게시물 팔로워 팔로잉  -->
 									<dl class="SupporterProfileInfo-infoCountBox">
 									<div>
-										<dt>게시물</dt>
+										<dt>피드</dt>
 										<dd>
-											0 <span class="BlindText_textHidden">개</span>
+											${feedCount} <span class="BlindText_textHidden">개</span>
 										</dd>
 									</div>
 									<div class="follower-following">
 										<dt>팔로워</dt>
 										<dd>
-											0 <span class="BlindText_textHidden">명</span> <a
+											${followerCount} <span class="BlindText_textHidden">명</span> <a
 												href="/web/social/follower"><span
 												class="BlindText_textHidden"></span> </a>
 										</dd>
@@ -74,7 +74,7 @@
 									<div class="follower-following">
 										<dt>팔로잉</dt>
 										<dd>
-											0 <span class="BlindText_textHidden">명</span> <a
+											${followingCount} <span class="BlindText_textHidden">명</span> <a
 												ref="/web/social/followingsupporter"> <span
 												class="BlindText_textHidden"></span>
 											</a>
@@ -84,7 +84,7 @@
 								</div>
 								
 								<!-- 3. 상단 오른쪽 (프로필 편집 피드 작성하기) -->
-								<a class="Button-button Button-md Button-block SupporterProfileInfo-button">
+								<a class="Button-button Button-md Button-block SupporterProfileInfo-button" style="margin-right:10px;">
 									<span> 
 										<span class="Button-children">프로필 편집</span>
 									</span>
@@ -104,120 +104,25 @@
 				<div class="tab-list">
 					<ul role="tablist">
 						<li class="active">
-							<a href="#" id="feed" role="tab" aria-selected="ture" tabindex="-1">내 피드</a>
+							<button type="button" id="feed" role="tab" aria-selected="ture" tabindex="-1">내 피드</button>
 						</li>
 						<li class="nomal">
-							<a href="#" id="trade" role="tab" aria-selected="flase" aria-controls="tabWishes" tabindex="0">나의 교환내역</a>
+							<button type="button" id="trade" role="tab" aria-selected="flase" aria-controls="tabWishes" tabindex="0">나의 교환내역</button>
 						</li>
 						<li class="normal">
-							<a href="#" id="with" role="tab" aria-selected="false" tabindex="1">우리 함께해요</a>
-						</li>
-						<li class="normal">
-							<a href="#" id="scrap" role="tab" aria-selected="false" tabindex="2">스크랩</a>
+							<button type="button" id="with" role="tab" aria-selected="false" tabindex="1">우리 함께해요</button>
 						</li>
 					</ul>
 				</div>
 				<div class="project-list">
 				    <!-- top area -->
 					<div class="top-area">
-						<p class="status-text">80개의 글을 작성했습니다.</p>
+						<p class="status-text">${feedCount}개의 글을 작성했습니다.</p>
 					</div>
 					<!-- List ************ -->
 					<div class="List" id="projectCardList">
 						<ul>
-						<!-- 리워드 리스트 -->
-						<li class="list-list" data-hiddentype="L" data-campaintype="RWD"
-									data-campaignid="181138" data-campaignhiddenseq="0"><a
-									href="">
-										<div class="project-card">
-											<div class="card-img-section">
-												<em class="project-img"
-													style="background-image: url(https://cdn.wadiz.kr/wwwwadiz/green001/2023/0107/20230107141500112_181138.jpg/wadiz/format/jpg/quality/80)"></em>
-												<em class="heart-wrapper">
-													<div class="heart">
-														<svg viewBox="0 0 32 32" focusable="false"
-															role="presentation" class="withIcon-icon"
-															aria-hidden="true" style="width: 24px; height: 24px;">
-                								<path
-																d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
-                							</svg>
-														<span class="Heart-count">684</span>
-													</div>
-												</em>
-											</div>
-											<div class="card-info-section">
-												<h4>글 작성 제목</h4>
-												<h5>작성된 글 내용 일부</h5>
-												<div class="card-category">
-													<span class="category1">작성 날짜</span>
-												</div>
-											</div>
-										</div>
-								</a>
-								</li>
-								<!-- 여기까지 1개  -->
-								<!-- 리워드 리스트 -->
-						<li class="list-list" data-hiddentype="L" data-campaintype="RWD"
-									data-campaignid="181138" data-campaignhiddenseq="0"><a
-									href="">
-										<div class="project-card">
-											<div class="card-img-section">
-												<em class="project-img"
-													style="background-image: url(https://cdn.wadiz.kr/wwwwadiz/green001/2023/0107/20230107141500112_181138.jpg/wadiz/format/jpg/quality/80)"></em>
-												<em class="heart-wrapper">
-													<div class="heart">
-														<svg viewBox="0 0 32 32" focusable="false"
-															role="presentation" class="withIcon-icon"
-															aria-hidden="true" style="width: 24px; height: 24px;">
-                								<path
-																d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
-                							</svg>
-														<span class="Heart-count">684</span>
-													</div>
-												</em>
-											</div>
-											<div class="card-info-section">
-												<h4>글 작성 제목</h4>
-												<h5>작성된 글 내용 일부</h5>
-												<div class="card-category">
-													<span class="category1">작성 날짜</span>
-												</div>
-											</div>
-										</div>
-								</a>
-								</li>
-								<!-- 여기까지 2개  -->
-								<!-- 리워드 리스트 -->
-						<li class="list-list" data-hiddentype="L" data-campaintype="RWD"
-									data-campaignid="181138" data-campaignhiddenseq="0"><a
-									href="">
-										<div class="project-card">
-											<div class="card-img-section">
-												<em class="project-img"
-													style="background-image: url(https://cdn.wadiz.kr/wwwwadiz/green001/2023/0107/20230107141500112_181138.jpg/wadiz/format/jpg/quality/80)"></em>
-												<em class="heart-wrapper">
-													<div class="heart">
-														<svg viewBox="0 0 32 32" focusable="false"
-															role="presentation" class="withIcon-icon"
-															aria-hidden="true" style="width: 24px; height: 24px;">
-                								<path
-																d="M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z"></path>
-                							</svg>
-														<span class="Heart-count">684</span>
-													</div>
-												</em>
-											</div>
-											<div class="card-info-section">
-												<h4>글 작성 제목</h4>
-												<h5>작성된 글 내용 일부</h5>
-												<div class="card-category">
-													<span class="category1">작성 날짜</span>
-												</div>
-											</div>
-										</div>
-								</a>
-								</li>
-								<!-- 여기까지 3개  -->
+
 						</ul>
 					</div>
 				
@@ -234,12 +139,94 @@
 </div><!-- PageContainer 닫는 div  -->
 </body>
 <script>
-
+console.log()
+/* 상단 프로필 정보 */
 let mypage = `${mypage}`;
 mypage = JSON.parse(mypage);
+/* 닉네임 */
+$("#nick").text(mypage.membernick);
+/* 프로필사진 */
+$(".Avatar-hasImage").css("background-image",`url(${contextPath}/upload/` + mypage.memberimg + `)`);
 
-$("#nick").text(mypage.memberNick)
-$(".Avatar-hasImage").css("background-image",`url(${contextPath}/upload/` + mypage.memberImg + `)`);
-console.log()
+/* 내 피드 리스트 */
+start();
+
+ const $listWrap  = $("#projectCardList ul")
+ const $tabList = $(".tab_list button");
+function start() {
+	$.ajax({
+		url:"myFeed.mypage",
+		type: "get",
+		dataType:"json",
+		success: function(feeds) {
+			let text ="";
+ 			feeds.forEach(feed =>{								
+				text += feedList(feed);
+			});
+			$listWrap.append(text);
+		}
+	});
+}
+const feedList = (feed) =>{
+	return (`<li class='list-list'>
+		 	<a href=''>
+	 		<div class='project-card'>
+	 			<div class='card-img-section'>
+	 				<em class='project-img'style='background-image: url("${pageContext.request.contextPath}/upload/` + feed.fileoriginalname + `")'></em>
+	 				<em class='heart-wrapper'>
+	 					<div class='heart'>
+	 						<svg viewBox='0 0 32 32' focusable='false' role='presentation' class='withIcon-icon' aria-hidden='true' style='width: 24px; height: 24px;'> <path d='M22.16 4h-.007a8.142 8.142 0 0 0-6.145 2.79A8.198 8.198 0 0 0 9.76 3.998a7.36 7.36 0 0 0-7.359 7.446c0 5.116 4.64 9.276 11.6 15.596l2 1.76 2-1.76c6.96-6.32 11.6-10.48 11.6-15.6v-.08A7.36 7.36 0 0 0 22.241 4h-.085z'></path>
+	 						</svg>
+	 						<span class='Heart-count'>` + feed.goodCnt+ `</span>
+	 					</div>
+	 				</em>
+	 			</div>
+	 			<div class='card-info-section'>
+	 				<h4>` + feed.boardtitle + `</h4>
+	 				<h5>` + feed.boardcontents + `</h5>
+	 				<div class='card-category'><span class='category1'>` + feed.boarddate + `</span></div>
+	 			</div>
+	 		</div>
+	 	</a>
+</li>`)
+}
+
+/* 내 함께해요 리스트 */
+ $("#with").on("click",function(){
+	 
+	 console.log($tabList);
+	 
+	$.ajax({
+		url:"myTogether.mypage",
+		type: "get",
+		dataType:"json",
+		success: function(togethers) {
+			let text ="";
+			togethers.forEach(together =>{								
+				text += togetherList(together);
+			});
+			$listWrap.html(text);
+		}
+	});
+	 
+	 const togetherList = (together) =>{
+			return (`<li class='list-list'>
+				 	<a href=''>
+			 		<div class='project-card'>
+			 			<div class='card-img-section'>
+			 				<em class='project-img'style='background-image: url("${pageContext.request.contextPath}/upload/` + together.fileoriginalname + `")'></em>
+			 			</div>
+			 			<div class='card-info-section'>
+			 				<h4>` + together.boardtitle + `</h4>
+			 				<h5>` + together.boardcontents + `</h5>
+			 				<div class='card-category'><span class='category1'>` + together.boarddate + `</span></div>
+			 			</div>
+			 		</div>
+			 	</a>
+		</li>`)
+	}
+ })
+ 
+ 
 </script>
 </html>

@@ -35,7 +35,7 @@ public class MemberDAO {
 	}
 	
 //	mypage 마이페이지 프로필 정보 출력 - 0720유아람 추가
-	public Member2VO myProfile(Long id) {
+	public MemberDTO myProfile(Long id) {
 		return sqlSession.selectOne("member.profile", id);
 	}
 	

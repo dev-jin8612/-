@@ -24,134 +24,198 @@ public class TogetherDTO {
 	private String date;
 	
 	public TogetherDTO() {;}
-
-	Long getId() {
+	
+	public Long getId() {
 		return id;
 	}
 
-	void setId(Long id) {
+
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	String getBoardtitle() {
+
+
+	public String getBoardtitle() {
 		return boardtitle;
 	}
 
-	void setBoardtitle(String boardtitle) {
+
+
+	public void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	String getBoardcontents() {
+
+
+	public String getBoardcontents() {
 		return boardcontents;
 	}
 
-	void setBoardcontents(String boardcontents) {
+
+
+	public void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	String getBoarddate() {
+
+
+	public String getBoarddate() {
 		return boarddate;
 	}
 
-	void setBoarddate(String boarddate) {
+
+
+	public void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	Long getMemberid() {
+
+
+	public Long getMemberid() {
 		return memberid;
 	}
 
-	void setMemberid(Long memberid) {
+
+
+	public void setMemberid(Long memberid) {
 		this.memberid = memberid;
 	}
 
-	String getTogetherappcontent() {
+
+
+	public String getTogetherappcontent() {
 		return togetherappcontent;
 	}
 
-	void setTogetherappcontent(String togetherappcontent) {
+
+
+	public void setTogetherappcontent(String togetherappcontent) {
 		this.togetherappcontent = togetherappcontent;
 	}
 
-	Long getTogetherid() {
+
+
+	public Long getTogetherid() {
 		return togetherid;
 	}
 
-	void setTogetherid(Long togetherid) {
+
+
+	public void setTogetherid(Long togetherid) {
 		this.togetherid = togetherid;
 	}
 
-	String getFilesystemname() {
+
+
+	public String getFilesystemname() {
 		return filesystemname;
 	}
 
-	void setFilesystemname(String filesystemname) {
+
+
+	public void setFilesystemname(String filesystemname) {
 		this.filesystemname = filesystemname;
 	}
 
-	String getFileoriginalname() {
+
+
+	public String getFileoriginalname() {
 		return fileoriginalname;
 	}
 
-	void setFileoriginalname(String fileoriginalname) {
+
+
+	public void setFileoriginalname(String fileoriginalname) {
 		this.fileoriginalname = fileoriginalname;
 	}
 
-	Long getFilesize() {
+
+
+	public Long getFilesize() {
 		return filesize;
 	}
 
-	void setFilesize(Long filesize) {
+
+
+	public void setFilesize(Long filesize) {
 		this.filesize = filesize;
 	}
 
-	Long getFeedimg() {
+
+
+	public Long getFeedimg() {
 		return feedimg;
 	}
 
-	void setFeedimg(Long feedimg) {
+
+
+	public void setFeedimg(Long feedimg) {
 		this.feedimg = feedimg;
 	}
 
-	int getRenum() {
+
+
+	public int getRenum() {
 		return renum;
 	}
 
-	void setRenum(int renum) {
+
+
+	public void setRenum(int renum) {
 		this.renum = renum;
 	}
 
-	String getContents() {
+
+
+	public String getContents() {
 		return contents;
 	}
 
-	void setContents(String contents) {
+
+
+	public void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	String getReplyid() {
+
+
+	public String getReplyid() {
 		return replyid;
 	}
 
-	void setReplyid(String replyid) {
+
+
+	public void setReplyid(String replyid) {
 		this.replyid = replyid;
 	}
 
-	String getRereply() {
+
+
+	public String getRereply() {
 		return rereply;
 	}
 
-	void setRereply(String rereply) {
+
+
+	public void setRereply(String rereply) {
 		this.rereply = rereply;
 	}
 
-	String getDate() {
+
+
+	public String getDate() {
 		return date;
 	}
 
-	void setDate(String date) {
+
+
+	public void setDate(String date) {
 		this.date = date;
 	}
+
+
 
 	@Override
 	public String toString() {

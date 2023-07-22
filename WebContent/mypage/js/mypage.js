@@ -1,9 +1,6 @@
-document.getElementById("feed").onclick = function() {mouseClick()};
-document.getElementById("trade").onclick = function() {mouseClick()};
-document.getElementById("with").onclick = function() {mouseClick()};
-document.getElementById("scrap").onclick = function() {mouseClick()};
+let mypage = `${mypage}`;
+mypage = JSON.parse(mypage);
 
-function mouseClick() {
-alert("aa");
-
-};
+$("#nick").text(mypage.membernick);
+$(".Avatar-hasImage").css("background-image",`url(${contextPath}/upload/` + mypage.memberimg + `)`);
+console.log();
