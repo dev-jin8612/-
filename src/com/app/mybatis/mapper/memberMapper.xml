@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="member">
-
 	<select id="checkId" resultType="_int">
 		select count(id) from member where id = #{id}
 	</select>
@@ -16,4 +15,11 @@
 	<select id="login" resultType="string">
 		select id from member where id = #{id} and member_pw = #{memberpw}
 	</select>
+<<<<<<< HEAD
+	<select id="profile" resultType="member2VO">
+		select id, member_id, member_password, member_name, member_nick, member_img, member_hp
+		from tbl_member where id = #{id}
+	</select>
+=======
+>>>>>>> 417ebcd40abd9ea84d7d82a7316329f30bf36156
 </mapper>
