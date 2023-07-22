@@ -9,29 +9,44 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
 
-public class MemberFrontController extends HttpServlet{
+public class MemberFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-		
+
 		String target = req.getRequestURI().substring(req.getRequestURI().lastIndexOf("/") + 1).split("\\.")[0];
 		Result result = null;
-		
-//		System.out.println(target);
-		
-		if(target.equals("idCheck")) {
+
+//		System.out.println(req.getParameter("id"));
+
+		if (target.equals("idCheck")) {
 			result = new MemberController().execute(req, resp);
+		} else if (target.equals("login")) {
+			result = new Result();
+			result.setPath("account/");
+		} else if (target.equals("loginOk")) {
+			result = new LoginOkController().execute(req, resp);
+		} else if (target.equals("logout")) {
+			result = new LogoutController().execute(req, resp);
+		} else if (target.equals("join")) {
+			result = new Result();
+			result.setPath("account/join.jsp");
+		} else if (target.equals("joinOk")) {
+			result = new JoinOkController().execute(req, resp);
+		} else if (target.equals("feed")) {
+			result = new Result();
+			result.setPath("feed/");
 		}
-		
-		if(result != null) {
-			if(result.isRedirect()) {
+
+		if (result != null) {
+			if (result.isRedirect()) {
 				resp.sendRedirect(result.getPath());
-			}else {
+			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
 			}
 		}
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);

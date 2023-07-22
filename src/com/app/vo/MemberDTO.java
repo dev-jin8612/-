@@ -7,9 +7,6 @@ public class MemberDTO {
 	private String memberimg;
 	private String memberhp;
 	
-	//팔로잉, 팔로워 추가
-	private String member_id;
-	
 	public MemberDTO() {;}
 
 	public String getId() {
@@ -52,20 +49,13 @@ public class MemberDTO {
 		this.memberhp = memberhp;
 	}
 
-	
-	public String getMember_id() {
-		return member_id;
-	}
-
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
-	}
-
 	@Override
 	public String toString() {
 		return "MemberDTO [id=" + id + ", memberpw=" + memberpw + ", membername=" + membername + ", memberimg="
-				+ memberimg + ", memberhp=" + memberhp + ", member_id=" + member_id + "]";
+				+ memberimg + ", memberhp=" + memberhp + "]";
 	}
+	
+	
 	
 	
 }

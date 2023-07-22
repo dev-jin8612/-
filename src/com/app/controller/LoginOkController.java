@@ -18,24 +18,26 @@ public class LoginOkController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
-		String memberId = req.getParameter("memberId");
-		String memberPassword = req.getParameter("memberPassword");
+		String id = req.getParameter("id");
+		String memberpw = req.getParameter("memberpw");
 		String Id = null;
 		HttpSession session = req.getSession();
 		Result result = new Result();
 		result.setRedirect(true);
+
+//		System.out.println("aa");
 		
-		Id = memberDAO.login(memberId, memberPassword);
-		System.out.println(memberId);
+		Id = memberDAO.login(id, memberpw);
+		System.out.println(id);
 		
 //		회원이 없다면
 		if (Id == null) {
-			result.setPath(req.getContextPath() + "login.login?login=false");
+			result.setPath(req.getContextPath() + "login.member?login=false");
 		} else {
 //			로그인 성공/세션에 로그인된 회원의 번호 저장
-			session.setAttribute("memberId", memberId);
+			session.setAttribute("id", id);
 //			다른 방식으로 메인페이지 이동하게 바꾸기
-			result.setPath(req.getContextPath() + "/feed.login");
+			result.setPath(req.getContextPath() + "feed.member");
 		}
 		return result;
 	}
