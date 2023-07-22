@@ -2,125 +2,212 @@ package com.app.vo;
 
 public class TogetherDTO {
 	
-	private String together;
-	private String id;
+	private Long id;
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-//	좋아요, following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
-	private String meberid;
+	private Long memberid;
+//	함께해요
+	private String togetherappcontent;
+//	좋아요, 댓글
+	private Long togetherid;
 //	img
-	private int num;
-	private String img;
+	private String filesystemname;
+	private String fileoriginalname;
+	private Long filesize;
+	private Long feedimg;
 //	reply
-	private String to_id;
+	private int renum;
 	private String contents;
-	private String reply_id;
-	private String re_reply;
+	private String replyid;
+	private String rereply;
+	private String date;
 	
 	public TogetherDTO() {;}
 
-	public String getTogether() {
-		return together;
-	}
-
-	public void setTogether(String together) {
-		this.together = together;
-	}
-
-	public String getId() {
+	Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getBoardtitle() {
+	String getBoardtitle() {
 		return boardtitle;
 	}
 
-	public void setBoardtitle(String boardtitle) {
+	void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	public String getBoardcontents() {
+	String getBoardcontents() {
 		return boardcontents;
 	}
 
-	public void setBoardcontents(String boardcontents) {
+	void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	public String getBoarddate() {
+	String getBoarddate() {
 		return boarddate;
 	}
 
-	public void setBoarddate(String boarddate) {
+	void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	public String getMeberid() {
-		return meberid;
+	Long getMemberid() {
+		return memberid;
 	}
 
-	public void setMeberid(String meberid) {
-		this.meberid = meberid;
+	void setMemberid(Long memberid) {
+		this.memberid = memberid;
 	}
 
-	public int getNum() {
-		return num;
+	String getTogetherappcontent() {
+		return togetherappcontent;
 	}
 
-	public void setNum(int num) {
-		this.num = num;
+	void setTogetherappcontent(String togetherappcontent) {
+		this.togetherappcontent = togetherappcontent;
 	}
 
-	public String getImg() {
-		return img;
+	Long getTogetherid() {
+		return togetherid;
 	}
 
-	public void setImg(String img) {
-		this.img = img;
+	void setTogetherid(Long togetherid) {
+		this.togetherid = togetherid;
 	}
 
-	public String getTo_id() {
-		return to_id;
+	String getFilesystemname() {
+		return filesystemname;
 	}
 
-	public void setTo_id(String to_id) {
-		this.to_id = to_id;
+	void setFilesystemname(String filesystemname) {
+		this.filesystemname = filesystemname;
 	}
 
-	public String getContents() {
+	String getFileoriginalname() {
+		return fileoriginalname;
+	}
+
+	void setFileoriginalname(String fileoriginalname) {
+		this.fileoriginalname = fileoriginalname;
+	}
+
+	Long getFilesize() {
+		return filesize;
+	}
+
+	void setFilesize(Long filesize) {
+		this.filesize = filesize;
+	}
+
+	Long getFeedimg() {
+		return feedimg;
+	}
+
+	void setFeedimg(Long feedimg) {
+		this.feedimg = feedimg;
+	}
+
+	int getRenum() {
+		return renum;
+	}
+
+	void setRenum(int renum) {
+		this.renum = renum;
+	}
+
+	String getContents() {
 		return contents;
 	}
 
-	public void setContents(String contents) {
+	void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	public String getReply_id() {
-		return reply_id;
+	String getReplyid() {
+		return replyid;
 	}
 
-	public void setReply_id(String reply_id) {
-		this.reply_id = reply_id;
+	void setReplyid(String replyid) {
+		this.replyid = replyid;
 	}
 
-	public String getRe_reply() {
-		return re_reply;
+	String getRereply() {
+		return rereply;
 	}
 
-	public void setRe_reply(String re_reply) {
-		this.re_reply = re_reply;
+	void setRereply(String rereply) {
+		this.rereply = rereply;
+	}
+
+	String getDate() {
+		return date;
+	}
+
+	void setDate(String date) {
+		this.date = date;
 	}
 
 	@Override
 	public String toString() {
-		return "TogetherDTO [together=" + together + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
-				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
-				+ ", to_id=" + to_id + ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply
-				+ "]";
+		return "TogetherDTO [id=" + id + ", boardtitle=" + boardtitle + ", boardcontents=" + boardcontents
+				+ ", boarddate=" + boarddate + ", memberid=" + memberid + ", togetherappcontent=" + togetherappcontent
+				+ ", togetherid=" + togetherid + ", filesystemname=" + filesystemname + ", fileoriginalname="
+				+ fileoriginalname + ", filesize=" + filesize + ", feedimg=" + feedimg + ", renum=" + renum
+				+ ", contents=" + contents + ", replyid=" + replyid + ", rereply=" + rereply + ", date=" + date + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((feedimg == null) ? 0 : feedimg.hashCode());
+		result = prime * result + ((filesize == null) ? 0 : filesize.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		result = prime * result + ((memberid == null) ? 0 : memberid.hashCode());
+		result = prime * result + ((togetherid == null) ? 0 : togetherid.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		TogetherDTO other = (TogetherDTO) obj;
+		if (feedimg == null) {
+			if (other.feedimg != null)
+				return false;
+		} else if (!feedimg.equals(other.feedimg))
+			return false;
+		if (filesize == null) {
+			if (other.filesize != null)
+				return false;
+		} else if (!filesize.equals(other.filesize))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		if (memberid == null) {
+			if (other.memberid != null)
+				return false;
+		} else if (!memberid.equals(other.memberid))
+			return false;
+		if (togetherid == null) {
+			if (other.togetherid != null)
+				return false;
+		} else if (!togetherid.equals(other.togetherid))
+			return false;
+		return true;
 	}
 }

@@ -1,84 +1,140 @@
 package com.app.vo;
 
 public class MemberDTO {
-	private String id;
+	private Long id;
+//	팔로잉 팔로워랑 필드명이 겹침 join할 때 구분지으면 같아도 상관 없음
+	private String memberid;
 	private String memberpw;
 	private String membername;
 	private String memberimg;
 	private String memberhp;
-
-//	좋아요 밑에 member_id는 공통
-	private String good;
 	
-	//팔로잉, 팔로워 추가 테이블이 다름
-	private String member_id;
+//	팔로잉
+	private Long followerid;;
 	
-
 	public MemberDTO() {;}
 
-	public String getId() {
+	Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+
+
+	void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getMemberpw() {
+
+
+	String getMemberid() {
+		return memberid;
+	}
+
+
+
+	void setMemberid(String memberid) {
+		this.memberid = memberid;
+	}
+
+
+
+	String getMemberpw() {
 		return memberpw;
 	}
 
-	public void setMemberpw(String memberpw) {
+
+
+	void setMemberpw(String memberpw) {
 		this.memberpw = memberpw;
 	}
 
-	public String getMembername() {
+
+
+	String getMembername() {
 		return membername;
 	}
 
-	public void setMembername(String membername) {
+
+
+	void setMembername(String membername) {
 		this.membername = membername;
 	}
 
-	public String getMemberimg() {
+
+
+	String getMemberimg() {
 		return memberimg;
 	}
 
-	public void setMemberimg(String memberimg) {
+
+
+	void setMemberimg(String memberimg) {
 		this.memberimg = memberimg;
 	}
 
-	public String getMemberhp() {
+
+
+	String getMemberhp() {
 		return memberhp;
 	}
 
-	public void setMemberhp(String memberhp) {
+
+
+	void setMemberhp(String memberhp) {
 		this.memberhp = memberhp;
 	}
 
 
-	public String getGood() {
-		return good;
+
+	Long getFollowerid() {
+		return followerid;
 	}
 
-	public void setGood(String good) {
-		this.good = good;
+
+
+	void setFollowerid(Long followerid) {
+		this.followerid = followerid;
 	}
 
-	public String getMember_id() {
-		return member_id;
-	}
 
-	public void setMember_id(String member_id) {
-		this.member_id = member_id;
-	}
 
 	@Override
 	public String toString() {
-		return "MemberDTO [id=" + id + ", memberpw=" + memberpw + ", membername=" + membername + ", memberimg="
-				+ memberimg + ", memberhp=" + memberhp + ", good=" + good + ", member_id=" + member_id + "]";
+		return "MemberDTO [id=" + id + ", memberid=" + memberid + ", memberpw=" + memberpw + ", membername="
+				+ membername + ", memberimg=" + memberimg + ", memberhp=" + memberhp + ", followerid=" + followerid
+				+ "]";
 	}
 
-	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((followerid == null) ? 0 : followerid.hashCode());
+		result = prime * result + ((id == null) ? 0 : id.hashCode());
+		return result;
+	}
 
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MemberDTO other = (MemberDTO) obj;
+		if (followerid == null) {
+			if (other.followerid != null)
+				return false;
+		} else if (!followerid.equals(other.followerid))
+			return false;
+		if (id == null) {
+			if (other.id != null)
+				return false;
+		} else if (!id.equals(other.id))
+			return false;
+		return true;
+	}
+	
+	
 }
