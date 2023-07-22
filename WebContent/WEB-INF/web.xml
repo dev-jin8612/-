@@ -21,7 +21,7 @@
 		<url-pattern>*.login</url-pattern>
 	</servlet-mapping>
   
-    <servlet>
+   <servlet>
   	<servlet-name>Member</servlet-name>
   	<servlet-class>com.app.controller.MemberFrontController</servlet-class>
   </servlet>
@@ -30,4 +30,16 @@
   	<servlet-name>Member</servlet-name>
   	<url-pattern>*.member</url-pattern>
   </servlet-mapping>
+  
+    
+ <servlet>
+ 	<servlet-name>Mypage</servlet-name>
+ 	<servlet-class>com.app.controller.MyPageFrontController</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ 	<servlet-name>Mypage</servlet-name>
+ 	<url-pattern>*.mypage</url-pattern>
+ </servlet-mapping>
+ 
 </web-app>

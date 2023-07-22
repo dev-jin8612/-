@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!-- 공통헤더 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +14,8 @@
     <link rel="stylesheet" href="../inc/css/footer.css">
     <!-- //공통헤더 css -->
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="./mypage2.css">
+    <link rel="stylesheet" href="/mypage/mypage2.css">
+    <!-- <link rel="stylesheet" href="./mypage2.css"> -->
     <!-- 페이지 css -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
@@ -23,7 +25,7 @@
 <body>
 <jsp:include page="../inc/head.jsp"></jsp:include>
 <!-- 공통헤더 -->
-
+<div>${pageContext.request.contextPath}</div>
 <!-- 컨텐츠 -->
 <div id="wadizContainer">
 	<div id="mypageWrap">
@@ -51,17 +53,10 @@
 								<!-- 2. 상단 가운데 (이름 / 스크랩 게시물 팔로워 팔로잉) -->
 								<div class="SupporterProfileInfo-supporterInfo">
 									<dl class="SupporterProfileInfo-name" aria-label="서포터 정보">
-										<dd class="SupporterProfileInfo-nickname">윤담</dd>
+										<dd class="SupporterProfileInfo-nickname" id="nick">윤담</dd>
 									</dl>
 									<!-- 스크랩 게시물 팔로워 팔로잉  -->
 									<dl class="SupporterProfileInfo-infoCountBox">
-										<div class="SupporterProfileList">
-											<dt>스크랩</dt>
-											<dd>
-												0 <span
-												class="BlindText_textHidden">개</span>
-											</dd>
-										</div>
 									<div>
 										<dt>게시물</dt>
 										<dd>
@@ -108,11 +103,11 @@
 			<div id="Mypage2" class="mypage-project bg">
 				<div class="tab-list">
 					<ul role="tablist">
-						<li class="normal">
-							<a href="#" id="feed" role="tab" aria-selected="false" tabindex="-1">내 피드</a>
-						</li>
 						<li class="active">
-							<a href="#" id="trade" role="tab" aria-selected="true" aria-controls="tabWishes" tabindex="0">나의 교환내역</a>
+							<a href="#" id="feed" role="tab" aria-selected="ture" tabindex="-1">내 피드</a>
+						</li>
+						<li class="nomal">
+							<a href="#" id="trade" role="tab" aria-selected="flase" aria-controls="tabWishes" tabindex="0">나의 교환내역</a>
 						</li>
 						<li class="normal">
 							<a href="#" id="with" role="tab" aria-selected="false" tabindex="1">우리 함께해요</a>
@@ -223,7 +218,6 @@
 								</a>
 								</li>
 								<!-- 여기까지 3개  -->
-						
 						</ul>
 					</div>
 				
@@ -239,4 +233,13 @@
 
 </div><!-- PageContainer 닫는 div  -->
 </body>
+<script>
+
+let mypage = `${mypage}`;
+mypage = JSON.parse(mypage);
+
+$("#nick").text(mypage.memberNick)
+$(".Avatar-hasImage").css("background-image",`url(${contextPath}/upload/` + mypage.memberImg + `)`);
+console.log()
+</script>
 </html>
