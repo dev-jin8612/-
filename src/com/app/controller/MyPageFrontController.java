@@ -19,7 +19,7 @@ public class MyPageFrontController extends HttpServlet{
 		System.out.println(req.getRequestURI());
 		
 		if(target.equals("myProfile")) {
-			System.out.println("ÇÁÄÁµé¾î°¨");
+			System.out.println("í”„ì»¨í‹€ì–´ì˜´");
 			result = new MyProfileController().execute(req, resp);
 		}
 		if(result != null) {
