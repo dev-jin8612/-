@@ -12,30 +12,30 @@ import javax.servlet.http.HttpSession;
 import com.app.Action;
 import com.app.Result;
 import com.app.dao.MemberDAO;
+import com.app.vo.MemberDTO;
 
 public class LoginOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
-		String id = req.getParameter("id");
+		String memberid = req.getParameter("memberid");
 		String memberpw = req.getParameter("memberpw");
-		String Id = null;
+		MemberDTO Id = null;
 		HttpSession session = req.getSession();
 		Result result = new Result();
 		result.setRedirect(true);
 
-//		System.out.println("aa");
+		System.out.println(memberpw);
 		
-		Id = memberDAO.login(id, memberpw);
-		System.out.println(id);
+		Id = memberDAO.login(memberid, memberpw);
 		
 //		회원이 없다면
 		if (Id == null) {
 			result.setPath(req.getContextPath() + "login.member?login=false");
 		} else {
 //			로그인 성공/세션에 로그인된 회원의 번호 저장
-			session.setAttribute("id", id);
+			session.setAttribute("memberid", memberid);
 //			다른 방식으로 메인페이지 이동하게 바꾸기
 			result.setPath(req.getContextPath() + "feed.member");
 		}

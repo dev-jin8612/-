@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.app.Result;
+import com.app.controller.MemberController;
+import com.app.controller.JoinOkController;
+import com.app.controller.LoginOkController;
+import com.app.controller.LogoutController;
 
 public class MemberFrontController extends HttpServlet {
 	@Override
@@ -17,13 +21,13 @@ public class MemberFrontController extends HttpServlet {
 		String target = req.getRequestURI().substring(req.getRequestURI().lastIndexOf("/") + 1).split("\\.")[0];
 		Result result = null;
 
-//		System.out.println(req.getParameter("id"));
+//		System.out.println("aa");
 
 		if (target.equals("idCheck")) {
 			result = new MemberController().execute(req, resp);
 		} else if (target.equals("login")) {
 			result = new Result();
-			result.setPath("account/");
+			result.setPath("account/login.jsp");
 		} else if (target.equals("loginOk")) {
 			result = new LoginOkController().execute(req, resp);
 		} else if (target.equals("logout")) {
@@ -35,7 +39,7 @@ public class MemberFrontController extends HttpServlet {
 			result = new JoinOkController().execute(req, resp);
 		} else if (target.equals("feed")) {
 			result = new Result();
-			result.setPath("feed/");
+			result.setPath("feed/list.jsp");
 		}
 
 		if (result != null) {

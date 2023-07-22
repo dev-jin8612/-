@@ -15,9 +15,9 @@ public class MemberController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		MemberDAO memberDAO = new MemberDAO();
-		
+		System.out.println(req.getParameter("memberid"));
 		PrintWriter out = resp.getWriter();
-		out.print(memberDAO.checkId(req.getParameter("id")));
+		out.print(memberDAO.checkId(req.getParameter("memberid")));
 		out.close();
 		
 		return null;
