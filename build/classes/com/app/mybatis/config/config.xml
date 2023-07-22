@@ -7,8 +7,13 @@
 	</settings>
 	
 	<typeAliases>
+<<<<<<< HEAD
+		<typeAlias type="com.app.vo.MemberDTO" alias="memberDTO"/>
+		<typeAlias type="com.app.vo.Member2VO" alias="member2VO"/>
+		<typeAlias type="com.app.vo.FollowDTO" alias="followDTO"/>
+=======
 		<typeAlias type="com.app.vo.MemberDTO" alias="MemberDTO"/>
-		<typeAlias type="com.app.vo.TradeDTO" alias="TradeDTO"/>
+>>>>>>> 417ebcd40abd9ea84d7d82a7316329f30bf36156
 	</typeAliases>
 
 	<environments default="mysql"> 
@@ -25,7 +30,7 @@
 	
 	<mappers>
 		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"></mapper>
-		<mapper resource="com/app/mybatis/mapper/tradeMapper.xml"></mapper>
+		<mapper resource="com/app/mybatis/mapper/followMapper.xml"></mapper>
 	</mappers>
 	
 </configuration>

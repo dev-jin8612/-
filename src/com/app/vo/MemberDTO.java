@@ -6,13 +6,14 @@ public class MemberDTO {
 	private String membername;
 	private String memberimg;
 	private String memberhp;
-	
+
 //	좋아요 밑에 member_id는 공통
 	private String good;
 	
 	//팔로잉, 팔로워 추가 테이블이 다름
 	private String member_id;
 	
+
 	public MemberDTO() {;}
 
 	public String getId() {
@@ -55,6 +56,7 @@ public class MemberDTO {
 		this.memberhp = memberhp;
 	}
 
+
 	public String getGood() {
 		return good;
 	}
@@ -76,5 +78,7 @@ public class MemberDTO {
 		return "MemberDTO [id=" + id + ", memberpw=" + memberpw + ", membername=" + membername + ", memberimg="
 				+ memberimg + ", memberhp=" + memberhp + ", good=" + good + ", member_id=" + member_id + "]";
 	}
+
 	
+
 }

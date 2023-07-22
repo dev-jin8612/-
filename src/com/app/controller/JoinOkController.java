@@ -8,30 +8,27 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.loginDAO;
-import com.app.vo.loginDTO;
+import com.app.dao.MemberDAO;
+import com.app.vo.MemberDTO;
 
-public class JoinOkController implements Action {
+public class JoinOkController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		loginDAO memberDAO = new loginDAO();
-		loginDTO memberDTO = new loginDTO();
+		MemberDAO memberDAO = new MemberDAO();
+		MemberDTO memberDTO = new MemberDTO();
 		Result result = new Result();
-
-//	사용자가 화면에서 입력한 값을 전부 받아온다.
-//	화면에서 입력한 값은 모두 memberDTO객체에 담아준다.
-		memberDTO.setMemberId(req.getParameter("memberId"));
-		memberDTO.setMemberPassword(req.getParameter("memberPassword"));
-		memberDTO.setMemberName(req.getParameter("memberName"));
-		memberDTO.setMemberNick(req.getParameter("memberNick"));
-		memberDTO.setMemberHP(req.getParameter("memberHP"));
-		memberDTO.setMemberImg(req.getParameter("memberImg"));
+		
+		memberDTO.setId(req.getParameter("id"));
+		memberDTO.setMemberpw(req.getParameter("memberpw2"));
+		memberDTO.setMembername(req.getParameter("membername"));
+		memberDTO.setMemberimg(req.getParameter("memberimg"));
+		memberDTO.setMemberhp(req.getParameter("memberhp"));
 		
 		memberDAO.insert(memberDTO);
-
 		result.setRedirect(true);
 		result.setPath(req.getContextPath() + "/login.member");
-
-		return result;
+		
+		return null;
 	}
+	
 }
