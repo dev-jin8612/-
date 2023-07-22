@@ -1,8 +1,6 @@
 package com.app.dao;
 
 import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -16,10 +14,10 @@ public class MemberDAO {
 	public MemberDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
-	
+
 //	아이디 찾기
-	public boolean checkId(String id) {
-		return (Integer)sqlSession.selectOne("member.checkId", id) == 0;
+	public boolean checkId(String memberid) {
+		return (Integer)sqlSession.selectOne("member.checkId", memberid) == 0;
 	}
 
 //	회원가입
@@ -28,9 +26,9 @@ public class MemberDAO {
 	}
 
 //	로그인
-	public String login(String id, String memberpw) {
+	public MemberDTO login(String memberid, String memberpw) {
 		HashMap<String, String> loginMap = new HashMap<String, String>();
-		loginMap.put("id", id);
+		loginMap.put("memberid", memberid);
 		loginMap.put("memberpw", memberpw);
 
 		return sqlSession.selectOne("member.login", loginMap);

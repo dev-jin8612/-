@@ -17,10 +17,16 @@ public class TradeFrontController extends HttpServlet{
 		String target = req.getRequestURI().substring(req.getRequestURI().lastIndexOf("/") + 1).split("\\.")[0];
 		Result result = null;
 		
-//		System.out.println("컨트롤러 실행");
+		System.out.println(target);
 		
 		if(target.equals("list")) {
 			result = new TradeController().execute(req, resp);
+		}else if(target.equals("insert")) {
+			result = new TradeController().execute(req, resp);
+			
+		}else if(target.equals("com")) {
+			result = new Result();
+			result.setPath("trade/jsp/list.jsp");
 		}
 		
 		if(result != null) {

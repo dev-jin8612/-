@@ -5,22 +5,3 @@
 $('.Button_circular').on('click', function () {
   $('.IULButton_container input').click();
 });
-
-// 완료 버튼 누르면 join request 실행
-const $id = $("input#id");
-const $password1 = $("input#memberpw2");
-const $password2 = $("input#membername");
-
-
-function send() {
-// 아이디 공간이 비어 있다면
-    if(!$id.val()){
-        return;
-    }
-    // 비번 공간이 비어 있다면
-    if(!$password2.val()){
-        return;
-    }
-// 서브밋
-document.member.submit();
-}

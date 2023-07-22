@@ -15,10 +15,12 @@ public class TradeDAO {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
 
-	public List<TradeDTO> list(HashMap<String, Object> trade_list) {
-		return sqlSession.selectList("trade.list", trade_list);
+	public List<TradeDTO> list() {
+		return sqlSession.selectList("trade.list");
 	}
-	
-	//
+
+	public void insert(TradeDTO tradeDTO) {
+		sqlSession.insert("trade.insert", tradeDTO);
+	}
 	
 }

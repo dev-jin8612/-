@@ -8,14 +8,14 @@ const $password = $("input#memberpw");
 
 
 function send() {
-// 아이디 공간이 비어 있다면
-    if(!$id.val()){
-        return;
-    }
-    // 비번 공간이 비어 있다면
-    if(!$password.val()){
-        return;
-    }
-// 서브밋
-document.member.submit();
+	// 아이디 공간이 비어 있다면
+	if (!$id.val()) {
+		return;
+	}
+	// 비번 공간이 비어 있다면
+	if (!$password.val()) {
+		return;
+	}
+	// 서브밋
+	document.getElementById("form1").submit();
 }
