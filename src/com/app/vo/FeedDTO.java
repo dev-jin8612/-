@@ -7,12 +7,13 @@ public class FeedDTO {
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-//	follow
+//	좋아요, following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
 	private String meberid;
 //	img
 	private int num;
 	private String img;
 //	reply
+	private String f_id;
 	private String contents;
 	private String reply_id;
 	private String re_reply;
@@ -83,6 +84,14 @@ public class FeedDTO {
 		this.img = img;
 	}
 
+	public String getF_id() {
+		return f_id;
+	}
+
+	public void setF_id(String f_id) {
+		this.f_id = f_id;
+	}
+
 	public String getContents() {
 		return contents;
 	}
@@ -111,6 +120,7 @@ public class FeedDTO {
 	public String toString() {
 		return "FeedDTO [feed=" + feed + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
 				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
-				+ ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply + "]";
+				+ ", f_id=" + f_id + ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply
+				+ "]";
 	}
 }

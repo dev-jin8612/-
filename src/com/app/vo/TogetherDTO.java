@@ -7,12 +7,13 @@ public class TogetherDTO {
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
-//	follow
+//	좋아요, following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
 	private String meberid;
 //	img
 	private int num;
 	private String img;
 //	reply
+	private String to_id;
 	private String contents;
 	private String reply_id;
 	private String re_reply;
@@ -83,6 +84,14 @@ public class TogetherDTO {
 		this.img = img;
 	}
 
+	public String getTo_id() {
+		return to_id;
+	}
+
+	public void setTo_id(String to_id) {
+		this.to_id = to_id;
+	}
+
 	public String getContents() {
 		return contents;
 	}
@@ -111,6 +120,7 @@ public class TogetherDTO {
 	public String toString() {
 		return "TogetherDTO [together=" + together + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
 				+ boardcontents + ", boarddate=" + boarddate + ", meberid=" + meberid + ", num=" + num + ", img=" + img
-				+ ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply + "]";
+				+ ", to_id=" + to_id + ", contents=" + contents + ", reply_id=" + reply_id + ", re_reply=" + re_reply
+				+ "]";
 	}
 }

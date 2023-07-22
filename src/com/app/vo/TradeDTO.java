@@ -8,12 +8,13 @@ public class TradeDTO {
 	private String boardcontents;
 	private String boarddate;
 	private String boardstatus;
-//	follow
+//	좋아요, following feed에서는 내가 팔로우 한 사람의 게시글만 나와야 함
 	private String meberid;
 //	img
 	private int num;
 	private String img;
 //	reply
+	private String tr_id;
 	private String contents;
 	private String reply_id;
 	private String re_reply;
@@ -64,8 +65,8 @@ public class TradeDTO {
 		return boardstatus;
 	}
 
-	public void setBoardstatus(String board_status) {
-		this.boardstatus = board_status;
+	public void setBoardstatus(String boardstatus) {
+		this.boardstatus = boardstatus;
 	}
 
 	public String getMeberid() {
@@ -90,6 +91,14 @@ public class TradeDTO {
 
 	public void setImg(String img) {
 		this.img = img;
+	}
+
+	public String getTr_id() {
+		return tr_id;
+	}
+
+	public void setTr_id(String tr_id) {
+		this.tr_id = tr_id;
 	}
 
 	public String getContents() {
@@ -118,9 +127,9 @@ public class TradeDTO {
 
 	@Override
 	public String toString() {
-		return "TradeDTO [boardstatus=" + boardstatus + ", boardcontents=" + boardcontents + ", boarddate="
-				+ boarddate + ", boardtitle=" + boardtitle + ", contents=" + contents + ", id=" + id + ", img=" + img
-				+ ", meberid=" + meberid + ", num=" + num + ", re_reply=" + re_reply + ", reply_id=" + reply_id
-				+ ", trade=" + trade + "]";
+		return "TradeDTO [trade=" + trade + ", id=" + id + ", boardtitle=" + boardtitle + ", boardcontents="
+				+ boardcontents + ", boarddate=" + boarddate + ", boardstatus=" + boardstatus + ", meberid=" + meberid
+				+ ", num=" + num + ", img=" + img + ", tr_id=" + tr_id + ", contents=" + contents + ", reply_id="
+				+ reply_id + ", re_reply=" + re_reply + "]";
 	}
 }
