@@ -26,9 +26,6 @@ public class LoginOkController implements Action {
 		Result result = new Result();
 		result.setRedirect(true);
 
-		session.setAttribute("memberid", memberid);
-		session.setAttribute("memberpw", memberpw);
-		
 		System.out.println(memberpw);
 		
 		Id = memberDAO.login(memberid, memberpw);
@@ -39,7 +36,6 @@ public class LoginOkController implements Action {
 		} else {
 //			로그인 성공/세션에 로그인된 회원의 번호 저장
 			session.setAttribute("memberid", memberid);
-//			다른 방식으로 메인페이지 이동하게 바꾸기
 			result.setPath(req.getContextPath() + "feed.member");
 		}
 		return result;

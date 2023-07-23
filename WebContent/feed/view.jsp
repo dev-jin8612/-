@@ -26,7 +26,7 @@
 <title>feed</title>
 </head>
 <body>
-	<jsp:include page="../inc/head.jsp"></jsp:include>
+	<jsp:include page="${pageContext.request.contextPath}/inc/head.jsp"></jsp:include>
 	<!-- 공통헤더 -->
 	<!-- 피드 -->
 	<div id="container" class="feed-view">

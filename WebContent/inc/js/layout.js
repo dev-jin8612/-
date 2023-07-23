@@ -2,7 +2,7 @@
 function fn_allCate_open() {
 	$(".all-category").toggleClass('on');
 
-	$(".layer-bg").on("click", function()  {
+	$(".layer-bg").on("click", function() {
 		(".all-category").removeClass('on');
 	})
 }
@@ -23,14 +23,25 @@ function fn_layerClose(e) {
 	$(e).fadeOut();
 }
 
+// 로그인을 한 상태라면 로그아웃이 보이게 만들 예정
 $(document).ready(function() {
-	const $member = $('.member');
-	const $gest = $('.gest');
+	let xhr = new XMLHttpRequest();
 
-	let onlogin = sessionStorage.getItem("memberid");
-	if (onlogin != null) {
-		// 세션 값이 존재할 경우 처리
-		$member.show();
-		$gest.hidden();
-	}
+	xhr.open("GET", "/session.member", true);
+	xhr.send();
+
+	xhr.onreadystatechange = function() {
+		if (xhr.readyState === 4 && xhr.status === 200) {
+			console.log(xhr.responseText);
+			// 서버로부터 받아온 세션 값을 사용
+			if (xhr.responseText != "null") {
+				// 세션 값이 존재할 경우 처리
+				$("#login").css('display', 'inline-block');
+				$("#outlog").hide();
+			} else {
+				$("#login").hide();
+				$("#outlog").css('display', 'inline-block');
+			}
+		}
+	};
 });

@@ -62,7 +62,7 @@ h1.logo{line-height: 22px; display: inline-block; font-size: 32px; width: auto;p
 .head-search input[type=text]{padding-right: 24px; outline: none; border: 0px; width: 100%; font-size: 14px;}
 .head-search input[type=text]::placeholder{color: #adb5bd;}
 .head-search .search_btn{line-height: 50px;}
-.member{display: none;}
+/* #login{display: none;} */
 .gest{width: auto; display: inline-block;}
 .gest a{padding: 0 8px; line-height: 56px;}
 .head-user{flex-shrink: 0; width: auto;}
