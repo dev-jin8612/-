@@ -63,21 +63,24 @@
 	</select>
 
 	<select id="detail" resultType="TradeDTO">
-		select 
+		select
 		tr.board_title,
 		tr.board_contents,
 		tr.board_date,
-		tri.img_num, 
+		tri.img_num,
 		tri.file_system_name,
-		ttr.trade_id, 
-		ttr.contents, 
+		ttr.trade_id,
+		ttr.contents,
 		ttr.member_id,
 		ttr.re_reply
 		from
 		tbl_trade tr
-		left outer join tbl_trade_img tri on tr.id = tri.trade_img
-		left outer join tbl_trade_app tta on tr.member_id =	tta.trade_id
-		left outer join tbl_trade_reply ttr on tr.id = ttr.trade_id
+		left outer join tbl_trade_img tri on tr.id
+		= tri.trade_img
+		left outer join tbl_trade_app tta on tr.member_id =
+		tta.trade_id
+		left outer join tbl_trade_reply ttr on tr.id =
+		ttr.trade_id
 		where tr.id = ${boardId}
 		group by tr.board_title,
 		tr.board_contents,
@@ -86,9 +89,11 @@
 		ttr.contents, ttr.member_id, ttr.re_reply;
 	</select>
 	
-	<select id="img">
-		insert into tbl_trade_app (trade_app_content, app_img, member_id, trade_id)
-		values (#{togetherappcontent}, #{filesystemname}, #{id});
+	<select id="tradeimg">
+		insert into tbl_trade_app (trade_app_content,
+		app_img, member_id, trade_id)
+		values (#{togetherappcontent},
+		#{filesystemname}, #{memberid}, #{tradeid});
 	</select>
 	
 </mapper>

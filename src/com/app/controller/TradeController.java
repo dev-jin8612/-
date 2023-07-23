@@ -25,9 +25,9 @@ public class TradeController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException, ServletException {
-//		System.out.println("내부");
 		resp.setContentType("text/html; charset=UTF-8");
 		TradeDAO tradeDAO = new TradeDAO();
+		System.out.println("내부!");
 		PrintWriter out = resp.getWriter();
 		
 		Result result = new Result();
@@ -35,6 +35,8 @@ public class TradeController implements Action {
 		TradeDTO tradeDTO = new TradeDTO();
 		
 		Path path = null;
+		
+		System.out.println("bb");
 		
 		System.out.println(req.getParameter("infor"));
 		
@@ -103,7 +105,18 @@ public class TradeController implements Action {
 			tradeDTO.setTradeid(Long.parseLong(multipartRequest.getParameter("id")));
 			tradeDTO.setMemberid(Long.parseLong(multipartRequest.getParameter("memberid")));
 			
+			while(inputTypeFileNames.hasMoreElements()) {
+				String inputTypeFileName = inputTypeFileNames.nextElement();
+				String fileSystemName = multipartRequest.getFilesystemName(inputTypeFileName);
+				if(fileSystemName == null) {continue;}
+				tradeDTO.setFilesystemname(fileSystemName);
+			}
+			
 			tradeDAO.trade(tradeDTO);
+			
+			result.setRedirect(true);
+			result.setPath(req.getContextPath() + "com.trade");
+			return result;
 		}
 		else {
 			System.out.println("아무것도 없다");

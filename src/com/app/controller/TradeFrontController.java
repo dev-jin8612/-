@@ -28,11 +28,9 @@ public class TradeFrontController extends HttpServlet {
 			result.setPath("trade/jsp/list.jsp");
 		} else if (target.equals("detail")) {
 			result = new TradeController().execute(req, resp);
-		} 
-		/*
-		 * else if (target.equals("trade")) { result = new
-		 * TradeController().execute(req, resp); }
-		 */
+		} else if (target.equals("trade")) { 
+			result = new TradeController().execute(req, resp); 
+		}
 
 		if (result != null) {
 			if (result.isRedirect()) {
