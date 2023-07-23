@@ -10,9 +10,7 @@
 		<typeAlias type="com.app.vo.MemberDTO" alias="memberDTO"/>
 		<typeAlias type="com.app.vo.FeedDTO" alias="FeedDTO"/>
 		<typeAlias type="com.app.vo.TogetherDTO" alias="TogetherDTO"/>
-		<typeAlias type="com.app.vo.Member2VO" alias="member2VO"/>
 		<typeAlias type="com.app.vo.TradeDTO" alias="TradeDTO"/>
-
 	</typeAliases>
 
 	<environments default="mysql"> 
