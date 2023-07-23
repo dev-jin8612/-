@@ -22,5 +22,24 @@ public class TradeDAO {
 	public void insert(TradeDTO tradeDTO) {
 		sqlSession.insert("trade.insert", tradeDTO);
 	}
+
+	public Long selecttrade() {
+		return sqlSession.selectOne("trade.check");
+	}
+
+	public void img(TradeDTO tradeDTO) {
+		sqlSession.insert("trade.img", tradeDTO);
+		
+	}
+
+	public List<TradeDTO> detail(Long boardId) {
+		return sqlSession.selectList("trade.detail", boardId);
+	}
+
+	public void trade(TradeDTO tradeDTO) {
+		sqlSession.insert("trade.trade", tradeDTO);
+		
+	}
+	
 	
 }
