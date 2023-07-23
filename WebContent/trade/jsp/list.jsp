@@ -29,21 +29,7 @@
 
       <main class="board wzui">
         <div class="ui-header">
-          <h2 class="title">공지 사항</h2>
-        </div>
-        <div class="ui-tabs">
-          <ul>
-            <li class="active"><a href="#">전체</a></li>
-            <li>
-              <a href="#1">공지</a>
-            </li>
-            <li>
-              <a href="#2">이벤트</a>
-            </li>
-            <li>
-              <a href="#38">보도자료</a>
-            </li>
-          </ul>
+          <h2 class="title">교환해요</h2>
         </div>
 
         <div class="board-main">
@@ -182,7 +168,7 @@
                   <img src="" alt="" />
                 </div>
                 <a href="/" class="FMenu_menu" target="_blank" rel="noopener noreferrer"
-                  >공지사항
+                  >교환 목록
                   <!-- 공지사항 옆 이동 이미지 -->
                   <img src="" alt="" /></a
                 ><a href="/" class="FMenu_menu" target="_blank" rel="noopener noreferrer"
@@ -291,6 +277,7 @@
     			success: function(list){
     				for(i=0; i<list.length; i++){
     				const check = list[i].boardstatus;
+    				console.log(list[i].id);
     				var stat = "";
     				if(check == "ti"){
     					stat = "교환 중";
@@ -299,16 +286,31 @@
     					stat = "교환 완료";
     				}
     				
+    				var img = "";
+    				
+    				if(list[i].filesystemname == null){
+    					img = "https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg";
+    				}
+    				else{
+    					img = "${pageContext.request.contextPath}/upload/" + list[i].filesystemname;
+    				}
+    				
     	    		var ul_list = $("#ul_list"); //ul_list선언
     	    		ul_list.append("<li>"+
-    					'<a class="article" href="/">' +
-    					 	'<em class="category">교환</em>' +
-    		                '<em class="status closed">' + stat +"</em>" +
-    		                "<div class='info'>" +
-    		                  "<div class='thumb' style='background-image: url(https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg);'></div>" +
-    		                  "<h3 class='title'>" + list[i].boardtitle + "</h3>" +
-    		                  "<span class='author'>와디즈</span><span class='created-at'>" + list[i].boarddate.substring(0,11) + "</span>" +
-    		                "</div>" +
+    					'<a class="article list-wrap" href="${pageContext.request.contextPath}/trade/jsp/detailPage.jsp?id=' + list[i].id  + '">' +
+    						'<div class="text-con">' +
+	       					 	'<em class="category">교환</em>' +
+	    		                '<em class="status closed">' + stat +"</em>" +
+	    		                "<div class='info'>" +
+	    		                  "<div class='thumb' style='background-image: url(https://www.next-t.co.kr/public/uploads/7b7f7e2138e29e598cd0cdf2c85ea08d.jpg);'></div>" +
+	    		                  "<h3 class='title'>" + list[i].boardtitle + "</h3>" +
+	    		                  "<span class='author'>와디즈</span><span class='created-at'>" + list[i].boarddate.substring(0,11) + "</span>" +
+	    		                "</div>" +
+    						'</div>' +
+    						'<div class="img-con">' +
+    							'<img src="' + img + '">' +
+    						'</div>' +
+ 
     		                "</a></li>"); //ul_list안쪽에 li추가
     				}
     				
@@ -318,6 +320,11 @@
     		});
     	
 		}
+    	
+
+        function create() {
+        	location.href = "${pageContext.request.contextPath}/trade/jsp/createPage.jsp"
+    	}
     </script>
   </body>
 </html>

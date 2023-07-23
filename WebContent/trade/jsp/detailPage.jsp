@@ -9,8 +9,6 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/modal.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/tradeRequest.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/cssSet1.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/feed/css/layout.css" />
-<link rel="stylesheet" href="${pageContext.request.contextPath}/trade/css/detailsPage.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/font/font.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/xeicon/xeicon.min.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/header.css">
@@ -425,43 +423,22 @@
           <div class="wboard-wrap">
             <div class="wboard-detail-content">
               <div class="article-top">
-                <p class="title">
-                  [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
+                <p id = "title" class="title">
+                  
                 </p>
                 <div class="info">
-                  <em
-                    class="user-img"
-                    style="
-                      background-image: url(https://static.wadiz.kr/assets/icon/apple-touch-icon.png);
-                    "
-                  ></em>
-                  <span class="user-info">와디즈 <br />2023.06.07</span>
+                  <em class="user-img" style="
+                      background-image: url(https://static.wadiz.kr/assets/icon/apple-touch-icon.png);"></em>
+                  <span id="top" class="user-info"></span>
                 </div>
               </div>
               <div class="inner-contents">
                 <p style="margin: 0">
-                  <img
+                  <img id="img"
                     style="margin: 0"
-                    src="https://static.makercenter.wadiz.kr/board/image/068badac-e05e-4da1-bd15-29f097136539.jpg"
+                    src=""
                     class="fr-fic fr-dib"
                   />
-                </p>
-                <p style="margin: 0">
-                  <img
-                    style="margin: 0"
-                    src="https://static.makercenter.wadiz.kr/board/image/c374d39d-bd94-458e-a1ff-f2c502a498ad.jpg"
-                    class="fr-fic fr-dib"
-                  />
-                </p>
-                <p>
-                  <a
-                    href="/"
-                    target="_blank"
-                    ><img
-                      style="margin: 0"
-                      src="https://static.makercenter.wadiz.kr/board/image/5815d2e5-088b-48d0-b8ea-7a32844a18da.jpg"
-                      class="fr-fic fr-dib nearest"
-                  /></a>
                 </p>
               </div>
               <div class="article-attached">
@@ -469,9 +446,10 @@
               </div>
             </div>
           </div>
+          <div style="text-align: center;" id="content"></div>
           <div class="wcommunity-detail-bottom">
             <div class="wcommunity-share-area">
-              <button type="button" class="btn-symp"><span id="sympCount">0</span></button>
+              <button type="button" class="btn-symp" onclick="trade()">교환 신청</button>
               <div class="btn-share">
                 <button class="kakao" onclick="wadiz.share.kakao();"></button>
                 <button class="facebook" onclick="wadiz.share.facebook();"></button>
@@ -479,37 +457,6 @@
               </div>
             </div>
           </div>
-          <div class="wboard-detail-bottom">
-            <div class="wboard-comment">
-              <p class="comment-num"><em>이벤트</em> 말머리의 다른 게시글</p>
-              <div class="wboard-list">
-                <ul>
-                  <li>
-                    <a href="/">
-                      <p class="title">
-                        <em class="category">이벤트</em>
-                        [이벤트] 6월 '워라밸의 발견' 기획전 | 펀딩·스토어 선착순 쿠폰 (~6/30)
-                      </p>
-                      <p class="info">
-                        <span class="date"> 와디즈 2023.06.07 </span>
-                      </p>
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="/web/wboard/newsBoardDetail/8474?headWordId=&cPage=1">
-                      <p class="title">
-                        <em class="category">이벤트</em>
-                        [메이커 모집] 추석 기획전 참여 메이커 모집 (~7/3)
-                      </p>
-                      <p class="info">
-                        <span class="date"> 와디즈 2023.06.07 </span>
-                      </p>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
             <div class="wboard-detail-btn-wrap">
               <a class="wz button" href="#this" onClick="moveList()">목록으로 돌아가기</a>
             </div>
@@ -652,5 +599,53 @@
     <script src="../../feed/js/layout.js"></script>
     <!-- 모달 버튼 클릭 이벤트 -->
     <script src="../js/detailsPage.js"></script>
-  </body>
+	<script type="text/javascript">
+    start();
+    function start() {		
+    var id = "${param.id}";
+    var detail = "detail";
+     $.ajax({
+		url: "detail.trade",
+		type: "post",
+		data: "infor=" + detail + "&id=" + id,
+		dataType: "json",
+		success: function(list){
+			for (i = 0; i < list.length; i++) {
+				var newImageUrl = "${pageContext.request.contextPath}/upload/" + list[0].filesystemname;
+				
+				var topElement = document.getElementById("top");
+
+				// 줄 바꿈을 위해 새로운 HTML 요소를 생성합니다.
+				var lineBreakElement = document.createElement("br");
+
+				// 텍스트 내용을 설정합니다.
+				var text = "교환해요";
+
+				// 줄 바꿈 요소와 텍스트 내용을 top 요소에 추가합니다.
+				topElement.innerText = text;
+				topElement.appendChild(lineBreakElement);
+				topElement.appendChild(document.createTextNode(list[0].boarddate.substring(0, 11)));
+				
+				document.getElementById("title").innerText = list[0].boardtitle;
+				document.getElementById("img").src= newImageUrl;
+				document.getElementById("content").innerText = list[0].boardcontents;
+				} 
+			}
+		});
+	}
+    
+    function moveList() {
+    	location.href = "${pageContext.request.contextPath}/com.trade";
+	}
+    
+    function create() {
+    	location.href = "${pageContext.request.contextPath}/trade/jsp/createPage.jsp";
+	}
+		
+    function trade() {
+    	var id = "${param.id}";
+    	location.href = "${pageContext.request.contextPath}/trade/jsp/tradeRequest.jsp?id=" + id;
+	}
+    </script>
+</body>
 </html>
