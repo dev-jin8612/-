@@ -37,8 +37,7 @@ public class TradeDAO {
 	}
 
 	public void trade(TradeDTO tradeDTO) {
-		sqlSession.insert("trade.trade", tradeDTO);
-		
+		sqlSession.insert("trade.tradeimg", tradeDTO);
 	}
 	
 	

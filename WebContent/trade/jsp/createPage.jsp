@@ -12,7 +12,7 @@
 </head>
 <body>
 	<main id="create">
-		<form action="" method="post" enctype="multipart/form-data">
+		<form action="${pageContext.request.contextPath}/insert.trade?infor=insert&status=ti&memberid=1&imgnum=1" id="form" method="post" enctype="multipart/form-data">
 			<div id="root">
 				<div id="ALContainer" class="ALcontainer">
 					<div class="ALmain">
@@ -52,7 +52,7 @@
 												<button
 													class="Button_button Button_tertiaryGrey Button_text Button_md"
 													type="button">
-													<span><span class="Button_children">나가기</span></span>
+													<span><span class="Button_children" onclick="back()">나가기</span></span>
 												</button>
 											</div>
 										</div>
@@ -68,35 +68,24 @@
 									</div>
 									<div class="SMAN_container SMAN_disable">제목 작성</div>
 										<div>
-											<input type="text" id="title" class="trade_title">
+											<input type="text" id="title" name="title" class="trade_title">
 										</div>								
-									<form class="wz form FSFormContainer_form Form_form">
+									<!-- <form class="wz form FSFormContainer_form Form_form"> -->
 										<div class="Loader_loader Form_loader"></div>
 										<section class="Section_container" style="max-width: 630px">
-											<div class="Section_header">
-												<h2 class="Section_title Section_isRequired">소개 영상·사진
-													등록</h2>
-											</div>
-											<div class="Section_description">피드의 맨 위에서 가장 먼저 보여 주고
-												싶은 영상이나 사진을 등록해 주세요.</div>
+											
 											<div class="Section_content">
 												<div class="SVIF_container">
-													<label class="wz Radio_radio radio"><input
-														name="representVisual" type="radio" checked="" />
-														<div>소개 영상</div></label><label class="wz Radio_radio radio"><input
-														name="representVisual" type="radio" />
-														<div>소개 사진</div></label>
-													<div
-														class="field Form_field required IFF_field StoryImageField_field">
+													<div class="field Form_field required IFF_field StoryImageField_field">
 														<div class="IFF_buttonWrapper">
+														<br>
 															<label class="wz label IFBlabel Label_label"><button
 																	type="button" class="wz button gray IFBbutton">
 																	<i class="icon-camera-o" aria-hidden="true">등록하기</i>
 																</button>
 																<div class="wz input right IFBinput">
-																	<input
-																		accept="image/JPG,image/JPEG,image/GIF,image/PNG"
-																		name="uploadFile" placeholder="" type="file" value="" />
+																	<input accept="image/JPG,image/JPEG,image/GIF,image/PNG"
+																		id="uploadFile" name="uploadFile" placeholder="" type="file" />
 																</div> </label> <em class="helper error"></em> <em
 																class="helper IFF_helper"> 2MB 이하의 JPG, JPEG, GIF,
 																PNG 파일 해상도 630x400 픽셀 이상 여러 장 등록돼요. </em>
@@ -108,28 +97,13 @@
 										<div class="SMAN_container SMAN_disable">내용 작성</div>
 										<section class="Section_container SEWI_container"
 											style="max-width: 720px">
-											<div class="Section_content">
-												<div class="Editor_container SEWI_editor">
-													<div class="wysiwyg-editor">
-														<div class="fr-box fr-basic fr-top" role="application">
-															<div class="fr-wrapper show-placeholder" dir="auto">
-																<div style="min-height: 590px" id="content"
-																	class="fr-element fr-view fr-element-scroll-visible"
-																	contenteditable="true" dir="auto" aria-disabled="false"
-																	spellcheck="true">
-																	<p></p>
-																</div>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<textarea rows="" cols="" name="content" id="content" class="trade_content"></textarea>
 										</section>
-									</form>
+									<!-- </form> -->
 									<div class="FSContainer_btnWrapper">
 										<button
 											class="Button_button Button_primary Button_contained Button_lg"
-											type="button" id="submit" style="width: 420px; max-width: 100%" onclick="aaa()">
+											type="submit" style="width: 420px; max-width: 100%" onclick="save()">
 											<span><span class="Button_children">저장하기</span></span>
 										</button>
 									</div>
@@ -146,16 +120,21 @@
 	<script src="../js/createPage_back.js"></script>
 	<script type="text/javascript">
 		
-		function aaa() {
-    		var infor = "insert";
+		function save() {
+    		/* var infor = "insert";
 			var title = document.getElementById("title").value;
 			var content = document.getElementById("content").innerText;
 			var status = "ti";
 			var memberid = "1";
 			
-			location.href = "${pageContext.request.contextPath}/insert.trade?infor=" + infor + "&title=" + title + "&status=" + status +"&memberid=" + memberid;
+			location.href = "${pageContext.request.contextPath}/insert.trade?infor=" + infor + "&title=" + title + "&status=" + status +"&memberid=" + memberid; */
+			document.getElementById("form").submit();
 		}
 		
+		
+		function back() {
+			location.href = "${pageContext.request.contextPath}/trade/jsp/list.jsp"
+		}
 	</script>
 </body>
 </html>
