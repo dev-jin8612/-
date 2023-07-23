@@ -259,6 +259,7 @@ a.Button-button { display: inline-block; text-decoration: none;}
     
 @media screen and (min-width: 960px){
 .mypage-project .tab-list ul li { width: auto; margin-right: 24px;}}
+.mypage-project .tab-list ul li.active{border-bottom: 2px solid #00c4c4}
 .mypage-project .tab-list ul li { float: left; width: 13%;}
 .mypage-project .tab-list ul li button {
     display: block;
@@ -412,7 +413,7 @@ a.Button-button { display: inline-block; text-decoration: none;}
     float: right;
     display: block;
     padding-right: 20px;
-    width: 48%;
+    width: auto;
     text-align: right;
     font-size: 11px;
     color: #00c4c4;
@@ -423,6 +424,9 @@ a.Button-button { display: inline-block; text-decoration: none;}
     clear: both;
     display: block;
 }
+
+.trade_st{color: #00c4c4; margin-bottom: 4px; font-size: 12px; border: 1px solid #00c4c4; padding: 2px; max-width: 50px; text-align: center; border-radius:5px;}
+.trade_st.end{color: #cdd3d8; border-color: #cdd3d8} 
 
 .heart-wrapper{
 	position: absolute;

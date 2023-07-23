@@ -31,4 +31,14 @@
  	<url-pattern>*.mypage</url-pattern>
  </servlet-mapping>
  
+  <servlet>
+ 	<servlet-name>Follow</servlet-name>
+ 	<servlet-class>com.app.controller.FollowFrontContriller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ 	<servlet-name>Follow</servlet-name>
+ 	<url-pattern>*.follow</url-pattern>
+ </servlet-mapping>
+ 
 </web-app>

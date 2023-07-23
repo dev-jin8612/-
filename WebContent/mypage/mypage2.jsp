@@ -63,7 +63,7 @@
 											${feedCount} <span class="BlindText_textHidden">개</span>
 										</dd>
 									</div>
-									<div class="follower-following">
+									<div class="follower-following" onclick="flower()">
 										<dt>팔로워</dt>
 										<dd>
 											${followerCount} <span class="BlindText_textHidden">명</span> <a
@@ -71,7 +71,7 @@
 												class="BlindText_textHidden"></span> </a>
 										</dd>
 									</div>
-									<div class="follower-following">
+									<div class="follower-following" onclick="flowing()">
 										<dt>팔로잉</dt>
 										<dd>
 											${followingCount} <span class="BlindText_textHidden">명</span> <a
@@ -106,10 +106,10 @@
 						<li class="active">
 							<button type="button" id="feed" role="tab" aria-selected="ture" tabindex="-1">내 피드</button>
 						</li>
-						<li class="nomal">
+						<li>
 							<button type="button" id="trade" role="tab" aria-selected="flase" aria-controls="tabWishes" tabindex="0">나의 교환내역</button>
 						</li>
-						<li class="normal">
+						<li>
 							<button type="button" id="with" role="tab" aria-selected="false" tabindex="1">우리 함께해요</button>
 						</li>
 					</ul>
@@ -117,7 +117,7 @@
 				<div class="project-list">
 				    <!-- top area -->
 					<div class="top-area">
-						<p class="status-text">${feedCount}개의 글을 작성했습니다.</p>
+						<p class="status-text"><span>${feedCount}</span> 개의 글을 작성했습니다.</p>
 					</div>
 					<!-- List ************ -->
 					<div class="List" id="projectCardList">
@@ -148,11 +148,12 @@ $("#nick").text(mypage.membernick);
 /* 프로필사진 */
 $(".Avatar-hasImage").css("background-image",`url(${contextPath}/upload/` + mypage.memberimg + `)`);
 
-/* 내 피드 리스트 */
-start();
 
- const $listWrap  = $("#projectCardList ul")
- const $tabList = $(".tab_list button");
+/* 내 피드 리스트 */
+const $listWrap  = $("#projectCardList ul")
+const $total = $(".status-text span");
+
+start();
 function start() {
 	$.ajax({
 		url:"myFeed.mypage",
@@ -163,7 +164,7 @@ function start() {
  			feeds.forEach(feed =>{								
 				text += feedList(feed);
 			});
-			$listWrap.append(text);
+			$listWrap.html(text);
 		}
 	});
 }
@@ -191,10 +192,63 @@ const feedList = (feed) =>{
 </li>`)
 }
 
-/* 내 함께해요 리스트 */
- $("#with").on("click",function(){
+/* 탭 효과 */ 
+ $(".tab-list li").on("click",function(){
+  $(".tab-list li").not(this).removeClass('active');
+  $(this).addClass('active')
+})
+ 
+/* 내 교환해요 리스트 */
+ $("#trade").on("click",function(){
+	
+	 $total.text("${tradeCount}");
 	 
-	 console.log($tabList);
+	$.ajax({
+		url:"myTrade.mypage",
+		type: "get",
+		dataType:"json",
+		success: function(trades) {
+			let text ="";
+			trades.forEach(trade =>{								
+				text += tradeList(trade);
+			});
+			$listWrap.html(text);
+			for(let i=0;i<trades.length;i++){
+				if(trades[i].boardstatus == "ti"){
+					$(".trade_st").eq(i).text("교환중");
+				}else if(trades[i].boardstatus == "tc"){
+					$(".trade_st").eq(i).addClass("end");
+					$(".trade_st").eq(i).text("교환완료");
+				}
+			}
+		}
+	});
+	
+
+	 const tradeList = (trade) =>{
+			return (`<li class='list-list'>
+				 	<a href=''>
+			 		<div class='project-card'>
+			 			<div class='card-img-section'>
+			 				<em class='project-img'style='background-image: url("${pageContext.request.contextPath}/upload/` + trade.fileoriginalname + `")'></em>
+			 			</div>
+			 			<div class='card-info-section'>
+			 				<div class='trade_st'></div>
+			 				<h4>` + trade.boardtitle + `</h4>
+			 				<h5>` + trade.boardcontents + `</h5>
+			 				<div class='card-category'><span class='category1'>` + trade.boarddate + `</span></div>
+			 			</div>
+			 		</div>
+			 	</a>
+		</li>`)
+	}
+	 
+ })
+ 
+ /* 내 함께해요 리스트 */
+ $("#with").on("click",function(){
+	
+	 $total.text("${togetherCount}");
 	 
 	$.ajax({
 		url:"myTogether.mypage",
@@ -208,6 +262,7 @@ const feedList = (feed) =>{
 			$listWrap.html(text);
 		}
 	});
+	
 	 
 	 const togetherList = (together) =>{
 			return (`<li class='list-list'>
@@ -228,5 +283,17 @@ const feedList = (feed) =>{
  })
  
  
+  /* 내 피드 클릭 시 */
+  $("#feed").on("click",function(){
+	 $total.text("${feedCount}");
+	  start();
+  });
+ 
+ function flower() {
+	 location.href = "${pageContext.request.contextPath}followerList.follow"
+ }
+ function flowing() {
+	 location.href = "${pageContext.request.contextPath}followingList.follow"
+ }
 </script>
 </html>

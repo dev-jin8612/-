@@ -13,10 +13,11 @@ import org.json.JSONObject;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.TogetherDAO;
+import com.app.dao.TradeDAO;
 import com.app.vo.TogetherDTO;
+import com.app.vo.TradeDTO;
 
-public class MyTogetherListContriller implements Action {
+public class MyTradeListContriller implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
@@ -26,8 +27,8 @@ public class MyTogetherListContriller implements Action {
 		
 		Result result = new Result();
 		PrintWriter out = resp.getWriter();
-		TogetherDTO togetherDTO = new TogetherDTO();
-		TogetherDAO togetherDAO = new TogetherDAO();
+		TradeDTO tradeDTO = new TradeDTO();
+		TradeDAO tradeDAO = new TradeDAO();
 		
 
 //		세션 대신 사용
@@ -36,12 +37,12 @@ public class MyTogetherListContriller implements Action {
 		
 		
 //		내 함께해요 리스트
-		List<TogetherDTO> togethers = togetherDAO.myTogetherList(longValue);
-		JSONArray togetherJSONs = new JSONArray();
+		List<TradeDTO> trades = tradeDAO.myTradeList(longValue);
+		JSONArray tradeJSONs = new JSONArray();
 		
-		togethers.stream().map(together -> new JSONObject(together)).forEach(json -> togetherJSONs.put(json));
-		System.out.println(togetherJSONs.toString());
-		out.print(togetherJSONs.toString());
+		trades.stream().map(trade -> new JSONObject(trade)).forEach(json -> tradeJSONs.put(json));
+		System.out.println(tradeJSONs.toString());
+		out.print(tradeJSONs.toString());
 		out.close();
 		
 		return null;
