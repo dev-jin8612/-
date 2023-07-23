@@ -5,17 +5,18 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./css/main.css">
-<link rel="stylesheet" href="../feed/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/mainPage/css/main.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/reset.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/header.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/inc/css/footer.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/feed/css/layout.css">
 
-<link rel="stylesheet" href="../feed/css/font/font.css">
-<link rel="stylesheet" href="../feed/css/layout.css">
-
-<script charset="UTF-8" src="../feed/js/layout.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+<script charset="UTF-8" src="${pageContext.request.contextPath}/inc/js/layout.js"></script>
 <title>Document</title>
 </head>
 <body>
-<jsp:include page="../feed/head.jsp"></jsp:include>
+<jsp:include page="${pageContext.request.contextPath}/inc/head.jsp"></jsp:include>
 	<!-- 피드 좋아요 순 정렬 -->
 	<div class="top">
 		<div class="side">
