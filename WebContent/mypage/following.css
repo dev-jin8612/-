@@ -56,9 +56,6 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 input, textarea {
     background: none;
 }
-.MyFollowAppContainer-container{
-    margin: 0 8px;
-}
 .MyFollowAppContainer-contents{
     margin: auto;
     max-width: 768px;
@@ -68,7 +65,7 @@ input, textarea {
 .MyFollowAppContainer-header{
     line-height: 44px;
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 48px 12px 29px;
 }
 .MyFollowAppContainer-tabsWrapper{
@@ -80,7 +77,6 @@ input, textarea {
     width: 100%;
     min-height: 48px;
     overflow: hidden;
-    margin: 0 8px;
 }
 .Tabs-ul{
     overflow: auto;
@@ -90,12 +86,16 @@ input, textarea {
     position: relative;
     background-color: #fff;
     height: 100%;
+    margin-bottom: 32px;
 }
 li, ul{
     margin: 0;
 }
 .MyFollowAppContainer-tabsWrapper ul li {
-    margin: 0 8px;
+    margin: 0px;
+}
+.MyFollowAppContainer-tabsWrapper ul li + li{
+	margin-left: 20px
 }
 
 .Tabs-ul li {
@@ -105,10 +105,11 @@ li, ul{
     justify-content: center;
     margin: 0 8px;
     min-width: 30px;
-    max-width: 200px;
+    max-width: 60px;`
     vertical-align: middle;
     white-space: normal;
 }
+.Tabs-ul li.active{border-bottom: 2px solid #00c4c4}
 
 .Tabs-ul span {
     line-height: 28px;
@@ -117,7 +118,7 @@ li, ul{
     display: inline-flex;
     position: relative;
     align-items: center;
-    padding: 9px 4px;
+    padding: 9px 0px;
     height: 100%;
     color: #495057;
 }
@@ -176,11 +177,13 @@ li, ul{
 }
 .FollowingCard-rightPanel{
     display: flex;
+    justify-content: end;
 }
 
 .FollowingCard-avatarWrapper{
     display: flex;
     align-items: center;
+    max-width: 70px;
 }
 .FollowingCard-info{
     display: flex;

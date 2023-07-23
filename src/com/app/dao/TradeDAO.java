@@ -41,5 +41,14 @@ public class TradeDAO {
 		
 	}
 	
+//	교환해요 개수 출력
+	public int myTradeCount(Long member_id) {
+		return sqlSession.selectOne("trade.tradeMyCount", member_id);
+	}
+	
+//	내 교환해요 리스트 출력
+	public List<TradeDTO> myTradeList(Long id){
+		return sqlSession.selectList("trade.myTradeList", id);
+	}
 	
 }

@@ -13,21 +13,21 @@ import org.json.JSONObject;
 
 import com.app.Action;
 import com.app.Result;
-import com.app.dao.TogetherDAO;
-import com.app.vo.TogetherDTO;
+import com.app.dao.FollowDAO;
+import com.app.vo.MemberDTO;
 
-public class MyTogetherListContriller implements Action {
+public class FollowingListOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html; charset=UTF-8");
 		
-		System.out.println("컨트롤러 들어옴@@");
+		System.out.println("컨트롤러 들어옴@@11111");
 		
 		Result result = new Result();
 		PrintWriter out = resp.getWriter();
-		TogetherDTO togetherDTO = new TogetherDTO();
-		TogetherDAO togetherDAO = new TogetherDAO();
+		MemberDTO memberDTO = new MemberDTO();
+		FollowDAO followDAO = new FollowDAO();
 		
 
 //		세션 대신 사용
@@ -35,16 +35,21 @@ public class MyTogetherListContriller implements Action {
 		Long longValue = Long.valueOf(intValue);
 		
 		
-//		내 함께해요 리스트
-		List<TogetherDTO> togethers = togetherDAO.myTogetherList(longValue);
-		JSONArray togetherJSONs = new JSONArray();
-		
-		togethers.stream().map(together -> new JSONObject(together)).forEach(json -> togetherJSONs.put(json));
-		System.out.println(togetherJSONs.toString());
-		out.print(togetherJSONs.toString());
+//		내 팔로잉 리스트
+		List<MemberDTO> followings = followDAO.myFollowingList(longValue);
+		JSONArray followingJSONs = new JSONArray();
+	
+		followings.stream().map(following -> new JSONObject(following)).forEach(json -> followingJSONs.put(json));
+
+		out.print(followingJSONs.toString());		
 		out.close();
+		
+		System.out.println(followingJSONs.toString());
+		
 		
 		return null;
 	}
 
 }
+
+
