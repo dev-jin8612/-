@@ -232,15 +232,15 @@
 				</div>
 				<!-- //검색 -->
 				<div class="head-user">
-					<div class="gest">
-						<a href="${pageContext.request.contextPath}/login.member" class="login">로그인</a>
-						<a href="" class="login">회원가입</a>
+					<div class="gest" id="outlog" >
+						<a href="${pageContext.request.contextPath}/login.member"
+							class="login">로그인</a> <a
+							href="${pageContext.request.contextPath}/join.member"
+							class="login">회원가입</a>
 					</div>
-					<div class="member" style="display:none">
-						<div class="noti">
-							<a href="${pageContext.request.contextPath}/logout.member" class="login">로그 아웃</a>
-							<a href="" class="login">마이 페이지</a>
-						</div>
+					<div class="gest" id="login">
+						<a href="${pageContext.request.contextPath}/logout.member"
+							class="login">로그아웃</a> <a href="" class="login">마이 페이지</a>
 					</div>
 					<button type="button" class="full_btn">프로젝트 만들기</button>
 				</div>
