@@ -6,6 +6,7 @@ public class TradeDTO {
 	private String boardtitle;
 	private String boardcontents;
 	private String boarddate;
+	private String boardstatus;
 	private Long memberid;
 //	함께해요
 	private String togetherappcontent;
@@ -14,7 +15,9 @@ public class TradeDTO {
 //	교환 신청
 	private Long tradeappcontent;
 	private Long tradeid;
+	private String appimg;
 //	img
+	private int imgnum;
 	private String filesystemname;
 	private String fileoriginalname;
 	private Long filesize;
@@ -28,155 +31,262 @@ public class TradeDTO {
 	
 	public TradeDTO() {;}
 
-	Long getId() {
+	public Long getId() {
 		return id;
 	}
 
-	void setId(Long id) {
+
+
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	String getBoardtitle() {
+
+
+	public String getBoardtitle() {
 		return boardtitle;
 	}
 
-	void setBoardtitle(String boardtitle) {
+
+
+	public void setBoardtitle(String boardtitle) {
 		this.boardtitle = boardtitle;
 	}
 
-	String getBoardcontents() {
+
+
+	public String getBoardcontents() {
 		return boardcontents;
 	}
 
-	void setBoardcontents(String boardcontents) {
+
+
+	public void setBoardcontents(String boardcontents) {
 		this.boardcontents = boardcontents;
 	}
 
-	String getBoarddate() {
+
+
+	public String getBoarddate() {
 		return boarddate;
 	}
 
-	void setBoarddate(String boarddate) {
+
+
+	public void setBoarddate(String boarddate) {
 		this.boarddate = boarddate;
 	}
 
-	Long getMemberid() {
+
+
+	public String getBoardstatus() {
+		return boardstatus;
+	}
+
+
+
+	public void setBoardstatus(String boardstatus) {
+		this.boardstatus = boardstatus;
+	}
+
+
+
+	public Long getMemberid() {
 		return memberid;
 	}
 
-	void setMemberid(Long memberid) {
+
+
+	public void setMemberid(Long memberid) {
 		this.memberid = memberid;
 	}
 
-	String getTogetherappcontent() {
+
+
+	public String getTogetherappcontent() {
 		return togetherappcontent;
 	}
 
-	void setTogetherappcontent(String togetherappcontent) {
+
+
+	public void setTogetherappcontent(String togetherappcontent) {
 		this.togetherappcontent = togetherappcontent;
 	}
 
-	Long getTogetherid() {
+
+
+	public Long getTogetherid() {
 		return togetherid;
 	}
 
-	void setTogetherid(Long togetherid) {
+
+
+	public void setTogetherid(Long togetherid) {
 		this.togetherid = togetherid;
 	}
 
-	Long getTradeappcontent() {
+
+
+	public Long getTradeappcontent() {
 		return tradeappcontent;
 	}
 
-	void setTradeappcontent(Long tradeappcontent) {
+
+
+	public void setTradeappcontent(Long tradeappcontent) {
 		this.tradeappcontent = tradeappcontent;
 	}
 
-	Long getTradeid() {
+
+
+	public Long getTradeid() {
 		return tradeid;
 	}
 
-	void setTradeid(Long tradeid) {
+
+
+	public void setTradeid(Long tradeid) {
 		this.tradeid = tradeid;
 	}
 
-	String getFilesystemname() {
+
+
+	public String getAppimg() {
+		return appimg;
+	}
+
+
+
+	public void setAppimg(String appimg) {
+		this.appimg = appimg;
+	}
+
+
+
+	public int getImgnum() {
+		return imgnum;
+	}
+
+
+
+	public void setImgnum(int imgnum) {
+		this.imgnum = imgnum;
+	}
+
+
+
+	public String getFilesystemname() {
 		return filesystemname;
 	}
 
-	void setFilesystemname(String filesystemname) {
+
+
+	public void setFilesystemname(String filesystemname) {
 		this.filesystemname = filesystemname;
 	}
 
-	String getFileoriginalname() {
+
+
+	public String getFileoriginalname() {
 		return fileoriginalname;
 	}
 
-	void setFileoriginalname(String fileoriginalname) {
+
+
+	public void setFileoriginalname(String fileoriginalname) {
 		this.fileoriginalname = fileoriginalname;
 	}
 
-	Long getFilesize() {
+
+
+	public Long getFilesize() {
 		return filesize;
 	}
 
-	void setFilesize(Long filesize) {
+
+
+	public void setFilesize(Long filesize) {
 		this.filesize = filesize;
 	}
 
-	Long getTradeimg() {
+
+
+	public Long getTradeimg() {
 		return tradeimg;
 	}
 
-	void setTradeimg(Long tradeimg) {
+
+
+	public void setTradeimg(Long tradeimg) {
 		this.tradeimg = tradeimg;
 	}
 
-	int getRenum() {
+
+
+	public int getRenum() {
 		return renum;
 	}
 
-	void setRenum(int renum) {
+
+
+	public void setRenum(int renum) {
 		this.renum = renum;
 	}
 
-	String getContents() {
+
+
+	public String getContents() {
 		return contents;
 	}
 
-	void setContents(String contents) {
+
+
+	public void setContents(String contents) {
 		this.contents = contents;
 	}
 
-	String getReplyid() {
+
+
+	public String getReplyid() {
 		return replyid;
 	}
 
-	void setReplyid(String replyid) {
+
+
+	public void setReplyid(String replyid) {
 		this.replyid = replyid;
 	}
 
-	String getRereply() {
+
+
+	public String getRereply() {
 		return rereply;
 	}
 
-	void setRereply(String rereply) {
+
+
+	public void setRereply(String rereply) {
 		this.rereply = rereply;
 	}
 
-	String getDate() {
+
+
+	public String getDate() {
 		return date;
 	}
 
-	void setDate(String date) {
+
+
+	public void setDate(String date) {
 		this.date = date;
 	}
 
 	@Override
 	public String toString() {
 		return "TradeDTO [id=" + id + ", boardtitle=" + boardtitle + ", boardcontents=" + boardcontents + ", boarddate="
-				+ boarddate + ", memberid=" + memberid + ", togetherappcontent=" + togetherappcontent + ", togetherid="
-				+ togetherid + ", tradeappcontent=" + tradeappcontent + ", tradeid=" + tradeid + ", filesystemname="
+				+ boarddate + ", boardstatus=" + boardstatus + ", memberid=" + memberid + ", togetherappcontent="
+				+ togetherappcontent + ", togetherid=" + togetherid + ", tradeappcontent=" + tradeappcontent
+				+ ", tradeid=" + tradeid + ", appimg=" + appimg + ", imgnum=" + imgnum + ", filesystemname="
 				+ filesystemname + ", fileoriginalname=" + fileoriginalname + ", filesize=" + filesize + ", tradeimg="
 				+ tradeimg + ", renum=" + renum + ", contents=" + contents + ", replyid=" + replyid + ", rereply="
 				+ rereply + ", date=" + date + "]";
