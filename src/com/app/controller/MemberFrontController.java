@@ -12,6 +12,7 @@ import com.app.controller.MemberController;
 import com.app.controller.JoinOkController;
 import com.app.controller.LoginOkController;
 import com.app.controller.LogoutController;
+import com.app.controller.sessionOkController;
 
 public class MemberFrontController extends HttpServlet {
 	@Override
@@ -40,6 +41,8 @@ public class MemberFrontController extends HttpServlet {
 		} else if (target.equals("feed")) {
 			result = new Result();
 			result.setPath("feed/list.jsp");
+		}else if (target.equals("session")) {
+			result = new sessionOkController().execute(req, resp);
 		}
 
 		if (result != null) {

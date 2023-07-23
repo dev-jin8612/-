@@ -29,10 +29,10 @@
 	
 	<mappers>
 		<mapper resource="com/app/mybatis/mapper/memberMapper.xml"></mapper>
-aster
+
 		<mapper resource="com/app/mybatis/mapper/feedMapper.xml"></mapper>
 		<mapper resource="com/app/mybatis/mapper/followMapper.xml"></mapper>
-		<mapper resource="com/app/mybatis/mapper/togetherMapper.xml"></mapper> 
+		<mapper resource="com/app/mybatis/mapper/togetherMapper.xml"></mapper>
 		<mapper resource="com/app/mybatis/mapper/tradeMapper.xml"></mapper>
 
 	</mappers>
