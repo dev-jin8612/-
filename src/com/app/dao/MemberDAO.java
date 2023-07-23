@@ -5,7 +5,6 @@ import java.util.HashMap;
 import org.apache.ibatis.session.SqlSession;
 
 import com.app.mybatis.config.MyBatisConfig;
-import com.app.vo.Member2VO;
 import com.app.vo.MemberDTO;
 
 public class MemberDAO {

@@ -90,7 +90,7 @@
 		ttr.trade_id,
 		ttr.contents, ttr.member_id, ttr.re_reply;
 	</select>
-
+	
 	<select id="tradeimg">
 		insert into tbl_trade_app (trade_app_content,
 		app_img, member_id, trade_id)

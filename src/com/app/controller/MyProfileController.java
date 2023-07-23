@@ -17,6 +17,8 @@ import com.app.Result;
 import com.app.dao.FeedDAO;
 import com.app.dao.FollowDAO;
 import com.app.dao.MemberDAO;
+import com.app.dao.TogetherDAO;
+import com.app.dao.TradeDAO;
 import com.app.vo.FeedDTO;
 import com.app.vo.MemberDTO;
 
@@ -26,7 +28,7 @@ public class MyProfileController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html; charset=UTF-8");
 		
-		System.out.println("컨트롤러 들어옴");
+		System.out.println("컨트롤러 들어옴11");
 		
 		Result result = new Result();
 		PrintWriter out = resp.getWriter();
@@ -35,6 +37,8 @@ public class MyProfileController implements Action {
 		FeedDTO feedDTO = new FeedDTO();
 		FeedDAO feedDAO = new FeedDAO();
 		FollowDAO followDAO = new FollowDAO();
+		TogetherDAO togetherDAO = new TogetherDAO();
+		TradeDAO tradeDAO = new TradeDAO();
 		
 		
 //		세션 대신 사용
@@ -63,6 +67,8 @@ public class MyProfileController implements Action {
 		req.setAttribute("feedCount", feedDAO.myFeedCount(longValue));
 		req.setAttribute("followerCount", followDAO.myFollowerCount(longValue));
 		req.setAttribute("followingCount", followDAO.myFollowingCount(longValue));
+		req.setAttribute("togetherCount", togetherDAO.myTogetherCount(longValue));
+		req.setAttribute("tradeCount", tradeDAO.myTradeCount(longValue));
 			
 		result.setPath("mypage/mypage2.jsp");
 

@@ -22,7 +22,7 @@ public class MyFeedListController implements Action {
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		resp.setContentType("text/html; charset=UTF-8");
 		
-		System.out.println("컨트롤러 들어옴@@");
+		System.out.println("컨트롤러 들어옴");
 		
 		Result result = new Result();
 		PrintWriter out = resp.getWriter();
