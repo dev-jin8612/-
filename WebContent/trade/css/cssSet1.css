@@ -2011,7 +2011,9 @@ option {
 
 @media screen and (min-width: 769px) {
   .board-main .article {
-    padding: 20px 0 0;
+    padding: 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .board-footer {
@@ -2503,4 +2505,19 @@ svg:not(:root) {
 #changewidth,
 .all-category * {
   width: 100%;
+}
+h1.logo img{max-width: 77px;width: 100%;height: auto;display: block;}
+.list-wrap{
+	display: flex !important;
+	justify-content: space-between;
+	align-items:center
+}
+.list-wrap .img-con{
+	width:100%;
+	max-width: calc(100% / 9 * 3);
+	overflow: hidden;
+	border-radius: 10px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	height: 120px;
+	
 }

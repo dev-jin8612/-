@@ -3,10 +3,24 @@
 <mapper namespace="follow">
 	<select id="followerCount" resultType="_int">
 		select count(id) as "팔로워 수" from tbl_follower
-		where member_id = #{member_id};
+		where follower_id = #{member_id};
 	</select>
 	<select id="followingCount" resultType="_int">
 		select count(id) as "팔로잉 수" from tbl_following
-		where member_id = #{member_id};
+		where following_id = #{member_id};
+	</select>
+	
+	<select id="myFollowerList" resultType="MemberDTO">
+		select member_nick, member_img
+		from tbl_member m
+		left outer join tbl_follower f on m.id = f.member_id
+		where f.follower_id = #{id};
+	</select>
+	
+	<select id="myFollowingList" resultType="MemberDTO">
+		select member_nick, member_img
+		from tbl_member m
+		left outer join tbl_following f on m.id = f.member_id
+		where f.following_id = #{id};
 	</select>
 </mapper>

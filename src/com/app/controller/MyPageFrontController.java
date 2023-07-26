@@ -20,6 +20,7 @@ public class MyPageFrontController extends HttpServlet{
 		
 		
 		if(target.equals("myProfile")) {
+			System.out.println("마이페이지 프컨 들어옴");
 			result = new MyProfileController().execute(req, resp);
 		}else if(target.equals("myFeed")){
 			result = new MyFeedListController().execute(req, resp);
