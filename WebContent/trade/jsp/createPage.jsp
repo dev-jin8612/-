@@ -12,7 +12,7 @@
 </head>
 <body>
 	<main id="create">
-		<form action="${pageContext.request.contextPath}/insert.trade?infor=insert&status=ti&memberid=1&imgnum=1" id="form" method="post" enctype="multipart/form-data">
+		<form action="${pageContext.request.contextPath}/insert.trade?infor=insert&status=ti&memberid=1&imgnum=2" id="form" method="post" enctype="multipart/form-data">
 			<div id="root">
 				<div id="ALContainer" class="ALcontainer">
 					<div class="ALmain">

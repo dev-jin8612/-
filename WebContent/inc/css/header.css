@@ -22,6 +22,7 @@
 .inner-header{padding: 0 16px; max-width: 1440px; height: 100%; margin: 0 auto; display: flex; justify-content: center;}
 h1.feed-tit{display: none;line-height: 30px;font-size: 20px;font-weight: 600; padding: 16px 0;}
 h1.logo{line-height: 22px; display: inline-block; font-size: 32px; width: auto;padding: 14px 0 18px;}
+h1.logo img{max-width: 120px;width: 100%;height: auto;display: block;}
 
 /* 헤더 - gnb */
 .header nav{flex-shrink: 0; width: auto;}

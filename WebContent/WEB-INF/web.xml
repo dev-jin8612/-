@@ -41,4 +41,15 @@
  	<url-pattern>*.follow</url-pattern>
  </servlet-mapping>
  
+ <servlet>
+    <servlet-name>Trade</servlet-name>
+    <servlet-class>com.app.controller.TradeFrontController</servlet-class>
+ </servlet>
+
+ <servlet-mapping>
+    <servlet-name>Trade</servlet-name>
+    <url-pattern>*.trade</url-pattern>
+ </servlet-mapping>
+ 
+ 
 </web-app>
